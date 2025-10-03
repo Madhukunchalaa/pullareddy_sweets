@@ -3617,10 +3617,10 @@ input.main-search-input::placeholder {
 .catagory-product-card-2 .catagory-product-image {
   position: relative;
   z-index: 1;
-  height: 245px;
+  height: 300px;
 }
 .catagory-product-card-2 .catagory-product-image img {
-  object-fit: contain;
+  object-fit: cover;
   width: 242px;
   height: 242px;
 }
