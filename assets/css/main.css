@@ -12207,3 +12207,16 @@ p.sticky-label {
 .dropdown-menu li a:hover {
     color: #d12525; /* theme color */
 }
+
+.food-processing-wrapper .food-processing-items.style-2:hover .food-processing-content p{
+  color: #fff;
+}
+.food-processing-wrapper .food-processing-items.style-2:hover .food-processing-content h3{
+  color: #fff;
+}
+.food-processing-wrapper .food-processing-items.style-2.active h3{
+  color: #fff;
+}
+.food-processing-wrapper .food-processing-items.style-2.active p{
+  color: #fff;
+}
