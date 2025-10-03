@@ -417,111 +417,76 @@
         </section>-->
 
         <!-- Food Catagory Section Start -->
-        <section class="food-category-section fix section-padding section-bg">
-            <div class="tomato-shape">
-                <img src="assets/img/shape/tomato-shape.png" alt="shape-img">
+     <section class="gpr__sweetDelights__showcase">
+        <!-- Decorative circles -->
+        <div class="gpr__bgDecor__circle gpr__circle__primary"></div>
+        <div class="gpr__bgDecor__circle gpr__circle__secondary"></div>
+        <div class="gpr__bgDecor__circle gpr__circle__tertiary"></div>
+
+        <div class="gpr__mainWrapper__content">
+            <div class="gpr__heading__section">
+                <p class="gpr__tagline__primary">An explosion of flavor with every bite.</p>
+                <h2 class="gpr__title__showcase">Most Loved Delicacies</h2>
             </div>
-            <!-- <div class="burger-shape-2">
-                <img src="assets/img/shape/burger-shape-2.png" alt="shape-img">
-            </div> -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-9">
-                        <div class="section-title">
-                            <span class="wow fadeInUp">An explosion of flavor with every bite.</span>
-                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Most Loved Delicacies</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-5 ps-0 col-3 text-end wow fadeInUp" data-wow-delay=".5s">
-                        <div class="array-button">
-                            <button class="array-prev"><i class="far fa-long-arrow-left"></i></button>
-                            <button class="array-next"><i class="far fa-long-arrow-right"></i></button>
-                        </div>
-                    </div>
+
+            <div class="gpr__carousel__holder">
+                <div class="gpr__navigation__controls">
+                    <button class="gpr__navBtn__control gpr__navBtn__prev" onclick="gprSlideProducts('prev')">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="gpr__navBtn__control gpr__navBtn__next" onclick="gprSlideProducts('next')">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
-                <div class="swiper food-catagory-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="catagory-product-card bg-cover" style="background-image: url('assets/img/shape/catagory-card-shape.jpg');">
-                                <h5>Best Seller</h5>
-                                <div class="catagory-product-image text-center">
-                                    <a href="">
-                                        <img width="244" height="244" src="assets/img/jalebi.jpg" alt="product-img">
-                                        
-                                    </a>
-                                </div>
-                                <div class="catagory-product-content text-center">
-                                    
-                                    <h3>
-                                        <a href="">
-                                        Jalebi
-                                        </a>
-                                    </h3>
-                                    <!--<p>5 products</p>-->
-                                </div>
+
+                <div class="gpr__slider__viewport">
+                    <div class="gpr__itemsTrack__slider" id="gprProductTrack">
+                        <div class="gpr__delicacyItem__card">
+                            <span class="gpr__badge__label">Best Seller</span>
+                            <div class="gpr__imageFrame__product">
+                                <img src="assets/img/Badusha.jpg" alt="Badusha" class="gpr__photo__product">
+                            </div>
+                            <div class="gpr__details__product">
+                                <h3 class="gpr__name__product">Badusha</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="catagory-product-card bg-cover" style="background-image: url('assets/img/shape/catagory-card-shape.jpg');">
-                                <h5>Best Seller</h5>
-                                <div class="catagory-product-image text-center">
-                                    <a href="">
-                                        <img width="244" height="244" src="assets/img/mysore pak.jpg" alt="product-img">
-                                        
-                                    </a>
-                                </div>
-                                <div class="catagory-product-content text-center">
-                                    
-                                    <h3>
-                                        <a href="">
-                                        Mysore Pak
-                                        </a>
-                                    </h3>
-                                </div>
+
+                        <div class="gpr__delicacyItem__card">
+                            <span class="gpr__badge__label">Best Seller</span>
+                            <div class="gpr__imageFrame__product">
+                                <img src="assets/img/jalebi.jpg" alt="Jalebi" class="gpr__photo__product">
+                            </div>
+                            <div class="gpr__details__product">
+                                <h3 class="gpr__name__product">Jalebi</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="catagory-product-card bg-cover" style="background-image: url('assets/img/shape/catagory-card-shape.jpg');">
-                                <h5>Most Favorite</h5>
-                                <div class="catagory-product-image text-center">
-                                    <a href="">
-                                        <img width="244" height="244" src="assets/img/paper sweet.jpg" alt="product-img">
-                                        
-                                    </a>
-                                </div>
-                                <div class="catagory-product-content text-center">
-                                    
-                                    <h3>
-                                        <a href="">
-                                        Paper Sweet
-                                        </a>
-                                    </h3>
-                                </div>
+
+                        <div class="gpr__delicacyItem__card">
+                            <span class="gpr__badge__label gpr__badge__favorite">Most Favorite</span>
+                            <div class="gpr__imageFrame__product">
+                                <img src="assets/img/mysore pak.jpg" alt="Mysore Pak" class="gpr__photo__product">
+                            </div>
+                            <div class="gpr__details__product">
+                                <h3 class="gpr__name__product">Mysore Pak</h3>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="catagory-product-card bg-cover" style="background-image: url('assets/img/shape/catagory-card-shape.jpg');">
-                                <h5>Top Selling</h5>
-                                <div class="catagory-product-image text-center">
-                                    <a href="">
-                                        <img width="244" height="244" src="assets/img/Badusha.jpg" alt="product-img">
-                                        
-                                    </a>
-                                </div>
-                                <div class="catagory-product-content text-center">
-                                    
-                                    <h3>
-                                        <a href="">
-                                        Badusha 
-                                        </a>
-                                    </h3>
-                                </div>
+
+                        <div class="gpr__delicacyItem__card">
+                            <span class="gpr__badge__label gpr__badge__topRated">Top Selling</span>
+                            <div class="gpr__imageFrame__product">
+                                <img src="assets/img/paper sweet.jpg" alt="Paper Sweet" class="gpr__photo__product">
+                            </div>
+                            <div class="gpr__details__product">
+                                <h3 class="gpr__name__product">Paper Sweet</h3>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="gpr__indicators__dots" id="gprDotsContainer"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- About Section Start -->
         <section class="about-section fix section-padding pt-0 section-bg">
@@ -1491,5 +1456,104 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+           <script>
+        let gprCurrentSlide = 0;
+        const gprAllCards = document.querySelectorAll('.gpr__delicacyItem__card');
+        const gprTrackElement = document.getElementById('gprProductTrack');
+        const gprDotsHolder = document.getElementById('gprDotsContainer');
+        
+        function gprGetVisibleCount() {
+            const screenWidth = window.innerWidth;
+            if (screenWidth <= 480) return 1;
+            if (screenWidth <= 768) return 2;
+            if (screenWidth <= 1200) return 3;
+            return 4;
+        }
+
+        function gprCreateDots() {
+            gprDotsHolder.innerHTML = '';
+            const visibleItems = gprGetVisibleCount();
+            const totalPages = Math.ceil(gprAllCards.length / visibleItems);
+            
+            for (let i = 0; i < totalPages; i++) {
+                const dotElement = document.createElement('div');
+                dotElement.className = 'gpr__dot__indicator';
+                if (i === 0) dotElement.classList.add('gpr__dot__active');
+                dotElement.onclick = () => gprJumpToSlide(i);
+                gprDotsHolder.appendChild(dotElement);
+            }
+        }
+
+        function gprUpdateDots() {
+            const allDots = document.querySelectorAll('.gpr__dot__indicator');
+            const visibleItems = gprGetVisibleCount();
+            const activePage = Math.floor(gprCurrentSlide / visibleItems);
+            
+            allDots.forEach((dotEl, idx) => {
+                dotEl.classList.toggle('gpr__dot__active', idx === activePage);
+            });
+        }
+
+        function gprJumpToSlide(pageIndex) {
+            const visibleItems = gprGetVisibleCount();
+            gprCurrentSlide = pageIndex * visibleItems;
+            gprUpdateSliderPosition();
+        }
+
+        function gprSlideProducts(direction) {
+            const visibleItems = gprGetVisibleCount();
+            const maxSlide = gprAllCards.length - visibleItems;
+            
+            if (direction === 'next') {
+                gprCurrentSlide = Math.min(gprCurrentSlide + 1, maxSlide);
+            } else {
+                gprCurrentSlide = Math.max(gprCurrentSlide - 1, 0);
+            }
+            
+            gprUpdateSliderPosition();
+        }
+
+        function gprUpdateSliderPosition() {
+            const cardWidth = gprAllCards[0].offsetWidth;
+            const gapSize = 30;
+            const offsetAmount = gprCurrentSlide * (cardWidth + gapSize);
+            
+            gprTrackElement.style.transform = `translateX(-${offsetAmount}px)`;
+            gprUpdateDots();
+        }
+
+        gprCreateDots();
+
+        let gprResizeDelay;
+        window.addEventListener('resize', () => {
+            clearTimeout(gprResizeDelay);
+            gprResizeDelay = setTimeout(() => {
+                gprCurrentSlide = 0;
+                gprCreateDots();
+                gprUpdateSliderPosition();
+            }, 250);
+        });
+
+        let gprTouchStart = 0;
+        let gprTouchEnd = 0;
+
+        gprTrackElement.addEventListener('touchstart', (e) => {
+            gprTouchStart = e.changedTouches[0].screenX;
+        });
+
+        gprTrackElement.addEventListener('touchend', (e) => {
+            gprTouchEnd = e.changedTouches[0].screenX;
+            gprHandleSwipe();
+        });
+
+        function gprHandleSwipe() {
+            if (gprTouchEnd < gprTouchStart - 50) {
+                gprSlideProducts('next');
+            }
+            if (gprTouchEnd > gprTouchStart + 50) {
+                gprSlideProducts('prev');
+            }
+        }
+    </script>
     </body>
 </html>

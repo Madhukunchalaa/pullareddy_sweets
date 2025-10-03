@@ -12206,3 +12206,314 @@ p.sticky-label {
 .dropdown-menu li a:hover {
     color: #d12525; /* theme color */
 }
+
+
+
+
+
+
+        .gpr__sweetDelights__showcase {
+            position: relative;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+
+        /* Decorative circles */
+        .gpr__bgDecor__circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+
+        .gpr__circle__primary {
+            width: 300px;
+            height: 300px;
+            background: #dc2626;
+            top: -100px;
+            left: -100px;
+        }
+
+        .gpr__circle__secondary {
+            width: 200px;
+            height: 200px;
+            background: #dc2626;
+            bottom: 100px;
+            right: -50px;
+        }
+
+        .gpr__circle__tertiary {
+            width: 150px;
+            height: 150px;
+            background: #dc2626;
+            top: 50%;
+            left: 5%;
+        }
+
+        .gpr__mainWrapper__content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .gpr__heading__section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .gpr__tagline__primary {
+            color: #dc2626;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .gpr__title__showcase {
+            color: #1e40af;
+            font-size: 52px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gpr__carousel__holder {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .gpr__navigation__controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .gpr__navBtn__control {
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            background: #dc2626;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+
+        .gpr__navBtn__control:hover {
+            background: #b91c1c;
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+        }
+
+        .gpr__slider__viewport {
+            overflow: hidden;
+            padding: 20px 60px;
+        }
+
+        .gpr__itemsTrack__slider {
+            display: flex;
+            gap: 30px;
+            transition: transform 0.5s ease;
+        }
+
+        .gpr__delicacyItem__card {
+            min-width: calc(25% - 22.5px);
+            position: relative;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 40px 30px;
+            border: 1px solid rgba(220, 38, 38, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .gpr__delicacyItem__card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(220,38,38,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .gpr__delicacyItem__card:hover::before {
+            left: 100%;
+        }
+
+        .gpr__delicacyItem__card:hover {
+            transform: translateY(-15px);
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 25px 50px rgba(220,38,38,0.2);
+            border-color: rgba(220, 38, 38, 0.3);
+        }
+
+        .gpr__badge__label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 5px 15px rgba(220,38,38,0.4);
+            z-index: 2;
+        }
+
+        .gpr__badge__favorite {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            box-shadow: 0 5px 15px rgba(30,64,175,0.4);
+        }
+
+        .gpr__badge__topRated {
+            background: linear-gradient(135deg, #dc2626, #f59e0b);
+            box-shadow: 0 5px 15px rgba(220,38,38,0.4);
+        }
+
+        .gpr__imageFrame__product {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 30px auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(30,64,175,0.1));
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+        }
+
+        .gpr__delicacyItem__card:hover .gpr__imageFrame__product {
+            transform: rotate(10deg) scale(1.1);
+            box-shadow: 0 20px 40px rgba(220,38,38,0.3);
+        }
+
+        .gpr__imageFrame__product::before {
+            content: '';
+            position: absolute;
+            inset: -5px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #dc2626, #1e40af, #dc2626, #f59e0b);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+            animation: gpr__rotate__gradient 3s linear infinite;
+        }
+
+        .gpr__delicacyItem__card:hover .gpr__imageFrame__product::before {
+            opacity: 0.6;
+        }
+
+        @keyframes gpr__rotate__gradient {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .gpr__photo__product {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        .gpr__details__product {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .gpr__name__product {
+            color: #1f2937;
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .gpr__delicacyItem__card:hover .gpr__name__product {
+            transform: scale(1.05);
+            color: #dc2626;
+        }
+
+        .gpr__indicators__dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 40px;
+        }
+
+        .gpr__dot__indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d1d5db;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .gpr__dot__indicator.gpr__dot__active {
+            background: #dc2626;
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 1200px) {
+            .gpr__delicacyItem__card {
+                min-width: calc(33.333% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gpr__title__showcase {
+                font-size: 36px;
+            }
+
+            .gpr__delicacyItem__card {
+                min-width: calc(50% - 15px);
+            }
+
+            .gpr__slider__viewport {
+                padding: 20px 40px;
+            }
+
+            .gpr__navBtn__control {
+                width: 50px;
+                height: 50px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gpr__delicacyItem__card {
+                min-width: calc(100% - 20px);
+            }
+        }
