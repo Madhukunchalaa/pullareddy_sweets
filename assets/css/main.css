@@ -12142,10 +12142,10 @@ p.sticky-label {
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-
+/* 
 .product-item{
   margin-bottom: 40px;
-}
+} */
 
 /* Responsive for smaller screens */
 @media (max-width: 768px) {
