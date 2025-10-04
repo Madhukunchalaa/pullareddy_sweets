@@ -5643,6 +5643,13 @@ input.main-search-input::placeholder {
   border-radius: 14px;
   padding: 70px 75px;
 }
+.single-food-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
 
 @media (max-width: 991px) {
   .food-icon-wrapper .single-food-icon {
@@ -5659,6 +5666,8 @@ input.main-search-input::placeholder {
 .food-icon-wrapper .single-food-icon .content h4 {
   color: var(--white);
   margin-bottom: 10px;
+  font-size: 15px;
+  text-align: center;
 }
 .food-icon-wrapper .single-food-icon .content p {
   color: var(--white);
@@ -12211,309 +12220,721 @@ p.sticky-label {
 
 
 
-
-        .gpr__sweetDelights__showcase {
-            position: relative;
-            min-height: 100vh;
-            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
-            padding: 80px 20px;
-            overflow: hidden;
+ .delicacies-hero-section {
+            background-color:#FFEEEE;
+            padding: 60px 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            height: 443px;
+    width: 417px;
+    justify-content: center;
         }
 
-        /* Decorative circles */
-        .gpr__bgDecor__circle {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.15;
-        }
-
-        .gpr__circle__primary {
-            width: 300px;
-            height: 300px;
-            background: #dc2626;
-            top: -100px;
-            left: -100px;
-        }
-
-        .gpr__circle__secondary {
-            width: 200px;
-            height: 200px;
-            background: #dc2626;
-            bottom: 100px;
-            right: -50px;
-        }
-
-        .gpr__circle__tertiary {
-            width: 150px;
-            height: 150px;
-            background: #dc2626;
-            top: 50%;
-            left: 5%;
-        }
-
-        .gpr__mainWrapper__content {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .gpr__heading__section {
+        .delicacies-content-wrapper {
             text-align: center;
-            margin-bottom: 60px;
         }
 
-        .gpr__tagline__primary {
-            color: #dc2626;
+        .delicacies-tagline {
+            color: #d32f2f;
             font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 15px;
         }
 
-        .gpr__title__showcase {
-            color: #1e40af;
-            font-size: 52px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+.delicacies-main-heading {
+font-size: 27px;
+font-weight: bolder;
+color: #1a1a1a;
+
+text-transform: uppercase;
+font-family:arlow Condensed ;
+line-height: 27px;
+text-transform: uppercase;
+vertical-align: middle;
+letter-spacing: 0%;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
+        .delicacies-description {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .gpr__carousel__holder {
-            position: relative;
-            padding: 40px 0;
-        }
-
-        .gpr__navigation__controls {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-            display: flex;
-            justify-content: space-between;
-            z-index: 10;
-            pointer-events: none;
-        }
-
-        .gpr__navBtn__control {
-            width: 60px;
-            height: 60px;
+        .delicacies-cta-btn {
+            background-color: #d32f2f;
+            color: white;
             border: none;
-            border-radius: 50%;
-            background: #dc2626;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            pointer-events: all;
-            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
-        }
-
-        .gpr__navBtn__control:hover {
-            background: #b91c1c;
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
-        }
-
-        .gpr__slider__viewport {
-            overflow: hidden;
-            padding: 20px 60px;
-        }
-
-        .gpr__itemsTrack__slider {
-            display: flex;
-            gap: 30px;
-            transition: transform 0.5s ease;
-        }
-
-        .gpr__delicacyItem__card {
-            min-width: calc(25% - 22.5px);
-            position: relative;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 30px;
-            padding: 40px 30px;
-            border: 1px solid rgba(220, 38, 38, 0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            cursor: pointer;
-            overflow: hidden;
-            flex-shrink: 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        .gpr__delicacyItem__card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(220,38,38,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s ease;
-        }
-
-        .gpr__delicacyItem__card:hover::before {
-            left: 100%;
-        }
-
-        .gpr__delicacyItem__card:hover {
-            transform: translateY(-15px);
-            background: rgba(255, 255, 255, 1);
-            box-shadow: 0 25px 50px rgba(220,38,38,0.2);
-            border-color: rgba(220, 38, 38, 0.3);
-        }
-
-        .gpr__badge__label {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #dc2626, #b91c1c);
-            color: #fff;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 14px 40px;
+            font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            box-shadow: 0 5px 15px rgba(220,38,38,0.4);
-            z-index: 2;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        .gpr__badge__favorite {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            box-shadow: 0 5px 15px rgba(30,64,175,0.4);
+        .delicacies-cta-btn:hover {
+            background-color: #b71c1c;
         }
 
-        .gpr__badge__topRated {
-            background: linear-gradient(135deg, #dc2626, #f59e0b);
-            box-shadow: 0 5px 15px rgba(220,38,38,0.4);
-        }
-
-        .gpr__imageFrame__product {
+        .delicacies-carousel-container {
             position: relative;
-            width: 200px;
-            height: 200px;
-            margin: 30px auto;
+            /* padding: 40px 0; */
+        }
+
+        .delicacies-carousel-wrapper {
+            border: 2px solid #B71C1C;
+            border-radius: 15px;
+            padding: 62px 24px 46px;
+            background-color: white;
+            position: relative;
+        }
+
+        .delicacies-carousel-inner {
+            overflow: hidden;
+        }
+
+        .delicacies-carousel-item {
+            display: none;
+        }
+
+        .delicacies-carousel-item.delicacies-active {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .delicacies-product-card {
+            text-align: center;
+            flex: 0 0 calc(33.333% - 14px);
+        }
+
+        .delicacies-product-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 15px;
+        }
+
+        .delicacies-product-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+
+        .delicacies-carousel-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(220,38,38,0.1), rgba(30,64,175,0.1));
-            backdrop-filter: blur(10px);
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.5s ease;
+            z-index: 10;
+            transition: background-color 0.3s ease;
         }
 
-        .gpr__delicacyItem__card:hover .gpr__imageFrame__product {
-            transform: rotate(10deg) scale(1.1);
-            box-shadow: 0 20px 40px rgba(220,38,38,0.3);
-        }
-
-        .gpr__imageFrame__product::before {
-            content: '';
-            position: absolute;
-            inset: -5px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #dc2626, #1e40af, #dc2626, #f59e0b);
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            z-index: -1;
-            animation: gpr__rotate__gradient 3s linear infinite;
-        }
-
-        .gpr__delicacyItem__card:hover .gpr__imageFrame__product::before {
-            opacity: 0.6;
-        }
-
-        @keyframes gpr__rotate__gradient {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .gpr__photo__product {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 50%;
-            transition: all 0.5s ease;
-        }
-
-        .gpr__details__product {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .gpr__name__product {
-            color: #1f2937;
-            font-size: 28px;
-            font-weight: 700;
-            margin: 0;
-            transition: all 0.3s ease;
-        }
-
-        .gpr__delicacyItem__card:hover .gpr__name__product {
-            transform: scale(1.05);
-            color: #dc2626;
-        }
-
-        .gpr__indicators__dots {
+        .delicacies-carousel-control:hover {
+            background-color: #AC1E23;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 12px;
-            margin-top: 40px;
         }
 
-        .gpr__dot__indicator {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #d1d5db;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .delicacies-carousel-control.delicacies-prev {
+            left: -19px;
+            font-size: 26px;
         }
 
-        .gpr__dot__indicator.gpr__dot__active {
-            background: #dc2626;
-            width: 30px;
-            border-radius: 6px;
+        .delicacies-carousel-control.delicacies-next {
+            right: -19px;
+             font-size: 26px;
         }
 
-        @media (max-width: 1200px) {
-            .gpr__delicacyItem__card {
-                min-width: calc(33.333% - 20px);
+        @media (max-width: 992px) {
+            .delicacies-main-heading {
+                font-size: 32px;
+            }
+
+            .delicacies-product-card {
+                flex: 0 0 calc(50% - 10px);
+            }
+
+            .delicacies-carousel-item.delicacies-active .delicacies-product-card:nth-child(3) {
+                display: none;
             }
         }
 
         @media (max-width: 768px) {
-            .gpr__title__showcase {
-                font-size: 36px;
+            .delicacies-hero-section {
+                padding: 40px 20px;
             }
 
-            .gpr__delicacyItem__card {
-                min-width: calc(50% - 15px);
+            .delicacies-main-heading {
+                font-size: 28px;
             }
 
-            .gpr__slider__viewport {
-                padding: 20px 40px;
+            .delicacies-carousel-wrapper {
+                padding: 20px 50px;
             }
 
-            .gpr__navBtn__control {
-                width: 50px;
-                height: 50px;
-                font-size: 16px;
+            .delicacies-product-card {
+                flex: 0 0 100%;
+            }
+
+            .delicacies-carousel-item.delicacies-active {
+                flex-direction: column;
+            }
+
+            .delicacies-carousel-item.delicacies-active .delicacies-product-card:nth-child(2),
+            .delicacies-carousel-item.delicacies-active .delicacies-product-card:nth-child(3) {
+                display: none;
             }
         }
 
-        @media (max-width: 480px) {
-            .gpr__delicacyItem__card {
-                min-width: calc(100% - 20px);
+
+
+
+   .heritage-journey-section {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .heritage-image-wrapper {
+            position: relative;
+        }
+
+        .heritage-showcase-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid #0891b2;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .heritage-content-block {
+            padding-left: 40px;
+        }
+
+        .heritage-welcome-tag {
+            color: #d32f2f;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .heritage-main-title {
+            font-size: 46px;
+            font-weight: 800;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .heritage-highlight-text {
+            color: #d32f2f;
+        }
+
+        .heritage-description-text {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .heritage-features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .heritage-feature-item {
+            display: flex;
+            gap: 15px;
+        }
+
+        .heritage-icon-container {
+            flex-shrink: 0;
+        }
+
+        .heritage-icon-image {
+            width: 50px;
+            height: 50px;
+            color: #d32f2f;
+        }
+
+        .heritage-feature-content h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .heritage-feature-content p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .heritage-cta-button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            padding: 16px 45px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .heritage-cta-button:hover {
+            background-color: #b71c1c;
+        }
+
+        @media (max-width: 991px) {
+            .heritage-content-block {
+                padding-left: 0;
+                margin-top: 40px;
+            }
+
+            .heritage-main-title {
+                font-size: 36px;
+            }
+
+            .heritage-features-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .heritage-journey-section {
+                padding: 40px 0;
+            }
+
+            .heritage-main-title {
+                font-size: 28px;
+            }
+
+            .heritage-features-grid {
+                gap: 20px;
+            }
+        }
+
+        /* Icon SVG Styling */
+        .heritage-svg-icon {
+            width: 50px;
+            height: 50px;
+            fill: none;
+            stroke: #d32f2f;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+/* popular sweets section */
+ .sweet-tradition-section {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+        }
+
+        .sweet-tradition-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sweet-tradition-title {
+            font-size: 42px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .sweet-tradition-title-black {
+            color: #000;
+        }
+
+        .sweet-tradition-title-red {
+            color: #c42a2a;
+        }
+
+        .sweet-tradition-description {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .sweet-collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        .jaggery-collection-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .jaggery-collection-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .jaggery-product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .jaggery-card-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .jaggery-category-title {
+            color: #c42a2a;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .jaggery-product-count {
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .jaggery-explore-btn {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+
+.jaggery-collection-card:nth-child(1) .jaggery-explore-btn {
+            background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-collection-card:nth-child(2) .jaggery-explore-btn {
+            background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-collection-card:nth-child(3) .jaggery-explore-btn {
+            background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-collection-card:nth-child(4) .jaggery-explore-btn {
+             background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-explore-btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .sweet-view-more-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .sweet-view-more-btn {
+            background-color: #b92e2e;
+            color: #fff;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .sweet-view-more-btn:hover {
+            background-color: #a02626;
+        }
+
+        @media (max-width: 768px) {
+            .sweet-tradition-title {
+                font-size: 32px;
+            }
+
+            .sweet-collections-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+        }
+  .jaggery-collection-card:nth-child(1) .jaggery-explore-btn:hover,
+.jaggery-collection-card:nth-child(2) .jaggery-explore-btn:hover,
+.jaggery-collection-card:nth-child(3) .jaggery-explore-btn:hover,
+.jaggery-collection-card:nth-child(4) .jaggery-explore-btn:hover {
+    background-color: #1a1a1a !important;
+    color: #fff;
+}
+/* .jaggery-collection-card:nth-child(1):hover,
+.jaggery-collection-card:nth-child(2):hover,
+.jaggery-collection-card:nth-child(3):hover,
+.jaggery-collection-card:nth-child(4):hover {
+    background-color: #c42a2a !important;
+    color: #fff !important;
+} */
+/* --- keep existing base styles (you already have these) --- */
+.jaggery-collection-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Keep the lift on card hover, but DO NOT change bg here */
+.jaggery-collection-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button default */
+.jaggery-explore-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  background-color: #c42a2a; /* keep this as your button red */
+  color: #fff;
+}
+
+/* button hover visual (still darken the button) */
+.jaggery-explore-btn:hover,
+.jaggery-explore-btn:focus {
+  opacity: 0.95;
+  transform: scale(1.02);
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* --------- Modern CSS solution (use :has) --------- */
+/* When the button inside the card is hovered or focused, change the parent */
+.jaggery-collection-card:has(.jaggery-explore-btn:hover),
+.jaggery-collection-card:has(.jaggery-explore-btn:focus) {
+  background-color: #c42a2a;
+  color: #fff; /* ensures inherited text becomes white */
+}
+
+/* Make specific child text white when parent is in "button-hover state" */
+.jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-category-title,
+.jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-category-title,
+.jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-product-count,
+.jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-product-count {
+  color: #fff;
+}
+
+/* --------- JS fallback class (for older browsers) --------- */
+.jaggery-collection-card.btn-hover {
+  background-color: #c42a2a;
+  color: #fff;
+}
+.jaggery-collection-card.btn-hover .jaggery-category-title,
+.jaggery-collection-card.btn-hover .jaggery-product-count {
+  color: #fff;
+}
+
+
+/* tradidtional sweets section */
+ .traditional-sweets-hero {
+            background: linear-gradient(135deg, #ffe8e8 0%, #ffd4d4 100%);
+            padding: 80px 0;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+        }
+
+        .traditional-sweets-hero .container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .traditional-content-wrapper {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .traditional-tagline {
+            color: #d32f2f;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .traditional-main-heading {
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.2;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+        }
+
+        .traditional-heading-highlight {
+            color: #d32f2f;
+        }
+
+        .traditional-description-text {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .traditional-features-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .traditional-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 25px;
+            background: white;
+            margin-bottom: 2px;
+        }
+
+        .traditional-feature-item:first-child {
+            border-radius: 8px 8px 0 0;
+        }
+
+        .traditional-feature-item:last-child {
+            border-radius: 0 0 8px 8px;
+        }
+
+        .traditional-feature-item.featured-highlight {
+            background: #d32f2f;
+            color: white;
+        }
+
+        .traditional-feature-item img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .traditional-feature-text {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .traditional-image-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        .traditional-hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 991px) {
+            .traditional-sweets-hero .container {
+                flex-direction: column;
+            }
+
+            .traditional-content-wrapper {
+                padding-right: 0;
+            }
+
+            .traditional-main-heading {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .traditional-sweets-hero {
+                padding: 50px 0;
+            }
+
+            .traditional-main-heading {
+                font-size: 36px;
+            }
+
+            .traditional-feature-item {
+                padding: 15px 20px;
+            }
+
+            .traditional-feature-text {
+                font-size: 13px;
+            }
+
+            .traditional-feature-item img {
+                width: 32px;
+                height: 32px;
             }
         }

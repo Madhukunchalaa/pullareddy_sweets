@@ -417,163 +417,138 @@
         </section>-->
 
         <!-- Food Catagory Section Start -->
-     <section class="gpr__sweetDelights__showcase">
-        <!-- Decorative circles -->
-        <div class="gpr__bgDecor__circle gpr__circle__primary"></div>
-        <div class="gpr__bgDecor__circle gpr__circle__secondary"></div>
-        <div class="gpr__bgDecor__circle gpr__circle__tertiary"></div>
-
-        <div class="gpr__mainWrapper__content">
-            <div class="gpr__heading__section">
-                <p class="gpr__tagline__primary">An explosion of flavor with every bite.</p>
-                <h2 class="gpr__title__showcase">Most Loved Delicacies</h2>
+  <section class="container mt-4">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="delicacies-hero-section">
+                    <div class="delicacies-content-wrapper">
+                        <p class="delicacies-tagline">An explosion of flavor with every bite.</p>
+                        <h1 class="delicacies-main-heading">Most Loved Delicacies</h1>
+                        <p class="delicacies-description">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                        </p>
+                        <button class="delicacies-cta-btn">Explore More</button>
+                    </div>
+                </div>
             </div>
 
-            <div class="gpr__carousel__holder">
-                <div class="gpr__navigation__controls">
-                    <button class="gpr__navBtn__control gpr__navBtn__prev" onclick="gprSlideProducts('prev')">
-                        <i class="fas fa-arrow-left"></i>
+            <div class="col-lg-8 delicacies-carousel-container">
+                <div class="delicacies-carousel-wrapper">
+                    <button class="delicacies-carousel-control delicacies-prev" onclick="delicaciesMoveCarousel(-1)">
+                        <span>&#8249;</span>
                     </button>
-                    <button class="gpr__navBtn__control gpr__navBtn__next" onclick="gprSlideProducts('next')">
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
 
-                <div class="gpr__slider__viewport">
-                    <div class="gpr__itemsTrack__slider" id="gprProductTrack">
-                        <div class="gpr__delicacyItem__card">
-                            <span class="gpr__badge__label">Best Seller</span>
-                            <div class="gpr__imageFrame__product">
-                                <img src="assets/img/Badusha.jpg" alt="Badusha" class="gpr__photo__product">
+                    <div class="delicacies-carousel-inner">
+                        <div class="delicacies-carousel-item delicacies-active">
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/client/Jelebi.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
                             </div>
-                            <div class="gpr__details__product">
-                                <h3 class="gpr__name__product">Badusha</h3>
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/Badusha.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
+                            </div>
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/client/kaaju.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
                             </div>
                         </div>
 
-                        <div class="gpr__delicacyItem__card">
-                            <span class="gpr__badge__label">Best Seller</span>
-                            <div class="gpr__imageFrame__product">
-                                <img src="assets/img/jalebi.jpg" alt="Jalebi" class="gpr__photo__product">
+                        <div class="delicacies-carousel-item">
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/client/kalakand.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
                             </div>
-                            <div class="gpr__details__product">
-                                <h3 class="gpr__name__product">Jalebi</h3>
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/client/pootharekulu.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
                             </div>
-                        </div>
-
-                        <div class="gpr__delicacyItem__card">
-                            <span class="gpr__badge__label gpr__badge__favorite">Most Favorite</span>
-                            <div class="gpr__imageFrame__product">
-                                <img src="assets/img/mysore pak.jpg" alt="Mysore Pak" class="gpr__photo__product">
-                            </div>
-                            <div class="gpr__details__product">
-                                <h3 class="gpr__name__product">Mysore Pak</h3>
-                            </div>
-                        </div>
-
-                        <div class="gpr__delicacyItem__card">
-                            <span class="gpr__badge__label gpr__badge__topRated">Top Selling</span>
-                            <div class="gpr__imageFrame__product">
-                                <img src="assets/img/paper sweet.jpg" alt="Paper Sweet" class="gpr__photo__product">
-                            </div>
-                            <div class="gpr__details__product">
-                                <h3 class="gpr__name__product">Paper Sweet</h3>
+                            <div class="delicacies-product-card">
+                                <img src="assets/img/client/ariselu.jpg" alt="Jalebi" class="delicacies-product-image">
+                                <p class="delicacies-product-name">Jalebi</p>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="gpr__indicators__dots" id="gprDotsContainer"></div>
+                    <button class="delicacies-carousel-control delicacies-next" onclick="delicaciesMoveCarousel(1)">
+                        <span>&#8250;</span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
         <!-- About Section Start -->
-        <section class="about-section fix section-padding pt-0 section-bg">
-            <div class="container">
-                <div class="about-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
-                            <div class="about-image">
-                                <img src="assets/img/journey-img.jpg" alt="about-img">
-                                <div class="since-text bg-cover" style="background-image: url('assets/img/shape/food-shape.png');">
-                                    <h3>since /1985</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-lg-6 mt-5 mt-lg-0">
-                            <div class="about-content">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp">Welcome to G. Pullareddy Sweets </span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        A Journey of 77 Years  Crafting Sweetness  <span>Since 1948</span>
-                                    </h2>
-                                </div>
-                                <p class="wow fadeInUp" data-wow-delay=".5s">
-                                    Experience the authentic taste of tradition with every bite. From our humble beginnings in 1948 to becoming Kurnool's most trusted sweet destination, we continue to create memories one sweet at a time.
-                                </p>
-                                <div class="icon-area">
-                                    <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".3s">
-                                        <div class="icon">
-                                            <img src="assets/img/home-icon1.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>77 Years of Heritage </h4>
-                                            <p>
-                                                Traditional recipes passed down through generations
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="icon">
-                                            <img src="assets/img/home-icon2.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Pure & Natural </h4>
-                                            <p>
-                                                Made with finest ingredients and pure ghee
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="icon-area">
-                                    <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".3s">
-                                        <div class="icon">
-                                            <img src="assets/img/home-icon3.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Handcrafted Excellence  </h4>
-                                            <p>
-                                                Every sweet crafted with love and precision
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="icon-items d-flex wow fadeInUp" data-wow-delay=".5s">
-                                        <div class="icon">
-                                            <img src="assets/img/home-icon4.png" alt="">
-                                        </div>
-                                        <div class="content">
-                                            <h4>Trusted by Millions </h4>
-                                            <p>
-                                               Serving families across generations
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="info-area d-flex align-items-center">
-                                    <a href="about.html" class="theme-btn wow style-line-height fadeInUp" data-wow-delay=".3s">more about us</a>
-                                    <div class="info-content wow fadeInUp" data-wow-delay=".5s">
-                                        <span>BRENDON GARREY</span>
-                                        <h6>Customer’s experience is our highest priority.</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        <section class="heritage-journey-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="heritage-image-wrapper">
+                        <img src="assets/img/ajourney.jpg" alt="Traditional Sweets" class="heritage-showcase-image">
                     </div>
-                    
+                </div>
+
+                <div class="col-lg-6" style="padding: 45px;">
+                    <div class="heritage-content-block">
+                        <p class="heritage-welcome-tag">Welcome to G. Pullareddy Sweets</p>
+                        
+                        <h1 class="heritage-main-title">
+                            A Journey of 77 Years Crafting Sweetness 
+                            <span class="heritage-highlight-text">Since 1948</span>
+                        </h1>
+
+                        <p class="heritage-description-text">
+                            Experience the authentic taste of tradition with every bite. From our humble beginnings in 1948 to becoming Kurnool's most trusted sweet destination, we continue to create memories one sweet at a time.
+                        </p>
+
+                        <div class="heritage-features-grid">
+                            <div class="heritage-feature-item">
+                                <div class="heritage-icon-container">
+                                    <img src="assets/img/77years.png" alt="">
+                                </div>
+                                <div class="heritage-feature-content">
+                                    <h3>77 Years of Heritage</h3>
+                                    <p>Traditional recipes passed down through generations</p>
+                                </div>
+                            </div>
+
+                            <div class="heritage-feature-item">
+                                <div class="heritage-icon-container">
+                                    <img src="assets/img/pure and natural.png" alt="">
+                                </div>
+                                <div class="heritage-feature-content">
+                                    <h3>Pure & Natural</h3>
+                                    <p>Made with finest ingredients and pure ghee</p>
+                                </div>
+                            </div>
+
+                            <div class="heritage-feature-item">
+                                <div class="heritage-icon-container">
+                                   <img src="assets/img/handcrafted.png" alt="">
+                                </div>
+                                <div class="heritage-feature-content">
+                                    <h3>Handcrafted Excellence</h3>
+                                    <p>Every sweet crafted with love and precision</p>
+                                </div>
+                            </div>
+
+                            <div class="heritage-feature-item">
+                                <div class="heritage-icon-container">
+                                    <img src="assets/img/trusted.png" alt="">
+                                </div>
+                                <div class="heritage-feature-content">
+                                    <h3>Trusted by Millions</h3>
+                                    <p>Serving families across generations</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="heritage-cta-button">Know More</button>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Food Banner Section Start -->
         <section class="food-banner-section section-padding fix section-bg pt-0">
@@ -626,265 +601,100 @@
        
 
         <!-- Food Catagory Section Start -->
-        <section class="food-category-section popular-sweets fix section-padding section-bg">
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="wow fadeInUp">Every bite filled with authentic sweetness</span>
-                    <h2 class="wow fadeInUp" data-wow-delay=".3s">Popular Sweet Items</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="catagory-product-card-2 text-center">
-                            
-                            <div class="catagory-product-image">
-                                <img src="assets/img/mitai box.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Mitai Box</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="catagory-product-card-2 active text-center">
-                            
-                            <div class="catagory-product-image">
-                                <img src="assets/img/powers.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Spicy Powders</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="catagory-product-card-2 text-center">
-                            
-                            <div class="catagory-product-image">
-                                <img src="assets/img/pickels.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Traditional Pickels</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="catagory-product-card-2 text-center">
-                            
-                            <div class="catagory-product-image">
-                                <img src="assets/img/khara & snacks.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Khara & Snacks</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="catagory-product-card-2 text-center">
-                           
-                            <div class="catagory-product-image">
-                                <img src="assets/img/cakes & cokkies.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Cakes & Cookies</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="catagory-product-card-2 text-center">
-                            
-                            <div class="catagory-product-image">
-                                <img src="assets/img/dryfruit sweets.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Dry Fruit Sweets</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                        <div class="catagory-product-card-2 text-center">
-                           
-                            <div class="catagory-product-image">
-                                <img src="assets/img/signature special.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Signature Special</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".8s">
-                        <div class="catagory-product-card-2 text-center">
-                            <!--<div class="icon">
-                                <a href=""><i class="far fa-heart"></i></a>
-                            </div>-->
-                            <div class="catagory-product-image">
-                                <img src="assets/img/jaggery sweets.jpg" alt="product-img">
-                            </div>
-                            <div class="catagory-product-content">
-                                <div class="catagory-button">
-                                    <a href="" class="theme-btn-2"><i class="far fa-shopping-basket"></i>Explore</a>
-                                </div>
-                                <h4>
-                                    <a href="">Jaggery Sweets</a>
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="catagory-button text-center pt-4 wow fadeInUp" data-wow-delay=".3s">
-                    <a href="" class="theme-btn">
-                    <span class="button-content-wrapper d-flex align-items-center">
-                    <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                    <span class="button-text">view more</span>
-                    </span>
-                    </a>
+         <section class="sweet-tradition-section">
+        <div class="sweet-tradition-header">
+            <h1 class="sweet-tradition-title">
+                <span class="sweet-tradition-title-black">A SWEET TRADITION </span>
+                <span class="sweet-tradition-title-red">COLLECTIONS</span>
+            </h1>
+            <p class="sweet-tradition-description">
+                Exquisitely packaged to benefit every occasion, we celebrate your<br>
+                pride, happiness and relationships with absolute grandeur.
+            </p>
+        </div>
+
+        <div class="sweet-collections-grid">
+            <div class="jaggery-collection-card">
+                <img src="assets/img/jaggery-laddu.png" alt="Jaggery Sweets" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <p class="jaggery-product-count">5 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
                 </div>
             </div>
-        </section>
+
+            <div class="jaggery-collection-card">
+                <img src="assets/img/jaggery-curry.png" alt="Jaggery Sweets" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <p class="jaggery-product-count">5 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <div class="jaggery-collection-card">
+                <img src="assets/img/jsggery-biscuits.png" alt="Jaggery Sweets" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <p class="jaggery-product-count">5 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <div class="jaggery-collection-card">
+                <img src="assets/img/jaggery sweets.jpg" alt="Jaggery Sweets" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <p class="jaggery-product-count">5 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="sweet-view-more-container">
+            <button class="sweet-view-more-btn">VIEW MORE</button>
+        </div>
+    </section>
 
         <!-- Food Comboo Section Start -->
-        <section class="food-comboo-section fix bg-cover section-padding" style="background-image: url('assets/img/bg-image/bg.jpg');">
-            <!-- <div class="drinks-shape">
-                <img src="assets/img/shape/drinks.png" alt="shape-img">
-            </div> -->
-            <div class="container">
-                <div class="comboo-wrapper">
-                    <div class="row align-items-center">
-                        <div class="col-xl-6">
-                            <div class="food-comboo-content">
-                                <div class="section-title">
-                                    <span class="wow fadeInUp">HANDCRAFTED, EVERY BITE TASTE</span>
-                                    <h2 class="wow fadeInUp" data-wow-delay=".3s">
-                                        TRADITIONAL SWEETS<br> 
-                                        MADE WITH <span>PURE LOVE</span>
-                                    </h2>
-                                </div>
-                                <p class="wow fadeInUp" data-wow-delay=".5s">
-                                        Discover authentic flavors crafted by master artisans using time-honored recipes passed down through 77 years of sweet-making excellence.
-                                </p>
-                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                    <button class="nav-link wow fadeInUp" data-wow-delay=".3s" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
-                                    <span class="food-comboo-list">
-                                    <span class="offer-image">
-                                    <img src="assets/img/offer/chicken.png" alt="img">
-                                    </span>
-                                    <span class="comboo-title">
-                                    PURE GHEE & NATURAL INGREDIENTS ONLY
-                                    </span>
-                                    </span>
-                                    </button>
-                                    <button class="nav-link active wow fadeInUp" data-wow-delay=".5s" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-                                    <span class="food-comboo-list">
-                                    <span class="offer-image">
-                                    <img src="assets/img/offer/pizza.png" alt="img">
-                                    </span>
-                                    <span class="comboo-title">
-                                    77 YEARS OF KURNOOL'S SWEET LEGACY
-                                    </span>
-                                    </span>
-                                    </button>
-                                    <button class="nav-link wow fadeInUp" data-wow-delay=".7s" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                                    <span class="food-comboo-list">
-                                    <span class="offer-image">
-                                    <img src="assets/img/offer/burger.png" alt="img">
-                                    </span>
-                                    <span class="comboo-title">
-                                    HANDCRAFTED BY MASTER ARTISANS DAILY
-                                    </span>
-                                    </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-6">
-                            <div class="tab-content" id="nav-tab-Content">
-                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                    <div class="comboo-image bg-cover" style="background-image: url('assets/img/banner/comboo-bg.jpg');">
-                                        <!-- <div class="pizza-text">
-                                            <img src="assets/img/shape/combo-pizza-text.png" alt="shape-img">
-                                        </div> -->
-                                        <div class="pizza-image">
-                                            <img src="assets/img/hero/trending-food-img.png" alt="food-img">
-                                        </div>
-                                        <div class="offer-shape">
-                                            <img src="assets/img/offer/50percent-off-2.png" alt="shape-img">
-                                        </div>
-                                        <!-- <div class="vegetable-shape">
-                                            <img src="assets/img/shape/vegetable.png" alt="shape-img">
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                    <div class="comboo-image bg-cover" style="background-image: url('assets/img/banner/comboo-bg.jpg');">
-                                        <div class="pizza-text">
-                                            <img src="assets/img/shape/combo-pizza-text.png" alt="shape-img">
-                                        </div>
-                                        <div class="pizza-image">
-                                            <img src="assets/img/food/big-pizza.png" alt="food-img">
-                                        </div>
-                                        <div class="offer-shape">
-                                            <img src="assets/img/offer/50percent-off-2.png" alt="shape-img">
-                                        </div>
-                                        <!-- <div class="vegetable-shape">
-                                            <img src="assets/img/shape/vegetable.png" alt="shape-img">
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                    <div class="comboo-image bg-cover" style="background-image: url('assets/img/banner/comboo-bg.jpg');">
-                                        <div class="pizza-text">
-                                            <img src="assets/img/shape/combo-pizza-text.png" alt="shape-img">
-                                        </div>
-                                        <div class="pizza-image">
-                                            <img src="assets/img/food/big-pizza.png" alt="food-img">
-                                        </div>
-                                        <div class="offer-shape">
-                                            <img src="assets/img/offer/50percent-off-2.png" alt="shape-img">
-                                        </div>
-                                        <!-- <div class="vegetable-shape">
-                                            <img src="assets/img/shape/vegetable.png" alt="shape-img">
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+     <section class="traditional-sweets-hero">
+        <div class="container">
+            <div class="traditional-content-wrapper">
+                <p class="traditional-tagline">CRISPY, EVERY BITE HANDCRAFTED, EVERY BITE TASTETASTE</p>
+                
+                <h1 class="traditional-main-heading">
+                    TRADITIONAL SWEETS<br>
+                    MADE WITH <span class="traditional-heading-highlight">PURE LOVE</span>
+                </h1>
+                
+                <p class="traditional-description-text">
+                    Discover authentic flavors crafted by master artisans using time-honored recipes passed down through 77 years of sweet-making excellence.
+                </p>
+                
+                <div class="traditional-features-container">
+                    <div class="traditional-feature-item">
+                       <img src="assets/img/pure and natural.png" alt="">
+                        <span class="traditional-feature-text">PURE GHEE & NATURAL INGREDIENTS ONLY</span>
+                    </div>
+                    
+                    <div class="traditional-feature-item featured-highlight">
+                        <img src="assets/img/years.png" alt="">
+                        <span class="traditional-feature-text">77 YEARS OF KUNDOOL'S SWEET LEGACY</span>
+                    </div>
+                    
+                    <div class="traditional-feature-item">
+                        <img src="assets/img/handcraft.png" alt="handcrafted">
+                        <span class="traditional-feature-text">HANDCRAFTED BY MASTER ARTISANS DAILY</span>
                     </div>
                 </div>
             </div>
-        </section>
+            
+            <div class="traditional-image-wrapper">
+                <img src="assets/img/traditionalsweets.png" alt="Traditional Indian Sweets" class="traditional-hero-image">
+            </div>
+        </div>
+    </section>
+
 
 
         <!-- Choose Us Section Start -->
@@ -998,7 +808,7 @@
         </section>
 
         <!-- KFC Banner Section Start -->
-        <section class="kfc-banner fix bg-cover section-padding" style="background-image: url('assets/img/bg-image/bg.jpg');">
+        <!-- <section class="kfc-banner fix bg-cover section-padding" style="background-image: url('assets/img/bg-image/bg.jpg');">
             <div class="kfc-wrapper">
                 <div class="container-fluid">
                     <div class="row justify-content-between">
@@ -1035,7 +845,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Testimonial Section Start -->
         <section class="testimonial-section fix section-padding section-bg">
@@ -1059,9 +869,9 @@
                                             <h4>Priya Sharma</h4>
                                             <h5>kurnool</h5>
                                         </div>
-                                        <h3>
+                                        <p>
                                             "G. Pullareddy Sweets has been part of our family celebrations for over 30 years. The taste remains consistently authentic and brings back childhood memories."
-                                        </h3>
+                                        </p>
                                         <div class="star">
                                             <span class="fas fa-star"></span>
                                             <span class="fas fa-star"></span>
@@ -1077,9 +887,9 @@
                                             <h4>Ramesh Kumar</h4>
                                             <h5>Banglore</h5>
                                         </div>
-                                        <h3>
+                                        <p>
                                             "Their Mysore Pak is absolutely divine! I've tried many places but nothing comes close to the original taste from G. Pullareddy."
-                                        </h3>
+                                        </p>
                                         <div class="star">
                                             <span class="fas fa-star"></span>
                                             <span class="fas fa-star"></span>
@@ -1095,9 +905,9 @@
                                             <h4>Anitha Reddy</h4>
                                             <h5>Mumbai</h5>
                                         </div>
-                                        <h3>
+                                        <p>
                                             "From corporate gifting to personal celebrations, G. Pullareddy has never let us down. Quality and taste are always top-notch."
-                                        </h3>
+                                        </p>
                                         <div class="star">
                                             <span class="fas fa-star"></span>
                                             <span class="fas fa-star"></span>
@@ -1166,7 +976,7 @@
         </section>
 
         <!-- Booking Section Start -->
-        <section class="booking-section fix section-padding bg-cover" style="background-image: url('assets/img/banner/main-bg.jpg');">
+        <!-- <section class="booking-section fix section-padding bg-cover" style="background-image: url('assets/img/banner/main-bg.jpg');">
             <div class="container">
                 <div class="booking-wrapper style-responsive section-padding pb-0">
                     <div class="row justify-content-between align-items-center">
@@ -1232,7 +1042,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Footer Section Start -->
         <footer class="footer-section fix section-bg">
@@ -1555,5 +1365,30 @@
             }
         }
     </script>
+    <script>
+        let delicaciesCurrentSlide = 0;
+        const delicaciesSlides = document.querySelectorAll('.delicacies-carousel-item');
+        const delicaciesTotalSlides = delicaciesSlides.length;
+
+        function delicaciesShowSlide(index) {
+            delicaciesSlides.forEach(slide => slide.classList.remove('delicacies-active'));
+            
+            if (index >= delicaciesTotalSlides) {
+                delicaciesCurrentSlide = 0;
+            } else if (index < 0) {
+                delicaciesCurrentSlide = delicaciesTotalSlides - 1;
+            } else {
+                delicaciesCurrentSlide = index;
+            }
+            
+            delicaciesSlides[delicaciesCurrentSlide].classList.add('delicacies-active');
+        }
+
+        function delicaciesMoveCarousel(direction) {
+            delicaciesShowSlide(delicaciesCurrentSlide + direction);
+        }
+    </script>
+
+    
     </body>
 </html>
