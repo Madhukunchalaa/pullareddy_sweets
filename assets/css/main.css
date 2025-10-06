@@ -5643,6 +5643,13 @@ input.main-search-input::placeholder {
   border-radius: 14px;
   padding: 70px 75px;
 }
+.single-food-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+}
 
 @media (max-width: 991px) {
   .food-icon-wrapper .single-food-icon {
@@ -5659,6 +5666,8 @@ input.main-search-input::placeholder {
 .food-icon-wrapper .single-food-icon .content h4 {
   color: var(--white);
   margin-bottom: 10px;
+  font-size: 19px;
+  text-align: center;
 }
 .food-icon-wrapper .single-food-icon .content p {
   color: var(--white);
