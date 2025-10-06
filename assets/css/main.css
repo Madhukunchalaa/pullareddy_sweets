@@ -11976,7 +11976,7 @@ p.sticky-label {
 
 .footer-bottom {
   padding: 35px 0;
-  background-color: var(--theme);
+ background-color: #AC1E23
 }
 @media (max-width: 767px) {
   .footer-bottom .footer-bottom-wrapper {
@@ -12795,4 +12795,182 @@ text-align: center;
 
 
 /* tradidtional sweets section */
- 
+     .heritage-sweets-showcase {
+            background: linear-gradient(to right, #ffe5e5 0%, #ffd9d9 50%, #ffe5e5 100%);
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .sweets-content-wrapper {
+            display: flex;
+            align-items: stretch;
+            min-height: 500px;
+        }
+
+        .sweets-info-panel {
+            flex: 0 0 45%;
+            padding: 60px 50px 60px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sweets-category-label {
+            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            color: #c62828;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .sweets-main-title {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 42px;
+            line-height: 1.1;
+            color: #1a1a1a;
+            margin-bottom: 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sweets-main-title .highlight-pure {
+            color: #c62828;
+        }
+
+        .sweets-description-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .sweets-features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sweets-feature-item {
+            background: #c62828;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 2px;
+            transition: background 0.3s ease;
+        }
+
+        .sweets-feature-item:hover {
+            background: #b71c1c;
+        }
+
+        .sweets-feature-icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sweets-feature-icon i {
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .sweets-feature-text {
+            font-family: 'Poppins', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .sweets-highlight-number {
+            font-weight: 700;
+        }
+
+        .sweets-visual-gallery {
+            flex: 0 0 55%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sweets-gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 991px) {
+            .sweets-content-wrapper {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .sweets-info-panel {
+                flex: 1;
+                padding: 50px 40px;
+            }
+
+            .sweets-visual-gallery {
+                flex: 1;
+                min-height: 400px;
+            }
+
+            .sweets-main-title {
+                font-size: 38px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .sweets-info-panel {
+                padding: 40px 30px;
+            }
+
+            .sweets-main-title {
+                font-size: 32px;
+            }
+
+            .sweets-feature-item {
+                padding: 15px 18px;
+            }
+
+            .sweets-feature-text {
+                font-size: 10px;
+            }
+
+            .sweets-description-text {
+                font-size: 12px;
+            }
+
+            .sweets-visual-gallery {
+                min-height: 350px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .sweets-info-panel {
+                padding: 30px 20px;
+            }
+
+            .sweets-main-title {
+                font-size: 28px;
+            }
+
+            .sweets-category-label {
+                font-size: 9px;
+            }
+
+            .sweets-visual-gallery {
+                min-height: 300px;
+            }
+        }
