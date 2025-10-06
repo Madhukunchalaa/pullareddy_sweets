@@ -5205,6 +5205,7 @@ input.main-search-input::placeholder {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  font-family: 'Font Awesome 5 Pro';
 }
 
 .theme-bg {
@@ -5639,7 +5640,7 @@ input.main-search-input::placeholder {
 }
 
 .food-icon-wrapper {
-  background-color: #E85C5C;
+  background-color: #AC1E23;
   border-radius: 14px;
   padding: 70px 75px;
 }
@@ -8473,8 +8474,7 @@ input.main-search-input::placeholder {
   position: relative;
 }
 .main-cta-banner::before {
-  position: absolute;
-  top: -12px;
+
   left: 0;
   right: 0;
   bottom: 0;
@@ -12238,15 +12238,16 @@ p.sticky-label {
 
         .delicacies-tagline {
             color: #d32f2f;
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+           
+            margin-bottom: 5px;
            
         }
 
 .delicacies-main-heading {
-font-size: 35px;
+font-size: 31px;
 font-weight: bolder;
 color: #1a1a1a;
 text-transform: uppercase;
@@ -12254,6 +12255,7 @@ text-transform: uppercase;
 vertical-align: middle;
 letter-spacing: 0%;
 text-align: center;
+margin-bottom: 5px;
 }
 
 
@@ -12285,6 +12287,7 @@ text-align: center;
             letter-spacing: 1px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            border-radius: 7px;
         }
 
         .delicacies-cta-btn:hover {
@@ -12561,7 +12564,7 @@ text-align: center;
             stroke-linejoin: round;
         }
 /* popular sweets section */
- .sweet-tradition-section {
+  .sweet-tradition-section {
             padding: 60px 20px;
             background-color: #f8f8f8;
         }
@@ -12608,7 +12611,7 @@ text-align: center;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, background-color 0.25s ease, color 0.25s ease;
         }
 
         .jaggery-collection-card:hover {
@@ -12651,34 +12654,46 @@ text-align: center;
             font-weight: 600;
             text-transform: uppercase;
             cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-
-
-.jaggery-collection-card:nth-child(1) .jaggery-explore-btn {
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
             background-color: #c42a2a;
             color: #fff;
+            height: 37px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .jaggery-collection-card:nth-child(2) .jaggery-explore-btn {
-            background-color: #c42a2a;
-            color: #fff;
-        }
-
-        .jaggery-collection-card:nth-child(3) .jaggery-explore-btn {
-            background-color: #c42a2a;
-            color: #fff;
-        }
-
-        .jaggery-collection-card:nth-child(4) .jaggery-explore-btn {
-             background-color: #c42a2a;
-            color: #fff;
-        }
-
-        .jaggery-explore-btn:hover {
-            opacity: 0.9;
+        .jaggery-explore-btn:hover,
+        .jaggery-explore-btn:focus {
+            opacity: 0.95;
             transform: scale(1.02);
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        /* Modern CSS solution (use :has) */
+        .jaggery-collection-card:has(.jaggery-explore-btn:hover),
+        .jaggery-collection-card:has(.jaggery-explore-btn:focus) {
+            background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-category-title,
+        .jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-category-title,
+        .jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-product-count,
+        .jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-product-count {
+            color: #fff;
+        }
+
+        /* JS fallback class (for older browsers) */
+        .jaggery-collection-card.btn-hover {
+            background-color: #c42a2a;
+            color: #fff;
+        }
+
+        .jaggery-collection-card.btn-hover .jaggery-category-title,
+        .jaggery-collection-card.btn-hover .jaggery-product-count {
+            color: #fff;
         }
 
         .sweet-view-more-container {
@@ -12704,6 +12719,11 @@ text-align: center;
             background-color: #a02626;
         }
 
+        /* Hide the second row initially */
+        .hidden-row {
+            display: none !important;
+        }
+
         @media (max-width: 768px) {
             .sweet-tradition-title {
                 font-size: 32px;
@@ -12714,84 +12734,6 @@ text-align: center;
                 gap: 20px;
             }
         }
-  .jaggery-collection-card:nth-child(1) .jaggery-explore-btn:hover,
-.jaggery-collection-card:nth-child(2) .jaggery-explore-btn:hover,
-.jaggery-collection-card:nth-child(3) .jaggery-explore-btn:hover,
-.jaggery-collection-card:nth-child(4) .jaggery-explore-btn:hover {
-    background-color: #1a1a1a !important;
-    color: #fff;
-}
-/* .jaggery-collection-card:nth-child(1):hover,
-.jaggery-collection-card:nth-child(2):hover,
-.jaggery-collection-card:nth-child(3):hover,
-.jaggery-collection-card:nth-child(4):hover {
-    background-color: #c42a2a !important;
-    color: #fff !important;
-} */
-/* --- keep existing base styles (you already have these) --- */
-.jaggery-collection-card {
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, background-color 0.25s ease, color 0.25s ease;
-}
-
-/* Keep the lift on card hover, but DO NOT change bg here */
-.jaggery-collection-card:hover {
-  transform: translateY(-5px);
-}
-
-/* Button default */
-.jaggery-explore-btn {
-  display: block;
-  width: 100%;
-  padding: 12px 0;
-  border: none;
-  border-radius: 25px;
-  font-size: 14px;
-  font-weight: 600;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-  background-color: #c42a2a; /* keep this as your button red */
-  color: #fff;
-}
-
-/* button hover visual (still darken the button) */
-.jaggery-explore-btn:hover,
-.jaggery-explore-btn:focus {
-  opacity: 0.95;
-  transform: scale(1.02);
-  background-color: #1a1a1a;
-  color: #fff;
-}
-
-/* --------- Modern CSS solution (use :has) --------- */
-/* When the button inside the card is hovered or focused, change the parent */
-.jaggery-collection-card:has(.jaggery-explore-btn:hover),
-.jaggery-collection-card:has(.jaggery-explore-btn:focus) {
-  background-color: #c42a2a;
-  color: #fff; /* ensures inherited text becomes white */
-}
-
-/* Make specific child text white when parent is in "button-hover state" */
-.jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-category-title,
-.jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-category-title,
-.jaggery-collection-card:has(.jaggery-explore-btn:hover) .jaggery-product-count,
-.jaggery-collection-card:has(.jaggery-explore-btn:focus) .jaggery-product-count {
-  color: #fff;
-}
-
-/* --------- JS fallback class (for older browsers) --------- */
-.jaggery-collection-card.btn-hover {
-  background-color: #c42a2a;
-  color: #fff;
-}
-.jaggery-collection-card.btn-hover .jaggery-category-title,
-.jaggery-collection-card.btn-hover .jaggery-product-count {
-  color: #fff;
-}
 
 
 /* tradidtional sweets section */
@@ -12814,11 +12756,12 @@ text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            
         }
 
         .sweets-category-label {
             
-            font-size: 10px;
+            font-size: 18px;
             font-weight: 600;
             color: #c62828;
             text-transform: uppercase;
@@ -12842,7 +12785,7 @@ text-align: center;
 
         .sweets-description-text {
          
-            font-size: 13px;
+            font-size: 18px;
             line-height: 1.6;
             color: #666;
             margin-bottom: 30px;
@@ -12852,7 +12795,7 @@ text-align: center;
         .sweets-features-list {
             display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 18px;
         }
 
         .sweets-feature-item {

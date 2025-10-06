@@ -422,10 +422,11 @@
             <div class="col-lg-4">
                 <div class="delicacies-hero-section">
                     <div class="delicacies-content-wrapper">
-                        <p class="delicacies-tagline">An explosion of flavor with every bite.</p>
-                        <h1 class="delicacies-main-heading">Most Loved Delicacies</h1>
+                        <p class="delicacies-tagline">TRADITION MEETS TASTE IN EVERY CREATION</p>
+                        <h1 class="delicacies-main-heading">SIGNATURE SWEET COLLECTION</h1>
                         <p class="delicacies-description">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                            From our kitchen to your celebrations, discover sweets that have delighted generations. Made fresh daily using time-honored recipes and the finest natural ingredients sourced from trusted local suppliers.
+
                         </p>
                         <button class="delicacies-cta-btn">Explore More</button>
                     </div>
@@ -601,7 +602,7 @@
        
 
         <!-- Food Catagory Section Start -->
-         <section class="sweet-tradition-section">
+        <section class="sweet-tradition-section">
         <div class="sweet-tradition-header">
             <h1 class="sweet-tradition-title">
                 <span class="sweet-tradition-title-black">A SWEET TRADITION </span>
@@ -613,7 +614,7 @@
             </p>
         </div>
 
-        <div class="sweet-collections-grid">
+        <div class="sweet-collections-grid" id="collectionsGrid">
             <div class="jaggery-collection-card">
                 <img src="assets/img/jaggery-laddu.png" alt="Jaggery Sweets" class="jaggery-product-image">
                 <div class="jaggery-card-content">
@@ -626,7 +627,7 @@
             <div class="jaggery-collection-card">
                 <img src="assets/img/jaggery-curry.png" alt="Jaggery Sweets" class="jaggery-product-image">
                 <div class="jaggery-card-content">
-                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <h3 class="jaggery-category-title">SPICY POWDERS</h3>
                     <p class="jaggery-product-count">5 Products</p>
                     <button class="jaggery-explore-btn">Explore More</button>
                 </div>
@@ -635,24 +636,61 @@
             <div class="jaggery-collection-card">
                 <img src="assets/img/jsggery-biscuits.png" alt="Jaggery Sweets" class="jaggery-product-image">
                 <div class="jaggery-card-content">
-                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <h3 class="jaggery-category-title">CAKE AND COOKIE TREATS</h3>
                     <p class="jaggery-product-count">5 Products</p>
                     <button class="jaggery-explore-btn">Explore More</button>
                 </div>
             </div>
 
             <div class="jaggery-collection-card">
-                <img src="assets/img/jaggery sweets.jpg" alt="Jaggery Sweets" class="jaggery-product-image">
+                <img src="assets/img/dry_fruit_sweets.webp" alt="Jaggery Sweets" class="jaggery-product-image">
                 <div class="jaggery-card-content">
-                    <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
+                    <h3 class="jaggery-category-title">DRY FRUIT SWEETS</h3>
                     <p class="jaggery-product-count">5 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <!-- Hidden row - will be shown on "VIEW MORE" click -->
+            <div class="jaggery-collection-card hidden-row" data-row="2">
+                <img src="assets/img/sweets.png" alt="Traditional Sweets" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">CLASSIC BAKLAVAS</h3>
+                    <p class="jaggery-product-count">8 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <div class="jaggery-collection-card hidden-row" data-row="2">
+                <img src="assets/img/signature.png" alt="Festival Specials" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">Signature Specialities</h3>
+                    <p class="jaggery-product-count">6 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <div class="jaggery-collection-card hidden-row" data-row="2">
+                <img src="assets/img/khara.png" alt="Premium Collection" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">KHARA AND SNACKS</h3>
+                    <p class="jaggery-product-count">10 Products</p>
+                    <button class="jaggery-explore-btn">Explore More</button>
+                </div>
+            </div>
+
+            <div class="jaggery-collection-card hidden-row" data-row="2">
+                <img src="assets/img/traditiona-pics.png" alt="Gift Boxes" class="jaggery-product-image">
+                <div class="jaggery-card-content">
+                    <h3 class="jaggery-category-title">TRADITIONAL PICKELS</h3>
+                    <p class="jaggery-product-count">12 Products</p>
                     <button class="jaggery-explore-btn">Explore More</button>
                 </div>
             </div>
         </div>
 
         <div class="sweet-view-more-container">
-            <button class="sweet-view-more-btn">VIEW MORE</button>
+            <button class="sweet-view-more-btn" id="viewMoreBtn">VIEW MORE</button>
         </div>
     </section>
 
@@ -661,7 +699,7 @@
         <div class="sweets-content-wrapper">
             <!-- Left Content Panel -->
             <div class="sweets-info-panel">
-                <p class="sweets-category-label">Simple, Pure and Handcrafted, Taste and Tastefully</p>
+                <p class="sweets-category-label">crispy, every bite HANDCRAFTED, EVERY BITE TASTEtaste</p>
                 
                 <h2 class="sweets-main-title">
                     Traditional Sweets<br>
@@ -865,102 +903,81 @@
         </section> -->
 
         <!-- Testimonial Section Start -->
-        <section class="testimonial-section fix section-padding section-bg">
-            <!-- <div class="burger-shape">
-                <img src="assets/img/shape/burger-shape-3.png" alt="burger-shape">
-            </div>
-            <div class="fry-shape">
-                <img src="assets/img/shape/fry-shape-2.png" alt="burger-shape">
-            </div>
-            <div class="pizza-shape">
-                <img src="assets/img/shape/pizzashape.png" alt="burger-shape">
-            </div> -->
-            <div class="container">
-                <div class="testimonial-wrapper style-responsive">
-                    <div class="testimonial-items text-center">
-                        <div class="swiper testimonial-content-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="testimonial-content">
-                                        <div class="client-info">
-                                            <h4>Priya Sharma</h4>
-                                            <h5>kurnool</h5>
-                                        </div>
-                                        <p>
-                                            "G. Pullareddy Sweets has been part of our family celebrations for over 30 years. The taste remains consistently authentic and brings back childhood memories."
-                                        </p>
-                                        <div class="star">
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                        </div>
-                                    </div>
+       <section class="testimonial-section fix section-padding section-bg">
+           <!-- <h1>Testimonials</h1> -->
+    <div class="container">
+        <div class="testimonial-heading text-center">
+        </div>
+        
+        <div class="testimonial-wrapper style-responsive">
+            <div class="testimonial-items text-center">
+                <div class="swiper testimonial-content-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-content">
+                                <div class="client-info">
+                                    <h4>Priya Sharma</h4>
+                                    <h5>kurnool</h5>
                                 </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-content">
-                                        <div class="client-info">
-                                            <h4>Ramesh Kumar</h4>
-                                            <h5>Banglore</h5>
-                                        </div>
-                                        <p>
-                                            "Their Mysore Pak is absolutely divine! I've tried many places but nothing comes close to the original taste from G. Pullareddy."
-                                        </p>
-                                        <div class="star">
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="testimonial-content">
-                                        <div class="client-info">
-                                            <h4>Anitha Reddy</h4>
-                                            <h5>Mumbai</h5>
-                                        </div>
-                                        <p>
-                                            "From corporate gifting to personal celebrations, G. Pullareddy has never let us down. Quality and taste are always top-notch."
-                                        </p>
-                                        <div class="star">
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                            <span class="fas fa-star"></span>
-                                        </div>
-                                    </div>
+                                <p>
+                                    "G. Pullareddy Sweets has been part of our family celebrations for over 30 years. The taste remains consistently authentic and brings back childhood memories."
+                                </p>
+                                <div class="star">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
                                 </div>
                             </div>
-                            <div class="swiper testimonial-image-slider">
-                                <div class="swiper-wrapper">
-                                    <!-- <div class="swiper-slide">
-                                        <div class="client-image-item">
-                                            <div class="client-img bg-cover" style="background-image: url('assets/img/client/01.jpg')"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-image-item">
-                                            <div class="client-img bg-cover" style="background-image: url('assets/img/client/02.jpg')"></div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="client-image-item">
-                                            <div class="client-img bg-cover" style="background-image: url('assets/img/client/03.jpg')"></div>
-                                        </div>
-                                    </div> -->
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-content">
+                                <div class="client-info">
+                                    <h4>Ramesh Kumar</h4>
+                                    <h5>Banglore</h5>
                                 </div>
-                                <!-- <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div> -->
+                                <p>
+                                    "Their Mysore Pak is absolutely divine! I've tried many places but nothing comes close to the original taste from G. Pullareddy."
+                                </p>
+                                <div class="star">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                </div>
                             </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-content">
+                                <div class="client-info">
+                                    <h4>Anitha Reddy</h4>
+                                    <h5>Mumbai</h5>
+                                </div>
+                                <p>
+                                    "From corporate gifting to personal celebrations, G. Pullareddy has never let us down. Quality and taste are always top-notch."
+                                </p>
+                                <div class="star">
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                    <span class="fas fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper testimonial-image-slider">
+                        <div class="swiper-wrapper">
+                            <!-- Image slides commented out as in original -->
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <!-- Main Cta Banner Section Start -->
         <section class="main-cta-banner section-padding pt-0">
@@ -1067,7 +1084,7 @@
             <div class="container">
                 <div class="footer-widgets-wrapper">
                     <div class="row">
-                        <div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="col-xl-4 col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay=".2s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <a href="index.html">
@@ -1090,7 +1107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-2 ps-lg-5 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="col-xl-3 ps-lg-5 col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay=".4s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h4>Quick Links</h4>
@@ -1099,32 +1116,32 @@
                                     <li>
                                         <a href="about.html"> 
                                         <span class="text-effect">
-                                        <span class="effect-1">Services</span>
-                                        <span class="effect-1">Services</span>
+                                        <span class="effect-1">About Us</span>
+                                        <span class="effect-1">About Us</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="about.html">
                                         <span class="text-effect">
-                                        <span class="effect-1">About company</span>
-                                        <span class="effect-1">About company</span>
+                                        <span class="effect-1">contact us</span>
+                                        <span class="effect-1">contact us</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="news-details.html">
                                         <span class="text-effect">
-                                        <span class="effect-1">latest news</span>
-                                        <span class="effect-1">latest news</span>
+                                        <span class="effect-1">Products</span>
+                                        <span class="effect-1">Products</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="team.html">
                                         <span class="text-effect">
-                                        <span class="effect-1">team member</span>
-                                        <span class="effect-1">team member</span>
+                                        <span class="effect-1">Gallery</span>
+                                        <span class="effect-1">Gallery</span>
                                         </span>
                                         </a>
                                     </li>
@@ -1139,49 +1156,50 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-2 ps-lg-4 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="col-xl-3 ps-lg-4 col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-delay=".6s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
-                                    <h4>My account</h4>
+                                    <h4>Products</h4>
                                 </div>
                                 <ul class="list-items">
                                     <li>
                                         <a href="">
                                         <span class="text-effect">
-                                        <span class="effect-1">My Profile</span>
-                                        <span class="effect-1">My Profile</span>
+                                        <span class="effect-1">All Products</span>
+                                         <span class="effect-1">All Products</span>
+                                      
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                         <span class="text-effect">
-                                        <span class="effect-1">My Order History</span>
-                                        <span class="effect-1">My Order History</span>
+                                          <span class="effect-1">Cake and Cookie Treats</span>
+                                          <span class="effect-1">Cake and Cookie Treats</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                         <span class="text-effect">
-                                        <span class="effect-1">My Wish List</span>
-                                        <span class="effect-1">My Wish List</span>
+                                        <span class="effect-1">classic Baklavas</span>
+                                        <span class="effect-1">classic Baklavas</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                         <span class="text-effect">
-                                        <span class="effect-1">Order Tracking</span>
-                                        <span class="effect-1">Order Tracking</span>
+                                        <span class="effect-1">jaggery sweets</span>
+                                        <span class="effect-1">jaggery sweets</span>
                                         </span>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="">
                                         <span class="text-effect">
-                                        <span class="effect-1">Shopping Cart</span>
-                                        <span class="effect-1">Shopping Cart</span>
+                                        <span class="effect-1">Khara and snacks</span>
+                                        <span class="effect-1">Khara and snacks</span>
                                         </span>
                                         </a>
                                     </li>
@@ -1191,39 +1209,22 @@
                         <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".8s">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
-                                    <h4>Address:</h4>
+                                    <h4>Corporate Office</h4>
                                 </div>
                                 <div class="footer-address-text">
+                                    <b>G Pulla Reddy Sweets</b>
                                     <h6>
-                                        570 8th Ave, New York,NY <span>10018</span>
-                                        United States
+                                        kurnool <span></span>
+                                       Andhra Pradesh
                                     </h6>
                                     <h5>Hours:</h5>
                                     <h6>
-                                        9.30am – 6.30pm <br>
-                                        Monday to Friday
+                                       +91 XXXXXXXXX
                                     </h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 ps-xl-5 col-sm-6 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".9s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Install app</h4>
-                                </div>
-                                <div class="footer-apps-items">
-                                    <h5>From App Store or Google Play</h5>
-                                    <div class="apps-image d-flex align-items-center">
-                                        <a href="#"><img src="assets/img/app-store.png" alt="store-img"></a>
-                                        <a href="#"><img src="assets/img/google-play.png" alt="store-img"></a>
-                                    </div>
-                                    <div class="support-text">
-                                        <h5>24/7 Support center</h5>
-                                        <h3><a href="tel:+1718-904-4450">+1718-904-4450</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1231,7 +1232,7 @@
                 <div class="container">
                     <div class="footer-bottom-wrapper d-flex align-items-center justify-content-between">
                         <p class="wow fadeInLeft" data-wow-delay=".3s">
-                            © Copyright <span class="theme-color-3">2024</span> <a href="index.html">Foodking </a>. All Rights Reserved.
+                            © Copyright <span class="theme-color-3">2025</span> <a href="index.html">G Pullareddy </a>. All Rights Reserved.
                         </p>
                         <div class="card-image wow fadeInRight" data-wow-delay=".5s">
                             <img src="assets/img/card.png" alt="card-img">
@@ -1404,6 +1405,20 @@
         function delicaciesMoveCarousel(direction) {
             delicaciesShowSlide(delicaciesCurrentSlide + direction);
         }
+    </script>
+     <script>
+        const viewMoreBtn = document.getElementById('viewMoreBtn');
+        const hiddenCards = document.querySelectorAll('.hidden-row');
+
+        viewMoreBtn.addEventListener('click', function() {
+            hiddenCards.forEach(card => {
+                card.classList.remove('hidden-row');
+                card.classList.add('show-row');
+            });
+            
+            // Hide the button after showing more items
+            viewMoreBtn.style.display = 'none';
+        });
     </script>
 
     
