@@ -12926,3 +12926,62 @@ margin-bottom: 5px;
   color: white;
   transition: color 0.3s ease; /* smooth fade */
 }
+
+
+/* Parent container */
+.regional-dropdown {
+  position: relative;
+}
+
+/* Side dropdown — tighter alignment */
+.regional-side-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 95%; /* reduce this to bring closer */
+  transform: translateX(-153px); /* pulls dropdown slightly toward parent */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  min-width: 180px;
+  z-index: 9999;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 5px 0;
+}
+
+/* Dropdown links */
+.regional-side-menu li a {
+  display: block;
+  padding: 0px 15px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.regional-side-menu li a:hover {
+  background-color: #f8f8f8;
+  color: #e67e22;
+}
+
+/* Hover to show */
+.regional-dropdown:hover .regional-side-menu {
+  display: block;
+}
+
+/* Optional arrow for Regional */
+.regional-toggle::after {
+  content: " ▶";
+  font-size: 0.7em;
+}
+.category-heading {
+    display: none;
+    margin-top: -43px;
+    margin-bottom: 20px;
+   
+
+}
+.category-heading h2{
+   color: #B71C1C;
+
+}
