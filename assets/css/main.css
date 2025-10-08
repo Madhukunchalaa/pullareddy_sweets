@@ -11,7 +11,7 @@ Version: 2.0.0
   --body: #fff;
   --black: #000;
   --white: #fff;
-  --theme: #00813D;
+  --theme: #AC1E23;
   --theme2: #D12525;
   --theme3: #FFB936;
   --header: #212121;
@@ -12222,12 +12222,10 @@ p.sticky-label {
 
  .delicacies-hero-section {
             background-color:#FFEEEE;
-            padding: 60px 20px;
-            min-height: 400px;
+            padding: 50px 20px;
             display: flex;
             align-items: center;
             margin-right: 20px;
-            height: 443px;
             width: 417px;
            justify-content: center;
         }
@@ -12302,7 +12300,7 @@ margin-bottom: 5px;
         .delicacies-carousel-wrapper {
             border: 2px solid #B71C1C;
             border-radius: 15px;
-            padding: 62px 24px 52px;
+             padding: 21px 24px 12px;
             background-color: white;
             position: relative;
         }
@@ -12441,11 +12439,10 @@ margin-bottom: 5px;
 
         .heritage-welcome-tag {
             color: #d32f2f;
-            font-size: 14px;
+            font-size: 27px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
+            
         }
 
         .heritage-main-title {
@@ -12747,7 +12744,7 @@ margin-bottom: 5px;
             display: flex;
             align-items: stretch;
             min-height: 500px;
-            padding: 60px;
+            
         }
 
         .sweets-info-panel {
