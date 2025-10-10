@@ -13416,4 +13416,103 @@ margin-bottom: 5px;
             .heritage-header-tagline {
                 font-size: 12px;
             }
+          }
+  #map {
+      height: 500px;
+      width: 100%;
+    }
+
+
+     .contact-info-items {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .icon {
+            margin-bottom: 20px;
+        }
+
+        .icon img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .content h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+            text-transform: uppercase;
+        }
+
+        .address-carousel {
+            position: relative;
+            min-height: 180px;
+        }
+
+        .carousel-item {
+            display: none;
+            text-align: center;
+            padding: 10px;
+            animation: fadeIn 0.5s;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .carousel-item h4 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .carousel-item p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: -87px;
+        }
+
+       
+
+        .carousel-btn:hover {
+            background: #b71c1c;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            gap: 8px;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .indicator.active {
+            background: #d32f2f;
+            width: 25px;
+            border-radius: 5px;
         }

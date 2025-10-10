@@ -167,17 +167,49 @@
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="contact-info-items text-center">
-                            <div class="icon">
-                                <img src="assets/img/icon/location.svg" alt="icon-img">
-                            </div>
-                            <div class="content">
-                                <h3>address line</h3>
-                                <p>
-                                    Bowery St, New York, 37 USA <br>
-                                    NY 10013,USA 
-                                </p>
-                            </div>
-                        </div>
+        <div class="icon">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#AC1E23" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </div>
+        <div class="content">
+            <h3>Our Locations</h3>
+            
+            <div class="address-carousel">
+                <div class="carousel-item active">
+                    <h4>Sri Nagar Colony (B Camp)</h4>
+                    <p>R23W+P6Q, Sri Nagar Colony, B Camp,<br>Kurnool, Andhra Pradesh 518002</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <h4>Collectorate Complex</h4>
+                    <p>Shop No:7, Collectorate Complex,<br>Kurnool, Andhra Pradesh 518002</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <h4>Raj Vihar Road (Dharma Pet)</h4>
+                    <p>R2HQ+HC2, Raj Vihar Road, Dharma Pet,<br>Kurnool, Andhra Pradesh 518001</p>
+                </div>
+                
+                <div class="carousel-item">
+                    <h4>New Bus Stand (Sita Rama Nagar)</h4>
+                    <p>Ward No. 51, New Bus Stand Rd, Sita Rama Nagar,<br>Kurnool, Andhra Pradesh 518003</p>
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn"></button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                </div>
+                <button class="carousel-btn" id="nextBtn"></button>
+            </div>
+        </div>
+    </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="contact-info-items active text-center">
@@ -185,12 +217,15 @@
                                 <img src="assets/img/icon/phone.svg" alt="icon-img">
                             </div>
                             <div class="content">
-                                <h3>Phone Number</h3>
-                                <p>
-                                    +1255 - 568 - 6523 4374-221 <br>
-                                    +1255 - 568 - 6523
-                                </p>
-                            </div>
+  <h3>Phone Number</h3>
+  <p>
+    <a href="tel:+9108518244188">+91 085182 44188</a><br>
+    <a href="tel:+9108518224333">085182 24333</a><br>
+    <a href="tel:+9108518221445">085182 21445</a><br>
+    <a href="tel:+9108518649359">085186 49359</a>
+  </p>
+</div>
+
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
@@ -202,7 +237,9 @@
                                 <h3>Mail Adress</h3>
                                 <p>
                                     email@example.com <br>
-                                    info@yourdomain.com
+                                    info@yourdomain.com <br>
+                                     
+
                                 </p>
                             </div>
                         </div>
@@ -217,16 +254,7 @@
                 <div class="contact-area">
                     <div class="row justify-content-between">
                         <div class="col-xl-6 col-lg-6">
-                            <div class="map-content-area">
-                                <h3 class="wow fadeInUp" data-wow-delay=".3s"> Get in touch</h3>
-                                <p class="wow fadeInUp" data-wow-delay=".5s">
-                                    Lorem ipsum dolor sit amet consectetur adipiscing elit mattis <br>
-                                    faucibus odio feugiat arc dolor.
-                                </p>
-                                <div class="google-map wow fadeInUp" data-wow-delay=".7s">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                </div>
-                            </div>
+                            <div id="map"></div>
                         </div>
                         <div class="col-xl-5 col-lg-5 mt-5 mt-lg-0">
                             <div class="contact-form-items">
@@ -280,189 +308,7 @@
     
 
         <!-- Footer Section Start -->
-        <footer class="footer-section fix section-bg">
-            <div class="burger-shape">
-                <img src="assets/img/shape/burger-shape-3.png" alt="burger-shape">
-            </div>
-            <div class="fry-shape">
-                <img src="assets/img/shape/fry-shape-2.png" alt="burger-shape">
-            </div>
-            <div class="container">
-                <div class="footer-widgets-wrapper">
-                    <div class="row">
-                        <div class="col-xl-3 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".2s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <a href="index.html">
-                                    <img src="assets/img/logo/logo.svg" alt="logo-img">
-                                    </a>
-                                </div>
-                                <div class="footer-content">
-                                    <p>
-                                        We believe it has the power to do <br>
-                                        amazing things.
-                                    </p>
-                                    <span>Interested in working with us?</span> <br>
-                                    <a href="mailto:info@example.com" class="link">info@example.com</a>
-                                    <div class="social-icon d-flex align-items-center">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 ps-lg-5 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".4s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Quick Links</h4>
-                                </div>
-                                <ul class="list-items">
-                                    <li>
-                                        <a href="about.html"> 
-                                        <span class="text-effect">
-                                        <span class="effect-1">Services</span>
-                                        <span class="effect-1">Services</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">About company</span>
-                                        <span class="effect-1">About company</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="news-details.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">latest news</span>
-                                        <span class="effect-1">latest news</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="team.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">team member</span>
-                                        <span class="effect-1">team member</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="testimonial.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">testimonials</span>
-                                        <span class="effect-1">testimonials</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 ps-lg-4 col-sm-6 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay=".6s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>My account</h4>
-                                </div>
-                                <ul class="list-items">
-                                    <li>
-                                        <a href="shop-single.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">My Profile</span>
-                                        <span class="effect-1">My Profile</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-single.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">My Order History</span>
-                                        <span class="effect-1">My Order History</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-single.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">My Wish List</span>
-                                        <span class="effect-1">My Wish List</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-single.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">Order Tracking</span>
-                                        <span class="effect-1">Order Tracking</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-cart.html">
-                                        <span class="text-effect">
-                                        <span class="effect-1">Shopping Cart</span>
-                                        <span class="effect-1">Shopping Cart</span>
-                                        </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-sm-6 col-md-6 col-lg-3 wow fadeInUp" data-wow-delay=".8s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Address:</h4>
-                                </div>
-                                <div class="footer-address-text">
-                                    <h6>
-                                        570 8th Ave, New York,NY <span>10018</span>
-                                        United States
-                                    </h6>
-                                    <h5>Hours:</h5>
-                                    <h6>
-                                        9.30am – 6.30pm <br>
-                                        Monday to Friday
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 ps-xl-5 col-sm-6 col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".9s">
-                            <div class="single-footer-widget">
-                                <div class="widget-head">
-                                    <h4>Install app</h4>
-                                </div>
-                                <div class="footer-apps-items">
-                                    <h5>From App Store or Google Play</h5>
-                                    <div class="apps-image d-flex align-items-center">
-                                        <a href="#"><img src="assets/img/app-store.png" alt="store-img"></a>
-                                        <a href="#"><img src="assets/img/google-play.png" alt="store-img"></a>
-                                    </div>
-                                    <div class="support-text">
-                                        <h5>24/7 Support center</h5>
-                                        <h3><a href="tel:+1718-904-4450">+1718-904-4450</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="footer-bottom-wrapper d-flex align-items-center justify-content-between">
-                        <p class="wow fadeInLeft" data-wow-delay=".3s">
-                            © Copyright <span class="theme-color-3">2024</span> <a href="index.html">Foodking </a>. All Rights Reserved.
-                        </p>
-                        <div class="card-image wow fadeInRight" data-wow-delay=".5s">
-                            <img src="assets/img/card.png" alt="card-img">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <div id="footer-placeholder"></div>
 
         <!-- Back To Top Start -->
         <div class="scroll-up">
@@ -470,6 +316,7 @@
                 <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
             </svg>
         </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs0-vap2LfiERRcjwAFdrplwDWxpR2q6I" defer></script>
         <script>
   fetch('header.html')
     .then(response => response.text())
@@ -479,6 +326,126 @@
     .then(response => response.text())
     .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 </script>
+<script>
+  function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: { lat: 15.828909056714716, lng: 78.03853680888801 }
+    });
+
+    const locations = [
+      {
+        name: "G. Pulla Reddy Sweets - Sri Nagar Colony (B Camp)",
+        lat: 15.804352296953725,
+        lng: 78.04562502230274,
+        address: "R23W+P6Q, Sri Nagar Colony, B Camp, Kurnool, Andhra Pradesh 518002"
+      },
+      {
+        name: "G. Pulla Reddy Sweets - Collectorate Complex",
+        lat: 15.817788799490753,
+        lng: 78.04062610547831,
+        address: "Shop No:7, Collectorate Complex, Kurnool, Andhra Pradesh 518002"
+      },
+      {
+        name: "G. Pulla Reddy Sweets - Raj Vihar Road (Dharma Pet)",
+        lat: 15.828909056714716,
+        lng: 78.03853680888801,
+        address: "R2HQ+HC2, Raj Vihar Road, Dharma Pet, Kurnool, Andhra Pradesh 518001"
+      },
+      {
+        name: "G. Pulla Reddy Sweets - New Bus Stand (Sita Rama Nagar)",
+        lat: 15.82570943411368,
+        lng: 78.02683939705233,
+        address: "Ward No. 51, New Bus Stand Rd, Sita Rama Nagar, Kurnool, Andhra Pradesh 518003"
+      }
+    ];
+
+    const bounds = new google.maps.LatLngBounds();
+
+    locations.forEach(loc => {
+      const marker = new google.maps.Marker({
+        position: { lat: loc.lat, lng: loc.lng },
+        map: map,
+        title: loc.name
+      });
+
+      const infoWindow = new google.maps.InfoWindow({
+        content: `
+          <div style="font-size:14px;">
+            <h4>${loc.name}</h4>
+            <p>${loc.address}</p>
+            <a href="https://www.google.com/maps?q=${loc.lat},${loc.lng}" target="_blank" style="color:#0066cc;">
+              📍 Open Exact Location in Google Maps
+            </a>
+          </div>
+        `
+      });
+
+      marker.addListener("click", () => infoWindow.open(map, marker));
+      bounds.extend(marker.getPosition());
+    });
+
+    map.fitBounds(bounds);
+  }
+
+  window.addEventListener("load", initMap);
+</script>
+ <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('.indicator');
+        const totalItems = items.length;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            items.forEach(item => item.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            items[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+            showSlide(currentIndex);
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Event Listeners
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                showSlide(currentIndex);
+                resetAutoSlide();
+            });
+        });
+
+        // Start auto-slide
+        startAutoSlide();
+    </script>
         
         <!--<< All JS Plugins >>-->
         <script src="assets/js/jquery-3.7.1.min.js"></script>
