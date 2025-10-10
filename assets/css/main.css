@@ -6742,10 +6742,10 @@ input.main-search-input::placeholder {
 .main-sidebar .single-sidebar-widget .widget-categories ul li:not(:last-child) {
   margin-bottom: 20px;
 }
-.main-sidebar .single-sidebar-widget .widget-categories ul li a i {
-  font-size: 20px;
+.main-sidebar .single-sidebar-widget .widget-categories ul li a img {
+  width: 25px;
   color: var(--header);
-  margin-right: 20px;
+  margin-right: 17px;
 }
 .main-sidebar .single-sidebar-widget .range__barcustom .price-input {
   margin-top: 30px;
