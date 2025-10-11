@@ -13331,10 +13331,10 @@ margin-bottom: 5px;
             background-color: #fff;
         }
 
-        .heritage-header-tagline {
+        .heritage-header-tagline-about {
             text-align: center;
             color: #c7302b;
-            font-family: 'Roboto', sans-serif;
+           
             font-size: 14px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -13342,9 +13342,9 @@ margin-bottom: 5px;
             text-transform: uppercase;
         }
 
-        .heritage-main-title {
+        .heritage-main-title-about {
             text-align: center;
-            font-family: 'Playfair Display', serif;
+            
             font-size: 42px;
             font-weight: 700;
             color: #1a1a1a;

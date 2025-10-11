@@ -1,57 +1,231 @@
-<section class="contact-info-section fix section-padding section-bg">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".3s">
-                <div class="contact-info-items text-center">
-                    <div class="icon">
-                        <img src="assets/img/icon/location.svg" alt="icon-img">
-                    </div>
-                    <div class="content">
-                        <h3>Our Locations</h3>
-                        <p>
-                            <strong>New York Office:</strong><br>
-                            Bowery St, New York, NY 10013, USA<br><br>
-                            
-                            <strong>London Office:</strong><br>
-                            123 Baker Street, London, UK<br><br>
-                            
-                            <strong>Tokyo Office:</strong><br>
-                            456 Shibuya, Tokyo, Japan<br><br>
-                            
-                            <strong>Sydney Office:</strong><br>
-                            789 Harbour St, Sydney, Australia
-                        </p>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========== Meta Tags ========== -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="modinatheme">
+  <meta name="description" content="G Pulla Reddy Sweets">
+  
+  <!-- ======== Page title ============ -->
+  <title>G Pulla Reddy</title>
+
+  <!--<< Favicon >>-->
+  <link rel="shortcut icon" href="assets/img/logo/favicon.webp">
+
+  <!--<< CSS Files >>-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Temporary styling for demo visibility */
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff8f0;
+    }
+
+    .menu-open-btn {
+      background: #ac1e23;
+      border: none;
+      color: #fff;
+      padding: 10px 16px;
+      font-size: 18px;
+      border-radius: 8px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    /* Offcanvas visibility */
+    .offcanvas__info {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 350px;
+      height: 100vh;
+      background: #fff;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      transition: all 0.4s ease;
+      z-index: 1000;
+      padding: 30px;
+    }
+
+    .offcanvas__info.active {
+      right: 0;
+    }
+
+    .offcanvas__close button {
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .offcanvas__content p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .offcanvas__contact h4 {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #ac1e23;
+    }
+
+    .offcanvas__contact ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .offcanvas__contact li {
+      margin-bottom: 10px;
+    }
+
+    .theme-btn {
+      background: #ac1e23;
+      color: white;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .social-icon a {
+      color: #ac1e23;
+      margin-right: 12px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Open Button -->
+  <button class="menu-open-btn"><i class="fas fa-bars"></i> Menu</button>
+
+  <!-- Offcanvas Section -->
+  <div class="fix-area">
+    <div class="offcanvas__info">
+      <div class="offcanvas__wrapper">
+        <div class="offcanvas__content">
+          <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+            <div class="offcanvas__logo">
+              <a href="index.html">
+                <img src="assets/img/logo/logo.svg" alt="logo-img" width="150">
+              </a>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".5s">
-                <div class="contact-info-items active text-center">
-                    <div class="icon">
-                        <img src="assets/img/icon/phone.svg" alt="icon-img">
-                    </div>
-                    <div class="content">
-                        <h3>Phone Number</h3>
-                        <p>
-                            +1255 - 568 - 6523<br>
-                            +1255 - 568 - 6523
-                        </p>
-                    </div>
-                </div>
+            <div class="offcanvas__close">
+              <button><i class="fas fa-times"></i></button>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".7s">
-                <div class="contact-info-items text-center">
-                    <div class="icon">
-                        <img src="assets/img/icon/email.svg" alt="icon-img">
-                    </div>
-                    <div class="content">
-                        <h3>Mail Address</h3>
-                        <p>
-                            email@example.com<br>
-                            info@yourdomain.com
-                        </p>
-                    </div>
-                </div>
+          </div>
+
+          <p class="text d-none d-lg-block">
+            This involves interactions between a business and its customers. It's about meeting customers' needs and resolving their problems. Effective customer service is crucial.
+          </p>
+
+          <div class="offcanvas-gallery-area d-lg-block">
+            <div class="offcanvas-gallery-items">
+              <a href="assets/img/header/01.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/01.jpg" alt="gallery-img" width="90">
+              </a>
+              <a href="assets/img/header/02.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/02.jpg" alt="gallery-img" width="90">
+              </a>
+              <a href="assets/img/header/03.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/03.jpg" alt="gallery-img" width="90">
+              </a>
             </div>
+            <div class="offcanvas-gallery-items mt-2">
+              <a href="assets/img/header/04.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/04.jpg" alt="gallery-img" width="90">
+              </a>
+              <a href="assets/img/header/05.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/05.jpg" alt="gallery-img" width="90">
+              </a>
+              <a href="assets/img/header/06.jpg" class="offcanvas-image img-popup">
+                <img src="assets/img/header/06.jpg" alt="gallery-img" width="90">
+              </a>
+            </div>
+          </div>
+
+          <div class="mobile-menu fix mb-3"></div>
+
+          <div class="offcanvas__contact">
+            <h4>Contact Info</h4>
+            <ul>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon"><i class="fal fa-map-marker-alt"></i></div>
+                <div class="offcanvas__contact-text">
+                  <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15"><i class="fal fa-envelope"></i></div>
+                <div class="offcanvas__contact-text">
+                  <a href="mailto:info@foodking.com">info@foodking.com</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15"><i class="fal fa-clock"></i></div>
+                <div class="offcanvas__contact-text">
+                  <a target="_blank" href="#">Mon - Fri, 09am - 05pm</a>
+                </div>
+              </li>
+              <li class="d-flex align-items-center">
+                <div class="offcanvas__contact-icon mr-15"><i class="far fa-phone"></i></div>
+                <div class="offcanvas__contact-text">
+                  <a href="tel:+11002345909">+11002345909</a>
+                </div>
+              </li>
+            </ul>
+
+            <div class="header-button mt-4">
+              <a href="#" class="theme-btn">
+                <span class="button-content-wrapper d-flex align-items-center justify-content-center">
+                  <span class="button-icon"><i class="flaticon-delivery"></i></span>
+                  <span class="button-text">Order Now</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="social-icon d-flex align-items-center mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div> <!-- /offcanvas__contact -->
         </div>
+      </div>
     </div>
-</section>
+  </div>
+
+  <!-- JS (toggle functionality) -->
+  <script src="https://kit.fontawesome.com/a2d9a4a52b.js" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const offcanvas = document.querySelector(".offcanvas__info");
+      const openBtn = document.querySelector(".menu-open-btn");
+      const closeBtn = document.querySelector(".offcanvas__close button");
+
+      openBtn.addEventListener("click", () => {
+        offcanvas.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        offcanvas.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
