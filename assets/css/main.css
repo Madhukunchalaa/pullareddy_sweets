@@ -9340,6 +9340,8 @@ input.main-search-input::placeholder {
   }
 }
 .testimonial-section {
+  /* background-image: url('../img/testimonial-bg.jpg'); */
+  background-size: cover;
   position: relative;
 }
 .testimonial-section .burger-shape {
