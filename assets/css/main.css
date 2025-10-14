@@ -7783,7 +7783,10 @@ input.main-search-input::placeholder {
 @media (max-width: 1399px) {
   .pizza-banner-items {
     padding: 60px 30px;
+
   }
+
+  
 }
 @media (max-width: 1199px) {
   .pizza-banner-items {
@@ -7794,6 +7797,13 @@ input.main-search-input::placeholder {
   .pizza-banner-items {
     padding: 60px 30px;
     background-size: 300%;
+  }
+  .pizza-banner-items img{
+    min-height: 200px !important;
+  }
+  .single-offer-items{
+    min-height: 200px;
+    
   }
 }
 .pizza-banner-items .pizza-image {
@@ -11461,7 +11471,7 @@ p.sticky-label {
 .contact-info-items:hover .icon, .contact-info-items.active .icon {
   filter: grayscale(100%) brightness(300%);
 }
-.contact-info-items:hover .content h3, .contact-info-items:hover .content p, .contact-info-items.active .content h3, .contact-info-items.active .content p {
+.contact-info-items:hover .content h3, .carousel-item h4,.contact-info-items:hover .content p, .contact-info-items.active .content h3, .contact-info-items.active .content p {
   color: var(--white);
 }
 
@@ -13180,7 +13190,7 @@ margin-bottom: 5px;
         }
 
         .kurnool-mission-image-section img{
-          width: 500px;
+          width: 450px;
           position: absolute;
         }
 
@@ -13323,9 +13333,6 @@ margin-bottom: 5px;
             }
         }
 
-#vision-text,#vision2-text{
-  display: none;
-}
 
 
 .heritage-section {
@@ -13474,7 +13481,7 @@ margin-bottom: 5px;
         .carousel-item h4 {
             font-size: 18px;
             font-weight: bold;
-            color: #d32f2f;
+            color: white;
             margin-bottom: 10px;
         }
 
@@ -13518,3 +13525,282 @@ margin-bottom: 5px;
             width: 25px;
             border-radius: 5px;
         }
+
+
+
+
+/* Base styles for larger screens are assumed to be defined elsewhere */
+
+/* Tablet Landscape - 1024px and below */
+@media screen and (max-width: 1024px) {
+    .kurnool-about-content {
+        gap: 30px;
+    }
+    
+    .kurnool-about-heading {
+        font-size: 2rem;
+    }
+    
+    .kurnool-mission-content {
+        padding: 40px 30px;
+    }
+}
+
+/* Tablet Portrait - 768px and below */
+@media screen and (max-width: 768px) {
+    .kurnool-about-wrapper {
+        padding: 40px 0;
+    }
+    
+    .kurnool-about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .kurnool-about-text {
+        order: 1;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .kurnool-about-image-placeholder {
+        order: 2;
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .kurnool-about-heading {
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+    
+    .kurnool-about-description,
+    .kurnool-about-founder {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    
+    /* Mission Section */
+    .kurnool-mission-wrapper .row {
+        flex-direction: column;
+    }
+    
+    .kurnool-mission-wrapper .col-lg-5,
+    .kurnool-mission-wrapper .col-lg-7 {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .kurnool-mission-image-section {
+        padding: 30px 20px;
+    }
+    
+    .kurnool-mission-content {
+        padding: 30px 20px;
+    }
+    
+    .kurnool-mission-title,
+    .kurnool-core-values-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Landscape - 576px and below */
+@media screen and (max-width: 576px) {
+    .kurnool-about-wrapper {
+        padding: 30px 0;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .kurnool-about-label {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+    
+    .kurnool-about-heading {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .kurnool-highlight {
+        display: inline-block;
+    }
+    
+    .kurnool-about-description,
+    .kurnool-about-founder {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+    
+    .kurnool-about-text {
+        padding: 0 15px;
+    }
+    
+    .kurnool-about-image-placeholder {
+        padding: 0 15px;
+    }
+    
+    .kurnool-about-image-frame img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    /* Mission Section Mobile */
+    .kurnool-mission-wrapper {
+        padding: 30px 0;
+    }
+    
+    .kurnool-mission-image-section {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .kurnool-mission-image-placeholder img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+    
+    .kurnool-mission-content {
+        padding: 20px 15px;
+    }
+    
+    .kurnool-mission-section {
+        margin-bottom: 30px;
+    }
+    
+    .kurnool-mission-title,
+    .kurnool-core-values-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    
+    .kurnool-mission-text {
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+    
+    .kurnool-mission-label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Portrait - 375px and below */
+@media screen and (max-width: 375px) {
+    .kurnool-about-heading {
+        font-size: 1.35rem;
+    }
+    
+    .kurnool-about-description,
+    .kurnool-about-founder,
+    .kurnool-mission-text {
+        font-size: 0.85rem;
+    }
+    
+    .kurnool-mission-title,
+    .kurnool-core-values-title {
+        font-size: 1.2rem;
+    }
+    
+    .container,
+    .kurnool-about-text,
+    .kurnool-about-image-placeholder,
+    .kurnool-mission-image-section,
+    .kurnool-mission-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/* Additional utility styles for better responsiveness */
+@media screen and (max-width: 768px) {
+    /* Ensure images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Prevent horizontal scroll */
+    body {
+        overflow-x: hidden;
+    }
+    
+    /* Adjust container fluid on mobile */
+    .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+/* Touch-friendly tap targets for mobile */
+@media screen and (max-width: 768px) {
+    .kurnool-mission-title,
+    .kurnool-core-values-title {
+        padding: 10px 0;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.phone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.phone-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.phone-item a {
+    display: block;
+    font-weight: 600;
+    font-size: 23px;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+.phone-item .location {
+    display: block;
+    font-size: 16px;
+   
+    
+}
+
+
+
+/* Responsive: Stack on small screens */
+@media (max-width: 576px) {
+    .phone-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+.contact-info-items {
+    min-height: 380px; /* Adjust this value as needed */
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-items .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
