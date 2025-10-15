@@ -307,7 +307,7 @@
 
         <div class="sweet-collections-grid" id="collectionsGrid">
             <div class="jaggery-collection-card">
-                <img src="assets/img/jaggery-laddu.png" alt="Jaggery Sweets" class="jaggery-product-image">
+                <img src="assets/img/jaggery-sweetss.jpg" alt="Jaggery Sweets" class="jaggery-product-image">
                 <div class="jaggery-card-content">
                     <h3 class="jaggery-category-title">JAGGERY SWEETS</h3>
                     <p class="jaggery-product-count">5 Products</p>
@@ -850,27 +850,68 @@
             delicaciesShowSlide(delicaciesCurrentSlide + direction);
         }
     </script>
-     <script>
-      function showSection(section) {
-    // Get all buttons and sections
-    const buttons = document.querySelectorAll('.kurnool-toggle-btn');
-    const sections = document.querySelectorAll('.kurnool-content-section');
-    
-    // Remove active class from all
-    buttons.forEach(btn => btn.classList.remove('active'));
-    sections.forEach(sec => sec.classList.remove('active'));
-    
-    // Add active class to selected
-    if (section === 'mission') {
-        buttons[0].classList.add('active');
-        document.getElementById('mission-section').classList.add('active');
-    } else if (section === 'values') {
-        buttons[1].classList.add('active');
-        document.getElementById('values-section').classList.add('active');
-    }
-}
 
-    </script>
+    <script>
+   // Mission & Vision Toggle Function
+   function showSection(section) {
+       const buttons = document.querySelectorAll('.kurnool-toggle-btn');
+       const sections = document.querySelectorAll('.kurnool-content-section');
+       
+       buttons.forEach(btn => btn.classList.remove('active'));
+       sections.forEach(sec => sec.classList.remove('active'));
+       
+       if (section === 'mission') {
+           buttons[0].classList.add('active');
+           document.getElementById('mission-section').classList.add('active');
+       } else if (section === 'values') {
+           buttons[1].classList.add('active');
+           document.getElementById('values-section').classList.add('active');
+       }
+   }
+
+   // View More Button Functionality
+   document.addEventListener('DOMContentLoaded', function() {
+       const viewMoreBtn = document.getElementById('viewMoreBtn');
+       const hiddenCards = document.querySelectorAll('.hidden-row');
+       let isExpanded = false;
+
+       if (viewMoreBtn) {
+           viewMoreBtn.addEventListener('click', function() {
+               isExpanded = !isExpanded;
+               
+               hiddenCards.forEach(card => {
+                   if (isExpanded) {
+                       card.style.display = 'block';
+                       // Add animation
+                       setTimeout(() => {
+                           card.style.opacity = '1';
+                           card.style.transform = 'translateY(0)';
+                       }, 10);
+                   } else {
+                       card.style.opacity = '0';
+                       card.style.transform = 'translateY(20px)';
+                       setTimeout(() => {
+                           card.style.display = 'none';
+                       }, 300);
+                   }
+               });
+               
+               // Change button text
+               viewMoreBtn.textContent = isExpanded ? 'VIEW LESS' : 'VIEW MORE';
+           });
+       }
+   });
+
+   hiddenCards.forEach(card => {
+  if (isExpanded) {
+    card.classList.add('show');
+  } else {
+    card.classList.remove('show');
+  }
+});
+
+</script>
+     
 
 
     </body>

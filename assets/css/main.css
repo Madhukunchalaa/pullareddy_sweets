@@ -12722,7 +12722,7 @@ margin-bottom: 5px;
 
         /* Hide the second row initially */
         .hidden-row {
-            display: none !important;
+            display: none ;
         }
 
         @media (max-width: 768px) {
@@ -13770,7 +13770,7 @@ margin-bottom: 5px;
 .phone-item a {
     display: block;
     font-weight: 600;
-    font-size: 23px;
+    
     margin-bottom: 5px;
     text-decoration: none;
 }
@@ -13932,22 +13932,22 @@ margin-bottom: 5px;
     padding: 12px 30px;
     font-size: 16px;
     font-weight: 600;
-    border: 2px solid #D4145A;
+    border: 2px solid #AC1E23;
     background-color: transparent;
-    color: #D4145A;
+    color: #AC1E23;
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .kurnool-toggle-btn:hover {
-    background-color: #D4145A;
+    background-color:#AC1E23;
     color: white;
     transform: translateY(-2px);
 }
 
 .kurnool-toggle-btn.active {
-    background-color: #D4145A;
+    background-color: #AC1E23;
     color: white;
 }
 
@@ -13974,3 +13974,21 @@ margin-bottom: 5px;
     }
 }
 
+
+.contact-info-items:hover .phone-item a, .contact-info-items:hover .phone-item .location {
+  color: #fff;
+}
+
+
+.hidden-row {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.hidden-row.show {
+  display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
