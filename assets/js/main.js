@@ -49,10 +49,10 @@
              slidesPerView: 1,
              effect: "fade",
              speed: 2000,
-             autoplay: {
-             delay: 5000,
-             disableOnInteraction: false,
-             },
+            //  autoplay: {
+            //  delay: 000,
+            //  disableOnInteraction: false,
+            //  },
              pagination: {
                 el: ".dot",
                 clickable: true,
@@ -96,10 +96,10 @@
               slidesPerView: 1,
               effect: "fade",
               speed: 2000,
-              autoplay: {
-              delay: 5000,
-              disableOnInteraction: false,
-              },
+            //   autoplay: {
+            //   delay: 5000,
+            //   disableOnInteraction: false,
+            //   },
               pagination: {
                 el: ".pegi-number",
                 type: "fraction",
@@ -148,10 +148,10 @@
             slidesPerView: 1,
             effect: "fade",
             speed: 3000,
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 6000,
+            //     disableOnInteraction: false,
+            // },
             navigation: {
                 nextEl: ".array-prev",
                 prevEl: ".array-next",

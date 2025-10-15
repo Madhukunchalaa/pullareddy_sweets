@@ -87,54 +87,47 @@
         <div class="offcanvas__overlay"></div>
 
         <div id="header-placeholder"></div>
-
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-pause="false" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
   <div class="carousel-inner">
-    
-    
     <div class="carousel-item active">
-        <div class="banner-container1">
-        <h2>77 Years Of Sweet Heritage</h2>
+      <div class="banner-container1 text-align-left">
+        <h2>77 Years Of <br> Sweet Heritage</h2>
         <h5>Handcrafted with Love Since 1948</h5>
-        </div>
-         
-  
+      </div>
     </div>
-
-    
 
     <div class="carousel-item">
       <div class="banner-container">
-        <h2>creating sweet memories</h2>
-        <h5>trusted by families for 3 generations</h5>
-
+        <h2>Creating Sweet Memories</h2>
+        <h5>Trusted by families for 3 generations</h5>
         <a href="about.html"><button class="heritage-cta-button mb-5">Know More</button></a>
       </div>
     </div>
+
     <div class="carousel-item">
-  <video class="d-block w-100" autoplay muted loop playsinline>
-    <source src="assets/img/bannervideo.mp4" type="video/mp4">
-    <source src="assets/img/bannervideo.mp4" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
-</div>
- <div class="carousel-item">
-  <video class="d-block w-100" autoplay muted loop playsinline>
-    <source src="assets/img/bannervideo2.mp4" type="video/mp4">
-    <source src="assets/img/bannervideo2.mp4" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
-</div>
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="assets/img/bannervideo.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="carousel-item">
+      <video class="d-block w-100" autoplay muted loop playsinline>
+        <source src="assets/img/bannervideo2.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
+
   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
 
   <section class="container mt-4">
         <div class="row g-4">
@@ -206,7 +199,7 @@
                 <div class="col-lg-6">
                     <div class="heritage-image-wrapper">
                         <img src="assets/img/journey-img-2.jpg" alt="Traditional Sweets" class="heritage-showcase-image">
-                       
+
 
                     </div>
                 </div>
@@ -267,7 +260,7 @@
                         </div>
 
                         <a href="about.html"><button class="heritage-cta-button">Know More</button></a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -285,38 +278,38 @@
                     <!-- Left Card - Sweet Indulgence -->
                     <div class="sweet-indulgence-card" style="flex: 1; min-width: 300px;">
                         <div class="sweet-indulgence-bg" style="background-image: url('assets/img/gulabjamun.jpg');"></div>
-                        
+
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-1"></div>
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-2"></div>
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-3"></div>
-                        
+
                         <div class="sweet-indulgence-glow"></div>
-                        
+
                         <div class="sweet-indulgence-content">
                             <h1 class="sweet-indulgence-heading-primary">Sweet</h1>
                             <h1 class="sweet-indulgence-heading-secondary">Indulgence</h1>
                             <p class="sweet-indulgence-tagline">Handcrafted Since 1948</p>
                             <a href="about.html"><button class="sweet-indulgence-cta">Discover Our Story</button></a>
-                            
+
                         </div>
                     </div>
 
                     <!-- Right Card - Savory Delights -->
                     <div class="sweet-indulgence-card" style="flex: 1; min-width: 300px;">
                         <div class="sweet-indulgence-bg" style="background-image: url('assets/img/grandmother.jpg');"></div>
-                        
+
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-1"></div>
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-2"></div>
                         <div class="sweet-indulgence-decor sweet-indulgence-decor-3"></div>
-                        
+
                         <div class="sweet-indulgence-glow"></div>
-                        
+
                         <div class="sweet-indulgence-content">
                             <h1 class="sweet-indulgence-heading-primary">Savory</h1>
                             <h1 class="sweet-indulgence-heading-secondary">Delights</h1>
                             <p class="sweet-indulgence-tagline">Crafted With Passion</p>
                             <a href="sweets.html"> <button class="sweet-indulgence-cta">Explore Menu</button></a>
-                           
+
                         </div>
                     </div>
 
@@ -893,10 +886,10 @@
    function showSection(section) {
        const buttons = document.querySelectorAll('.kurnool-toggle-btn');
        const sections = document.querySelectorAll('.kurnool-content-section');
-       
+
        buttons.forEach(btn => btn.classList.remove('active'));
        sections.forEach(sec => sec.classList.remove('active'));
-       
+
        if (section === 'mission') {
            buttons[0].classList.add('active');
            document.getElementById('mission-section').classList.add('active');
@@ -915,7 +908,7 @@
        if (viewMoreBtn) {
            viewMoreBtn.addEventListener('click', function() {
                isExpanded = !isExpanded;
-               
+
                hiddenCards.forEach(card => {
                    if (isExpanded) {
                        card.style.display = 'block';
@@ -932,7 +925,7 @@
                        }, 300);
                    }
                });
-               
+
                // Change button text
                viewMoreBtn.textContent = isExpanded ? 'VIEW LESS' : 'VIEW MORE';
            });
@@ -948,7 +941,7 @@
 });
 
 </script>
-     
+
 
 
     </body>
