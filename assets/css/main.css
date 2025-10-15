@@ -13992,3 +13992,175 @@ margin-bottom: 5px;
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+   .sweet-indulgence-card {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+        }
+
+        .sweet-indulgence-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('your-image-path-here.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .sweet-indulgence-bg::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 70%, transparent 100%);
+        }
+
+        .sweet-indulgence-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px 80px;
+        }
+
+        .sweet-indulgence-heading-primary {
+           
+            font-size: 6rem;
+            font-weight: 400;
+            color: #f5e6d3;
+            line-height: 1;
+            margin-bottom: 0;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .sweet-indulgence-heading-secondary {
+           
+            font-size: 3rem;
+            font-weight: 400;
+            color: #f5e6d3;
+            line-height: 1;
+            margin-bottom: 30px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        .sweet-indulgence-tagline {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #d4c4b0;
+            margin-bottom: 50px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        .sweet-indulgence-cta {
+            font-family: 'Montserrat', sans-serif;
+            background: rgba(139, 90, 43, 0.9);
+            color: #f5e6d3;
+            border: none;
+            padding: 18px 45px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(139, 90, 43, 0.4);
+            width: fit-content;
+        }
+
+        .sweet-indulgence-cta:hover {
+            background: rgba(160, 105, 50, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(139, 90, 43, 0.6);
+        }
+
+        .sweet-indulgence-decor {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(218, 165, 32, 0.3), transparent);
+            filter: blur(20px);
+        }
+
+        .sweet-indulgence-decor-1 {
+            top: 10%;
+            right: 20%;
+            animation: sweet-float 6s ease-in-out infinite;
+        }
+
+        .sweet-indulgence-decor-2 {
+            bottom: 15%;
+            right: 15%;
+            animation: sweet-float 8s ease-in-out infinite reverse;
+        }
+
+        .sweet-indulgence-decor-3 {
+            top: 50%;
+            right: 30%;
+            animation: sweet-float 7s ease-in-out infinite;
+        }
+
+        @keyframes sweet-float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .sweet-indulgence-glow {
+            position: absolute;
+            bottom: 80px;
+            left: 80px;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(139, 69, 19, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(30px);
+            animation: sweet-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes sweet-pulse {
+            0%, 100% {
+                opacity: 0.5;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.8;
+                transform: scale(1.1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .sweet-indulgence-heading-primary, 
+            .sweet-indulgence-heading-secondary {
+                font-size: 4rem;
+            }
+            
+            .sweet-indulgence-tagline {
+                font-size: 1.2rem;
+            }
+            
+            .sweet-indulgence-content {
+                padding: 40px;
+            }
+            
+            .sweet-indulgence-cta {
+                padding: 15px 35px;
+                font-size: 1rem;
+            }
+        }
