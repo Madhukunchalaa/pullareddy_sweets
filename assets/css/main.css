@@ -13818,6 +13818,97 @@ margin-bottom: 5px;
   position: relative;
   text-align: center;
 }
+.banner-container1{
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/sweetsbanner1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content:center;
+  position: relative;
+  text-align: center;
+}
+.banner-container1 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-container1 h2 {
+  color: #E5C592;
+  font-size: 72px;
+  font-weight: bolder;
+   font-family: 'Barlow Condensed';
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-container1 h5 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* second banner */
+.banner-container2{
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/sweetsbanner2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content:center;
+  position: relative;
+  text-align: center;
+}
+.banner-container2 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-container2 h2 {
+  color: #E5C592;
+  font-size: 72px;
+  font-weight: bolder;
+   font-family: 'Barlow Condensed';
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-container2 h5 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
 
 /* Dark overlay for better text readability */
 .banner-container::before {
@@ -13865,8 +13956,6 @@ margin-bottom: 5px;
 }
 
 .heritage-cta-button {
-  
- 
   color: #ffffff;
   padding: 18px 45px;
   font-size: 18px;
