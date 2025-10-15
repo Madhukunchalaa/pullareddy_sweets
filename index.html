@@ -87,9 +87,14 @@
         <div class="offcanvas__overlay"></div>
 
         <div id="header-placeholder"></div>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+<div id="carouselExampleAutoplaying"
+     class="carousel slide"
+     data-bs-ride="false"
+     data-bs-interval="false"
+     data-bs-wrap="true">
+
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active ">
       <div class="banner-container1 text-align-left">
         <h2>77 Years Of <br> Sweet Heritage</h2>
         <h5>Handcrafted with Love Since 1948</h5>
@@ -122,7 +127,7 @@
     <span class="visually-hidden">Previous</span>
   </button>
 
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button style="z-index: 999;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -941,6 +946,17 @@
 });
 
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carouselElement = document.getElementById('carouselExampleAutoplaying');
+    const carousel = new bootstrap.Carousel(carouselElement, {
+      interval: false,  // No autoplay
+      wrap: true        // Loop from last to first slide
+    });
+  });
+</script>
+
+
 
 
 
