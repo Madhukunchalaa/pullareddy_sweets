@@ -151,47 +151,63 @@
 
 
 
-    <section class="kurnool-mission-wrapper">
-        <div class="container-fluid" style="background-color: #FFF8F8;">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="kurnool-mission-image-section">
-                        <div class="kurnool-mission-image-placeholder">
-                       <img src="assets/img/ourvisionmission.jpg" alt="">
-                        </div>
+   <section class="kurnool-mission-wrapper">
+    <div class="container-fluid" style="background-color: #FFF8F8;">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="kurnool-mission-image-section">
+                    <div class="kurnool-mission-image-placeholder">
+                        <img src="assets/img/ourvisionmission.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="kurnool-mission-content">
-                        <!-- Mission and Vision -->
-                        <div class="kurnool-mission-section">
-                            <h2 class="kurnool-mission-title" onclick="showText()">Mission and Vision</h2>
+            </div>
+            <div class="col-lg-7">
+                <div class="kurnool-mission-content">
+                    <!-- Toggle Buttons -->
+                    <div class="kurnool-toggle-buttons">
+                        <button class="kurnool-toggle-btn active" onclick="showSection('mission')">
+                            Mission & Vision
+                        </button>
+                        <button class="kurnool-toggle-btn" onclick="showSection('values')">
+                            Core Values
+                        </button>
+                    </div>
 
-                            <p class="kurnool-mission-text" id="mission-text">
+                    <!-- Mission and Vision Section -->
+                    <div class="kurnool-content-section active" id="mission-section">
+                        <div class="kurnool-mission-section">
+                            <h2 class="kurnool-mission-title">Mission and Vision</h2>
+
+                            <p class="kurnool-mission-text">
                                 <span class="kurnool-mission-label">Our Mission:</span>
-                                 Born in the heart of Kurnool, G. Pulla Reddy Sweets stands for purity, tradition, and heartfelt hospitality.
-Our mission is to preserve the soul of Andhra’s sweet-making heritage — crafting each delicacy with devotion, honesty, and the same warmth our founder believed in.
-From our hometown kitchens to families across the world, we continue to share the taste of Kurnool’s love and legacy —
-spreading joy, one sweet at a time.
+                                Born in the heart of Kurnool, G. Pulla Reddy Sweets stands for purity, tradition, and heartfelt hospitality.
+                                Our mission is to preserve the soul of Andhra's sweet-making heritage — crafting each delicacy with devotion, honesty, and the same warmth our founder believed in.
+                                From our hometown kitchens to families across the world, we continue to share the taste of Kurnool's love and legacy —
+                                spreading joy, one sweet at a time.
                             </p>
 
-                            <p class="kurnool-mission-text"id="mission2-text">
+                            <p class="kurnool-mission-text">
                                 <span class="kurnool-mission-label">Our Vision:</span>
-                               To uphold the legacy of authentic Indian sweets by staying true to time-honored traditions and using only the finest ingredients. We strive to consistently deliver purity, taste, and quality in every bite—ensuring our customers experience the same trust and delight that have defined G. Pulla Reddy Sweets for generations.
+                                To uphold the legacy of authentic Indian sweets by staying true to time-honored traditions and using only the finest ingredients. We strive to consistently deliver purity, taste, and quality in every bite—ensuring our customers experience the same trust and delight that have defined G. Pulla Reddy Sweets for generations.
+                            </p>
                         </div>
+                    </div>
 
-                        <!-- Core Values -->
+                    <!-- Core Values Section -->
+                    <div class="kurnool-content-section" id="values-section">
                         <div class="kurnool-mission-section">
                             <h2 class="kurnool-core-values-title">Core Values</h2>
-                             <p class="kurnool-mission-text" id="vision-text">
+                            <p class="kurnool-mission-text">
                                 <span class="kurnool-mission-label">A Sweet Tradition:</span>
-                            Each recipe is a legacy, carefully preserved and perfected over time to bring you the same taste that has delighted generations. From selecting the finest ingredients to following traditional methods with precision, we honor our heritage while delivering timeless flavors you can trust.
+                                Each recipe is a legacy, carefully preserved and perfected over time to bring you the same taste that has delighted generations. From selecting the finest ingredients to following traditional methods with precision, we honor our heritage while delivering timeless flavors you can trust.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section class="heritage-section">
         <div class="container">
@@ -216,7 +232,7 @@ spreading joy, one sweet at a time.
                 <div class="col-lg-4 col-md-6 heritage-card-wrapper">
                     <div class="heritage-sweet-card">
                         <div class="heritage-image-container">
-                            <img src="assets/img/PURITY IMAGE.jpg"
+                            <img src="assets/img/purityghee.jpg"
                                  alt="Traditional Indian Sweets"
                                  class="heritage-sweet-image">
                         </div>

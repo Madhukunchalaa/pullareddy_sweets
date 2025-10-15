@@ -188,7 +188,7 @@
                 <div class="col-lg-6">
                     <div class="heritage-image-wrapper">
                         <img src="assets/img/journey-img-2.jpg" alt="Traditional Sweets" class="heritage-showcase-image">
-                         <img src="assets/img/ajourney2.jpg" alt="Traditional Sweets" class="heritage-showcase-image">
+                       
 
                     </div>
                 </div>
@@ -266,7 +266,7 @@
 
                     <!-- Left Image -->
                     <div style="flex: 1; min-width: 300px;">
-                        <div class="single-offer-items bg-cover" style="background-image: url('assets/img/newhomecard1.jpg'); min-height: 400px; background-size: cover; background-position: center; border-radius: 8px;">
+                        <div class="single-offer-items bg-cover" style="background-image: url('assets/img/sweetingludience.jpg'); min-height: 400px; background-size: cover; background-position: center; border-radius: 8px;">
                             <div class="offer-content">
                                 <!-- Add your content here -->
                             </div>
@@ -434,7 +434,7 @@
 
             <!-- Right Visual Gallery -->
             <div class="sweets-visual-gallery">
-                <img src="assets/img/tradtionalsweetimage.png"
+                <img src="assets/img/newtraditional.jpg"
                      alt="Traditional Indian Sweets Platter"
                      class="sweets-gallery-image">
             </div>
@@ -459,7 +459,7 @@
                                     <img src="assets/img/banner/icon1.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <h4>Excellence in Traditional Sweets - 2024</h4>
+                                    <h4>Excellence in Traditional Sweets 2024</h4>
                                 </div>
                             </div>
                         </div>
@@ -469,7 +469,7 @@
                                     <img src="assets/img/banner/icon2.png" alt="">
                                 </div>
                                 <div class="content">
-                                    <h4>Best Sweet Shop in Kurnool - Multiple Years</h4>
+                                    <h4>Best Sweet Shop in Kurnool Multiple Years</h4>
                                 </div>
                             </div>
                         </div>
@@ -848,18 +848,25 @@
         }
     </script>
      <script>
-        const viewMoreBtn = document.getElementById('viewMoreBtn');
-        const hiddenCards = document.querySelectorAll('.hidden-row');
+      function showSection(section) {
+    // Get all buttons and sections
+    const buttons = document.querySelectorAll('.kurnool-toggle-btn');
+    const sections = document.querySelectorAll('.kurnool-content-section');
+    
+    // Remove active class from all
+    buttons.forEach(btn => btn.classList.remove('active'));
+    sections.forEach(sec => sec.classList.remove('active'));
+    
+    // Add active class to selected
+    if (section === 'mission') {
+        buttons[0].classList.add('active');
+        document.getElementById('mission-section').classList.add('active');
+    } else if (section === 'values') {
+        buttons[1].classList.add('active');
+        document.getElementById('values-section').classList.add('active');
+    }
+}
 
-        viewMoreBtn.addEventListener('click', function() {
-            hiddenCards.forEach(card => {
-                card.classList.remove('hidden-row');
-                card.classList.add('show-row');
-            });
-
-            // Hide the button after showing more items
-            viewMoreBtn.style.display = 'none';
-        });
     </script>
 
 
