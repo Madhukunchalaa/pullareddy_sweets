@@ -1,283 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ========== Meta Tags ========== -->
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="modinatheme">
-  <meta name="description" content="G Pulla Reddy Sweets">
-  
-  <!-- ======== Page title ============ -->
-  <title>G Pulla Reddy</title>
-
-  <!--<< Favicon >>-->
-  <link rel="shortcut icon" href="assets/img/logo/favicon.webp">
-
-  <!--<< CSS Files >>-->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <link rel="stylesheet" href="assets/css/meanmenu.css">
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/nice-select.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* Temporary styling for demo visibility */
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff8f0;
-    }
-
-    .menu-open-btn {
-      background: #ac1e23;
-      border: none;
-      color: #fff;
-      padding: 10px 16px;
-      font-size: 18px;
-      border-radius: 8px;
-      margin: 20px;
-      cursor: pointer;
-    }
-
-    /* Offcanvas visibility */
-    .offcanvas__info {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 350px;
-      height: 100vh;
-      background: #fff;
-      box-shadow: -2px 0 8px rgba(0,0,0,0.1);
-      overflow-y: auto;
-      transition: all 0.4s ease;
-      z-index: 1000;
-      padding: 30px;
-    }
-
-    .offcanvas__info.active {
-      right: 0;
-    }
-
-    .offcanvas__close button {
-      background: none;
-      border: none;
-      font-size: 22px;
-      cursor: pointer;
-      color: #333;
-    }
-
-    .offcanvas__content p {
-      color: #555;
-      font-size: 14px;
-    }
-
-    .offcanvas__contact h4 {
-      margin-top: 20px;
-      font-weight: bold;
-      color: #ac1e23;
-    }
-
-    .offcanvas__contact ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .offcanvas__contact li {
-      margin-bottom: 10px;
-    }
-
-    .theme-btn {
-      background: #ac1e23;
-      color: white;
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    .social-icon a {
-      color: #ac1e23;
-      margin-right: 12px;
-      font-size: 18px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel with Video</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Open Button -->
-  <button class="menu-open-btn"><i class="fas fa-bars"></i> Menu</button>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+  </div>
 
-  <!-- Offcanvas Section -->
-  <div class="fix-area">
-    <div class="offcanvas__info">
-      <div class="offcanvas__wrapper">
-        <div class="offcanvas__content">
-          <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-            <div class="offcanvas__logo">
-              <a href="index.html">
-                <img src="assets/img/logo/logo.svg" alt="logo-img" width="150">
-              </a>
-            </div>
-            <div class="offcanvas__close">
-              <button><i class="fas fa-times"></i></button>
-            </div>
-          </div>
-
-          <p class="text d-none d-lg-block">
-            This involves interactions between a business and its customers. It's about meeting customers' needs and resolving their problems. Effective customer service is crucial.
-          </p>
-
-          <div class="offcanvas-gallery-area d-lg-block">
-            <div class="offcanvas-gallery-items">
-              <a href="assets/img/header/01.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/01.jpg" alt="gallery-img" width="90">
-              </a>
-              <a href="assets/img/header/02.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/02.jpg" alt="gallery-img" width="90">
-              </a>
-              <a href="assets/img/header/03.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/03.jpg" alt="gallery-img" width="90">
-              </a>
-            </div>
-            <div class="offcanvas-gallery-items mt-2">
-              <a href="assets/img/header/04.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/04.jpg" alt="gallery-img" width="90">
-              </a>
-              <a href="assets/img/header/05.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/05.jpg" alt="gallery-img" width="90">
-              </a>
-              <a href="assets/img/header/06.jpg" class="offcanvas-image img-popup">
-                <img src="assets/img/header/06.jpg" alt="gallery-img" width="90">
-              </a>
-            </div>
-          </div>
-
-          <div class="mobile-menu fix mb-3"></div>
-
-          <div class="offcanvas__contact">
-            <h4>Contact Info</h4>
-            <ul>
-              <li class="d-flex align-items-center">
-                <div class="offcanvas__contact-icon"><i class="fal fa-map-marker-alt"></i></div>
-                <div class="offcanvas__contact-text">
-                  <a target="_blank" href="#">Main Street, Melbourne, Australia</a>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <div class="offcanvas__contact-icon mr-15"><i class="fal fa-envelope"></i></div>
-                <div class="offcanvas__contact-text">
-                  <a href="mailto:info@foodking.com">info@foodking.com</a>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <div class="offcanvas__contact-icon mr-15"><i class="fal fa-clock"></i></div>
-                <div class="offcanvas__contact-text">
-                  <a target="_blank" href="#">Mon - Fri, 09am - 05pm</a>
-                </div>
-              </li>
-              <li class="d-flex align-items-center">
-                <div class="offcanvas__contact-icon mr-15"><i class="far fa-phone"></i></div>
-                <div class="offcanvas__contact-text">
-                  <a href="tel:+11002345909">+11002345909</a>
-                </div>
-              </li>
-            </ul>
-
-            <div class="header-button mt-4">
-              <a href="#" class="theme-btn">
-                <span class="button-content-wrapper d-flex align-items-center justify-content-center">
-                  <span class="button-icon"><i class="flaticon-delivery"></i></span>
-                  <span class="button-text">Order Now</span>
-                </span>
-              </a>
-            </div>
-
-            <div class="social-icon d-flex align-items-center mt-3">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div> <!-- /offcanvas__contact -->
-        </div>
-      </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="assets/img/sweetsbanner1.jpg" class="d-block w-100" alt="Slide 1">
+    </div>
+    
+   
+    
+    <div class="carousel-item active">
+      <video class="d-block w-100" muted loop playsinline preload="auto">
+        <source src="assets/img/bannervideo2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
-    <section class="food-banner-section fix section-padding section-bg pt-0">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-9 wow fadeInUp" data-wow-delay=".3s">
-                        <div class="burger-banner-items bg-cover" style="background-image: url(assets/img/banner/burger-bg.png);">
-                            <div class="burger-content text-center">
-                                <h3>Traditional</h3>
-                                <h2>Festival Favourite</h2>
-                                <h4><a href="" class="text-white">Boondi <span>Laddu</span></a></h4>
-                                <a href="" class="theme-btn mt-4">
-                                <span class="button-content-wrapper d-flex align-items-center">
-                                <span class="button-text">Know More</span>
-                                </span>
-                                </a>
-                            </div>
-                            <div class="burger-image">
-                                <img src="assets/img/img1.png" alt="food-img">
-                            </div>
-                            <div class="text-shape">
-                                <img src="assets/img/shape/pizza-text-2.png" alt="shape-img">
-                            </div>
-                            <!-- <div class="burger-text">
-                                <img src="assets/img/shape/burger-text.png" alt="shape-img">
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-9 mt-5 mt-xl-0 wow fadeInUp" data-wow-delay=".5s">
-                        <div class="single-offer-items style-2 bg-cover" style="background-image: url('assets/img/banner/pepsi-bg.png');">
-                            <div class="offer-content">
-                                <h5>Every bite filled with authentic sweetness</h5>
-                                <h3>
-                                    Premium cashew <br>
-                                    delicacy
-                                </h3>
-                                <h4><a href="" class="text-white">Kaju <span>Katli</span></a></h4>
-                                <a href="" class="theme-btn mt-4">
-                                <span class="button-content-wrapper d-flex align-items-center">
-                                <span class="button-text">Know More</span>
-                                </span>
-                                </a>
-                            </div>
-                            <!-- <div class="offer-img">
-                                <img src="assets/img/offer/50percent-off-3.png" alt="shape-img">
-                            </div> -->
-                            <div class="roller-box">
-                                <img src="assets/img/kaju-cashew.png" alt="food-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-  <!-- JS (toggle functionality) -->
-  <script src="https://kit.fontawesome.com/a2d9a4a52b.js" crossorigin="anonymous"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      const offcanvas = document.querySelector(".offcanvas__info");
-      const openBtn = document.querySelector(".menu-open-btn");
-      const closeBtn = document.querySelector(".offcanvas__close button");
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-      openBtn.addEventListener("click", () => {
-        offcanvas.classList.add("active");
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.querySelector('#myCarousel');
+    
+    if (carousel) {
+      carousel.addEventListener('slid.bs.carousel', function() {
+        const allVideos = carousel.querySelectorAll('video');
+        allVideos.forEach(video => {
+          video.pause();
+          video.currentTime = 0;
+        });
+        
+        const activeVideo = carousel.querySelector('.carousel-item.active video');
+        if (activeVideo) {
+          activeVideo.play().catch(error => {
+            console.log('Video autoplay prevented:', error);
+          });
+        }
       });
-
-      closeBtn.addEventListener("click", () => {
-        offcanvas.classList.remove("active");
-      });
-    });
-  </script>
+    }
+  });
+</script>
 
 </body>
 </html>
