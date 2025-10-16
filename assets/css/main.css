@@ -13,7 +13,7 @@ Version: 2.0.0
   --white: #fff;
   --theme: #AC1E23;
   --theme2: #D12525;
-  --theme3: #FFB936;
+  --theme3: #AC1E23;
   --header: #212121;
   --base: #00813D;
   --text: #5C5C5B;
@@ -4815,7 +4815,22 @@ input.main-search-input::placeholder {
     padding: 12px 20px;
     font-size: 14px;
   }
+  .banner-container1{
+  
+  }
+
 }
+
+@media (max-width: 575px){
+  .banner-container1{
+      height:auto !important;
+
+  }
+  .banner-container1 h5{
+    margin-right: 0px !important
+  }
+}
+
 .food-menu-wrapper-2 .tab-food-menu-items .nav .nav-link.active {
   position: relative;
   background-color: var(--theme);
