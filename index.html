@@ -99,7 +99,7 @@
     <!-- ========================================
          HERO CAROUSEL SECTION
     ======================================== -->
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="false" data-bs-interval="false" data-bs-wrap="true">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
         <div class="carousel-inner">
             <!-- Slide 1 -->
             <div class="carousel-item active">
@@ -930,17 +930,18 @@
     <!-- ========================================
          CUSTOM JAVASCRIPT - BOOTSTRAP CAROUSEL SETTINGS
     ======================================== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carouselElement = document.getElementById('carouselExampleAutoplaying');
-            if (carouselElement) {
-                const carousel = new bootstrap.Carousel(carouselElement, {
-                    interval: false,  // No autoplay
-                    wrap: true        // Loop from last to first slide
-                });
-            }
-        });
-    </script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselElement = document.getElementById('carouselExampleAutoplaying');
+        if (carouselElement) {
+            const carousel = new bootstrap.Carousel(carouselElement, {
+                interval: 5000,  // Set interval in milliseconds (5000 = 5 seconds)
+                wrap: true       // Loop from last to first slide
+            });
+        }
+    });
+</script>
+
 
 </body>
 </html>
