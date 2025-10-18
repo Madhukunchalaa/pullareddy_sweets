@@ -100,7 +100,7 @@
          HERO CAROUSEL SECTION
     ======================================== -->
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
-        <div class="carousel-inner">
+        <div class="carousel-inner d-none d-md-block">
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="banner-container1 text-align-left">
@@ -112,7 +112,7 @@
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="banner-container2 text-align-left">
-                    <h2>Timeless Flavors,<br> Eternal Memories</h2>
+                    <h2>Timeless Flavors<br> Eternal Memories</h2>
                     <h5>Where tradition meets indulgence</h5>
                 </div>
             </div>
@@ -128,14 +128,18 @@
                 </div>
             </div>
         </div>
+     <div class="d-block d-md-none position-relative" style="max-width: 42rem;">
+  <img src="assets/img/mobile-banner.jpg" alt="Mobile Banner" class="w-100 d-block">
+  <div class="position-absolute top-0 start-0 end-0 bottom-0" style="background: linear-gradient(to right, rgba(172, 30, 35, 0.9), rgba(172, 30, 35, 0.7), transparent);"></div>
+</div>
 
         <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
 
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="z-index: 999;">
+        <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="z-index: 999;">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
