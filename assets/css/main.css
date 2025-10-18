@@ -770,12 +770,14 @@ h6 {
 .banner-container1 h2
  {
     margin-right: 200px;
+   
 }
 
 .banner-container2 h2{
   margin-right: 80px;
 
 }
+
 
 .banner-container h5,
 .banner-container1 h5,
@@ -791,9 +793,11 @@ h6 {
 
 .banner-container1 h5 {
     margin-right: 158px;
+    margin-bottom: 245px;
 }
 .banner-container2 h5 {
     margin-right: 94px;
+    margin-bottom: 240px;
 }
 
 .heritage-cta-button {
