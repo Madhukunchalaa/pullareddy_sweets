@@ -1,68 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carousel with Video</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>77 Years of Sweet Heritage</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .sw7742x9kl_banner {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 60px 40px;
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .sw7742x9kl_banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(135deg, rgba(20, 15, 10, 0.85) 0%, rgba(40, 30, 20, 0.75) 50%, rgba(20, 15, 10, 0.85) 100%); */
+            z-index: 1;
+        }
+
+        .vx8n2qpm7_wrapper {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+            text-align: left;
+            animation: fadeInRight 1.2s ease-out;
+        }
+
+        .jk5lm8n9p_heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 400;
+            color: #f5f5f5;
+            line-height: 1.1;
+            margin-bottom: 0;
+            letter-spacing: -2px;
+        }
+
+        .qt3rb6vx2_subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 7vw, 6rem);
+            font-weight: 700;
+            color: #f5f5f5;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .yz9wc4fh1_tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 300;
+            color: #d4d4d4;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .kd7pf2xs8_btn {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #d97634 0%, #c85a1a 100%);
+            padding: 18px 45px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.4s ease;
+            box-shadow: 0 8px 25px rgba(217, 118, 52, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .kd7pf2xs8_btn:hover {
+            background: linear-gradient(135deg, #e88a4d 0%, #d97634 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(217, 118, 52, 0.6);
+            color: #fff;
+        }
+
+        .nh6lj1vk9_first {
+            /* Add your first banner background image here */
+            background-image: url('assets/img/sweetsbanner1.jpg');
+        }
+
+        .bw4ts5yd3_second {
+            /* Add your second banner background image here */
+            background-image: url('assets/img/sweetsbanner2.jpg');
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .sw7742x9kl_banner {
+                padding: 50px 30px;
+                justify-content: center;
+            }
+
+            .vx8n2qpm7_wrapper {
+                text-align: center;
+            }
+
+            .jk5lm8n9p_heading {
+                font-size: clamp(2.5rem, 10vw, 5rem);
+            }
+
+            .qt3rb6vx2_subtitle {
+                font-size: clamp(2rem, 9vw, 4.5rem);
+            }
+
+            .yz9wc4fh1_tagline {
+                font-size: clamp(0.75rem, 2.5vw, 0.95rem);
+                letter-spacing: 3px;
+            }
+
+            .kd7pf2xs8_btn {
+                padding: 16px 40px;
+                font-size: clamp(0.85rem, 2.5vw, 1rem);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sw7742x9kl_banner {
+                padding: 40px 20px;
+                min-height: 90vh;
+            }
+
+            .jk5lm8n9p_heading {
+                font-size: clamp(2rem, 12vw, 3.5rem);
+                letter-spacing: -1px;
+            }
+
+            .qt3rb6vx2_subtitle {
+                font-size: clamp(1.8rem, 11vw, 3rem);
+                margin-bottom: 20px;
+            }
+
+            .yz9wc4fh1_tagline {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .kd7pf2xs8_btn {
+                padding: 14px 35px;
+                font-size: 0.8rem;
+                letter-spacing: 1.5px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
-  </div>
-
-  <div class="carousel-inner">
-    <div class="carousel-item">
-      <img src="assets/img/sweetsbanner1.jpg" class="d-block w-100" alt="Slide 1">
+    <!-- First Banner -->
+    <div class="sw7742x9kl_banner nh6lj1vk9_first">
+        <div class="vx8n2qpm7_wrapper">
+            <h1 class="jk5lm8n9p_heading">77 Years of</h1>
+            <h2 class="qt3rb6vx2_subtitle">Sweet Heritage</h2>
+            <p class="yz9wc4fh1_tagline">Handcrafted with love since 1948</p>
+            <a href="#" class="kd7pf2xs8_btn">Explore Our Collection</a>
+        </div>
     </div>
-    
-   
-    
-    <div class="carousel-item active">
-      <video class="d-block w-100" muted loop playsinline preload="auto">
-        <source src="assets/img/bannervideo2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+
+    <!-- Second Banner -->
+    <div class="sw7742x9kl_banner bw4ts5yd3_second">
+        <div class="vx8n2qpm7_wrapper">
+            <h1 class="jk5lm8n9p_heading">77 Years of</h1>
+            <h2 class="qt3rb6vx2_subtitle">Sweet Heritage</h2>
+            <p class="yz9wc4fh1_tagline">Handcrafted with love since 1948</p>
+            <a href="#" class="kd7pf2xs8_btn">Explore Our Collection</a>
+        </div>
     </div>
-  </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.querySelector('#myCarousel');
-    
-    if (carousel) {
-      carousel.addEventListener('slid.bs.carousel', function() {
-        const allVideos = carousel.querySelectorAll('video');
-        allVideos.forEach(video => {
-          video.pause();
-          video.currentTime = 0;
-        });
-        
-        const activeVideo = carousel.querySelector('.carousel-item.active video');
-        if (activeVideo) {
-          activeVideo.play().catch(error => {
-            console.log('Video autoplay prevented:', error);
-          });
-        }
-      });
-    }
-  });
-</script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

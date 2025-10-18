@@ -694,7 +694,7 @@
                                     <img src="assets/img/Avakay pickel.jpg" alt="Avakaya Pickle">
                                 </div>
                                 <div class="food-content">
-                                    <h3>Avakay Pickle</h3>
+                                    <h3>Avakay Pickel</h3>
                                 </div>
                             </div>
                         </div>
@@ -705,7 +705,7 @@
                                     <img src="assets/img/Gongura Pickel.jpg" alt="Gongura Pickle">
                                 </div>
                                 <div class="food-content">
-                                    <h3>Gongura Pickle</h3>
+                                    <h3>Gongura Pickel</h3>
                                 </div>
                             </div>
                         </div>
@@ -716,7 +716,17 @@
                                     <img src="assets/img/tarmarinf pickel.jpg" alt="Tamarind Pickle">
                                 </div>
                                 <div class="food-content">
-                                    <h3>Tamarind Pickle</h3>
+                                    <h3>Tamarind Pickel</h3>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-xl-4 col-lg-4 col-md-6 product-item" data-category="pickel&powder">
+                            <div class="food-items center">
+                                <div class="food-image">
+                                    <img src="assets/img/tomato_pachadi.jpg" alt="Tomato pickel">
+                                </div>
+                                <div class="food-content">
+                                    <h3>Tomato Pickel</h3>
                                 </div>
                             </div>
                         </div>
@@ -817,7 +827,6 @@
         </svg>
     </div>
 
-    <!-- Load Header and Footer -->
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -827,13 +836,11 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
     </script>
-
-    <!-- Category Filter and Pagination Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const filterLinks = document.querySelectorAll('.categories-list a[data-filter]');
             const productCards = Array.from(document.querySelectorAll('.product-item'));
-            const categoryHeadings = document.querySelectorAll('.category-heading');
+            const resultCount = document.querySelector('.product-showing h5:last-child');
             const nextBtn = document.getElementById('nextBtn');
             const prevBtn = document.getElementById('prevBtn');
             const pageNumbers = document.querySelectorAll('.page-numbers:not(#prevBtn):not(#nextBtn)');
@@ -844,9 +851,10 @@
 
             // Function to display 9 cards per slide
             function showSlide() {
-                // Hide all cards and headings first
-                productCards.forEach(card => card.style.display = 'none');
-                categoryHeadings.forEach(heading => heading.style.display = 'none');
+                // Hide all cards first
+                productCards.forEach(card => {
+                    card.style.display = 'none';
+                });
 
                 const start = currentSlide * cardsPerSlide;
                 const end = start + cardsPerSlide;
@@ -856,6 +864,13 @@
                 currentCards.forEach(card => {
                     card.style.display = 'block';
                 });
+
+                // Update result count
+                if (resultCount) {
+                    const total = visibleCards.length;
+                    const showingEnd = Math.min(end, total);
+                    resultCount.innerHTML = `Showing <span>${start + 1}–${showingEnd}</span> of ${total} results`;
+                }
 
                 // Update active page number
                 updatePageNumbers();
@@ -871,16 +886,16 @@
                     }
                 });
             }
-
-            // Update category headings visibility
             function updateCategoryHeadings(filterValue) {
-                categoryHeadings.forEach(heading => {
+                const headings = document.querySelectorAll('.category-heading');
+
+                headings.forEach(heading => {
                     const headingCategory = heading.getAttribute('data-category');
-                    
+
                     if (filterValue === 'all') {
-                        heading.style.display = 'none'; // Hide all headings for "All Sweets"
+                        heading.style.display = 'none'; // Hide all headings when "All Sweets" is selected
                     } else if (headingCategory === filterValue) {
-                        heading.style.display = 'block'; // Show matching heading
+                        heading.style.display = 'block'; // Show only matching heading
                     } else {
                         heading.style.display = 'none'; // Hide non-matching headings
                     }
@@ -891,17 +906,11 @@
             function updateVisibleCards(filterValue) {
                 visibleCards = productCards.filter(card => {
                     const cardCategory = card.getAttribute('data-category');
-                    
-                    if (filterValue === 'all') {
-                        return true; // Show all products
-                    }
-                    
-                    // Match exact category
-                    return cardCategory === filterValue;
+                    return filterValue === 'all' || cardCategory === filterValue;
                 });
 
                 currentSlide = 0;
-                updateCategoryHeadings(filterValue);
+                updateCategoryHeadings(filterValue); // Add this line
                 showSlide();
                 updatePaginationVisibility();
             }
@@ -909,7 +918,6 @@
             // Show/hide pagination based on number of pages
             function updatePaginationVisibility() {
                 const totalPages = Math.ceil(visibleCards.length / cardsPerSlide);
-                
                 pageNumbers.forEach((pageBtn, index) => {
                     if (index < totalPages) {
                         pageBtn.parentElement.style.display = 'inline-block';
@@ -917,12 +925,6 @@
                         pageBtn.parentElement.style.display = 'none';
                     }
                 });
-
-                // Hide pagination if only one page
-                const paginationWrapper = document.querySelector('.page-nav-wrap');
-                if (paginationWrapper) {
-                    paginationWrapper.style.display = totalPages <= 1 ? 'none' : 'block';
-                }
             }
 
             // Next Button Click
@@ -963,6 +965,14 @@
                 });
             });
 
+            // Default load - show first 9 "all" category cards
+            updateVisibleCards('all');
+
+            // Set "All Sweets" as active by default
+            const allSweetsLink = document.querySelector('.categories-list a[data-filter="all"]');
+            if (allSweetsLink) {
+                allSweetsLink.parentElement.classList.add('active');
+            }
             // Filter Click Handler
             filterLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
@@ -976,22 +986,11 @@
 
                     // Filter products
                     const filterValue = this.getAttribute('data-filter');
-                    console.log('Filtering by:', filterValue); // Debug log
                     updateVisibleCards(filterValue);
                 });
             });
-
-            // Default load - show first 9 "all" category cards
-            updateVisibleCards('all');
-
-            // Set "All Sweets" as active by default
-            const allSweetsLink = document.querySelector('.categories-list a[data-filter="all"]');
-            if (allSweetsLink) {
-                allSweetsLink.parentElement.classList.add('active');
-            }
         });
     </script>
-
     <!--<< All JS Plugins >>-->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!--<< Viewport Js >>-->
@@ -1019,4 +1018,13 @@
 
 </body>
 
-</html>            
+</html>           
+
+
+
+    <!-- Main Cta Banner Section Start -->
+
+
+    <!-- Footer Section Start -->
+    
+    
