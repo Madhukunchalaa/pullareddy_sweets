@@ -301,137 +301,7 @@
             </svg>
         </div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBs0-vap2LfiERRcjwAFdrplwDWxpR2q6I" defer></script>
-        <script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('header-placeholder').innerHTML = data);
-
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-</script>
-<script>
-  function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 13,
-      center: { lat: 15.828909056714716, lng: 78.03853680888801 }
-    });
-
-    const locations = [
-      {
-        name: "G. Pulla Reddy Sweets - Sri Nagar Colony (B Camp)",
-        lat: 15.804352296953725,
-        lng: 78.04562502230274,
-        address: "R23W+P6Q, Sri Nagar Colony, B Camp, Kurnool, Andhra Pradesh 518002"
-      },
-      {
-        name: "G. Pulla Reddy Sweets - Collectorate Complex",
-        lat: 15.817788799490753,
-        lng: 78.04062610547831,
-        address: "Shop No:7, Collectorate Complex, Kurnool, Andhra Pradesh 518002"
-      },
-      {
-        name: "G. Pulla Reddy Sweets - Raj Vihar Road (Dharma Pet)",
-        lat: 15.828909056714716,
-        lng: 78.03853680888801,
-        address: "R2HQ+HC2, Raj Vihar Road, Dharma Pet, Kurnool, Andhra Pradesh 518001"
-      },
-      {
-        name: "G. Pulla Reddy Sweets - New Bus Stand (Sita Rama Nagar)",
-        lat: 15.82570943411368,
-        lng: 78.02683939705233,
-        address: "Ward No. 51, New Bus Stand Rd, Sita Rama Nagar, Kurnool, Andhra Pradesh 518003"
-      }
-    ];
-
-    const bounds = new google.maps.LatLngBounds();
-
-    locations.forEach(loc => {
-      const marker = new google.maps.Marker({
-        position: { lat: loc.lat, lng: loc.lng },
-        map: map,
-        title: loc.name
-      });
-
-      const infoWindow = new google.maps.InfoWindow({
-        content: `
-          <div style="font-size:14px;">
-            <h4>${loc.name}</h4>
-            <p>${loc.address}</p>
-            <a href="https://www.google.com/maps?q=${loc.lat},${loc.lng}" target="_blank" style="color:#0066cc;">
-              📍 Open Exact Location in Google Maps
-            </a>
-          </div>
-        `
-      });
-
-      marker.addListener("click", () => infoWindow.open(map, marker));
-      bounds.extend(marker.getPosition());
-    });
-
-    map.fitBounds(bounds);
-  }
-
-  window.addEventListener("load", initMap);
-</script>
- <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
-        const indicators = document.querySelectorAll('.indicator');
-        const totalItems = items.length;
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            items.forEach(item => item.classList.remove('active'));
-            indicators.forEach(ind => ind.classList.remove('active'));
-
-            items[index].classList.add('active');
-            indicators[index].classList.add('active');
-        }
-
-        function nextSlide() {
-            currentIndex = (currentIndex + 1) % totalItems;
-            showSlide(currentIndex);
-        }
-
-        function prevSlide() {
-            currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-            showSlide(currentIndex);
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
-        }
-
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
-
-        // Event Listeners
-        document.getElementById('nextBtn').addEventListener('click', () => {
-            nextSlide();
-            resetAutoSlide();
-        });
-
-        document.getElementById('prevBtn').addEventListener('click', () => {
-            prevSlide();
-            resetAutoSlide();
-        });
-
-        indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => {
-                currentIndex = index;
-                showSlide(currentIndex);
-                resetAutoSlide();
-            });
-        });
-
-        // Start auto-slide
-        startAutoSlide();
-    </script>
-
-        <!--<< All JS Plugins >>-->
+         <!--<< All JS Plugins >>-->
         <script src="assets/js/jquery-3.7.1.min.js"></script>
         <!--<< Viewport Js >>-->
         <script src="assets/js/viewport.jquery.js"></script>
@@ -455,5 +325,371 @@
         <script src="assets/js/wow.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+     <script>
+        // ========== Wait for DOM to be fully loaded ==========
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM Loaded - Initializing...');
+  loadHeaderAndFooter();
+  initializeCarousel();
+  initializeMap();
+});
+
+// ========== Load Header and Footer ==========
+function loadHeaderAndFooter() {
+  // Load Header
+  fetch('header.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Header not found');
+      return response.text();
+    })
+    .then(data => {
+      document.getElementById('header-placeholder').innerHTML = data;
+      console.log('Header loaded successfully');
+      // Wait a bit for DOM to update, then initialize menu
+      setTimeout(initializeMobileMenu, 150);
+    })
+    .catch(error => {
+      console.error('Error loading header:', error);
+    });
+
+  // Load Footer
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+      console.log('Footer loaded successfully');
+    })
+    .catch(error => {
+      console.error('Error loading footer:', error);
+    });
+}
+
+// ========== Mobile Menu Functionality ==========
+function initializeMobileMenu() {
+  console.log('\n=== Initializing Mobile Menu ===');
+  
+  // Find all elements
+  const hamburger = document.querySelector('.sidebar__toggle');
+  const offcanvasInfo = document.querySelector('.offcanvas__info');
+  const closeBtn = document.querySelector('.offcanvas__close button');
+  const overlay = document.querySelector('.offcanvas__overlay');
+  
+  // Debug: Log what we found
+  console.log('Elements found:');
+  console.log('- Hamburger:', hamburger ? '✓ YES' : '✗ NO');
+  console.log('- Offcanvas:', offcanvasInfo ? '✓ YES' : '✗ NO');
+  console.log('- Close button:', closeBtn ? '✓ YES' : '✗ NO');
+  console.log('- Overlay:', overlay ? '✓ YES' : '✗ NO');
+  
+  // Check if critical elements exist
+  if (!hamburger) {
+    console.error('❌ CRITICAL: Hamburger button (.sidebar__toggle) not found!');
+    return;
+  }
+  
+  if (!offcanvasInfo) {
+    console.error('❌ CRITICAL: Offcanvas menu (.offcanvas__info) not found!');
+    return;
+  }
+  
+  // ===== OPEN MENU =====
+  function openMenu(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    console.log('\n🔓 Opening menu...');
+    
+    // Add classes
+    offcanvasInfo.classList.add('info-open');
+    console.log('✓ Added info-open to offcanvas');
+    
+    if (overlay) {
+      overlay.classList.add('overlay-open');
+      console.log('✓ Added overlay-open to overlay');
+    }
+    
+    // Prevent body scroll
+    document.body.style.overflow = 'hidden';
+    
+    // Check computed styles
+    const computedTransform = window.getComputedStyle(offcanvasInfo).transform;
+    console.log('Transform value:', computedTransform);
+    console.log('✓ Menu should now be visible!');
+  }
+  
+  // ===== CLOSE MENU =====
+  function closeMenu(e) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    
+    console.log('\n🔒 Closing menu...');
+    
+    // Remove classes
+    offcanvasInfo.classList.remove('info-open');
+    
+    if (overlay) {
+      overlay.classList.remove('overlay-open');
+    }
+    
+    // Restore body scroll
+    document.body.style.overflow = '';
+    
+    console.log('✓ Menu closed');
+  }
+  
+  // ===== EVENT LISTENERS =====
+  
+  // Hamburger click
+  hamburger.addEventListener('click', function(e) {
+    console.log('\n🍔 Hamburger clicked!');
+    openMenu(e);
+  });
+  console.log('✓ Hamburger click listener attached');
+  
+  // Close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function(e) {
+      console.log('\n❌ Close button clicked');
+      closeMenu(e);
+    });
+    console.log('✓ Close button listener attached');
+  }
+  
+  // Overlay click
+  if (overlay) {
+    overlay.addEventListener('click', function() {
+      console.log('\n⬛ Overlay clicked');
+      closeMenu();
+    });
+    console.log('✓ Overlay listener attached');
+  }
+  
+  // ESC key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && offcanvasInfo.classList.contains('info-open')) {
+      console.log('\n⎋ ESC key pressed');
+      closeMenu();
+    }
+  });
+  console.log('✓ ESC key listener attached');
+  
+  // Close when clicking menu links
+  const allMenuLinks = offcanvasInfo.querySelectorAll('a');
+  allMenuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // Small delay to allow navigation
+      setTimeout(closeMenu, 100);
+    });
+  });
+  console.log(`✓ Added close listeners to ${allMenuLinks.length} menu links`);
+  
+  // Initialize MeanMenu if jQuery is available
+  if (typeof $ !== 'undefined' && typeof $.fn.meanmenu === 'function') {
+    setTimeout(function() {
+      const mobileMenuContainer = $('.mobile-menu');
+      if (mobileMenuContainer.length) {
+        // Clone desktop menu to mobile menu container
+        const desktopMenu = $('#mobile-menu').clone();
+        mobileMenuContainer.html(desktopMenu);
+        
+        // Initialize MeanMenu
+        mobileMenuContainer.meanmenu({
+          meanMenuContainer: '.mobile-menu',
+          meanScreenWidth: "991",
+          meanMenuClose: '<i class="fas fa-times"></i>',
+          meanMenuOpen: '<i class="fas fa-bars"></i>'
+        });
+        console.log('✓ MeanMenu initialized');
+      }
+    }, 200);
+  }
+  
+  console.log('\n✅ Mobile menu initialization complete!\n');
+}
+
+// ========== Address Carousel ==========
+function initializeCarousel() {
+  const items = document.querySelectorAll('.carousel-item');
+  const indicators = document.querySelectorAll('.indicator');
+  const nextBtn = document.getElementById('nextBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  
+  if (items.length === 0) {
+    console.log('No carousel found on this page');
+    return;
+  }
+  
+  let currentIndex = 0;
+  const totalItems = items.length;
+  let autoSlideInterval;
+
+  function showSlide(index) {
+    items.forEach(item => item.classList.remove('active'));
+    indicators.forEach(ind => ind.classList.remove('active'));
+    
+    items[index].classList.add('active');
+    indicators[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    showSlide(currentIndex);
+  }
+
+  function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 3000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
+  }
+
+  // Event Listeners
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+  }
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentIndex = index;
+      showSlide(currentIndex);
+      resetAutoSlide();
+    });
+  });
+
+  // Start auto-slide
+  startAutoSlide();
+
+  // Pause on hover
+  const carouselContainer = document.querySelector('.address-carousel');
+  if (carouselContainer) {
+    carouselContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+  }
+  
+  console.log('✓ Carousel initialized');
+}
+
+// ========== Google Maps ==========
+function initializeMap() {
+  const mapElement = document.getElementById("map");
+  if (!mapElement) {
+    console.log('No map element found on this page');
+    return;
+  }
+
+  // Wait for Google Maps API to load
+  if (typeof google === 'undefined' || typeof google.maps === 'undefined') {
+    setTimeout(initializeMap, 500);
+    return;
+  }
+
+  const map = new google.maps.Map(mapElement, {
+    zoom: 13,
+    center: { lat: 15.828909056714716, lng: 78.03853680888801 },
+    mapTypeControl: true,
+    streetViewControl: true,
+    fullscreenControl: true
+  });
+
+  const locations = [
+    {
+      name: "G. Pulla Reddy Sweets - Sri Nagar Colony (B Camp)",
+      lat: 15.804352296953725,
+      lng: 78.04562502230274,
+      address: "R23W+P6Q, Sri Nagar Colony, B Camp, Kurnool, Andhra Pradesh 518002"
+    },
+    {
+      name: "G. Pulla Reddy Sweets - Collectorate Complex",
+      lat: 15.817788799490753,
+      lng: 78.04062610547831,
+      address: "Shop No:7, Collectorate Complex, Kurnool, Andhra Pradesh 518002"
+    },
+    {
+      name: "G. Pulla Reddy Sweets - Raj Vihar Road (Dharma Pet)",
+      lat: 15.828909056714716,
+      lng: 78.03853680888801,
+      address: "R2HQ+HC2, Raj Vihar Road, Dharma Pet, Kurnool, Andhra Pradesh 518001"
+    },
+    {
+      name: "G. Pulla Reddy Sweets - New Bus Stand (Sita Rama Nagar)",
+      lat: 15.82570943411368,
+      lng: 78.02683939705233,
+      address: "Ward No. 51, New Bus Stand Rd, Sita Rama Nagar, Kurnool, Andhra Pradesh 518003"
+    }
+  ];
+
+  const bounds = new google.maps.LatLngBounds();
+
+  locations.forEach((loc, index) => {
+    const marker = new google.maps.Marker({
+      position: { lat: loc.lat, lng: loc.lng },
+      map: map,
+      title: loc.name,
+      animation: google.maps.Animation.DROP,
+      label: {
+        text: String(index + 1),
+        color: 'white',
+        fontWeight: 'bold'
+      }
+    });
+
+    const infoWindow = new google.maps.InfoWindow({
+      content: `
+        <div style="font-family: Arial, sans-serif; max-width: 250px; padding: 10px;">
+          <h4 style="margin: 0 0 10px 0; color: #AC1E23; font-size: 16px;">${loc.name}</h4>
+          <p style="margin: 0 0 10px 0; color: #666; font-size: 13px; line-height: 1.5;">${loc.address}</p>
+          <a href="https://www.google.com/maps?q=${loc.lat},${loc.lng}" 
+             target="_blank" 
+             style="display: inline-block; color: #AC1E23; text-decoration: none; font-size: 13px; font-weight: 600;">
+            📍 Open in Google Maps
+          </a>
+        </div>
+      `
+    });
+
+    marker.addListener("click", () => {
+      infoWindow.open(map, marker);
+    });
+
+    bounds.extend(marker.getPosition());
+  });
+
+  map.fitBounds(bounds);
+
+  google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+    if (map.getZoom() > 15) {
+      map.setZoom(15);
+    }
+  });
+  
+  console.log('✓ Google Maps initialized');
+}
+
+// Backup map initialization
+window.addEventListener('load', initializeMap);
+     </script>
+
+       
     </body>
 </html>

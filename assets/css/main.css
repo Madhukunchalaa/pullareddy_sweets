@@ -3065,3 +3065,251 @@ h6 {
                 letter-spacing: 1.5px;
             }
         }
+
+
+
+
+/* ========== Mobile Menu & Offcanvas Styles ========== */
+/* ========== CRITICAL FIX FOR MOBILE MENU ========== */
+
+/* Fix the offcanvas z-index and transform */
+.offcanvas__info {
+  background: #fff;
+  position: fixed !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 400px;
+  height: 100%;
+  z-index: 10000 !important; /* MUST be above overlay */
+  overflow-y: scroll;
+  overscroll-behavior-y: contain;
+  scrollbar-width: none;
+  
+  /* Hidden by default - off screen to the right */
+  transform: translateX(calc(100% + 80px)) !important;
+  transition: transform 0.45s ease-in-out !important;
+}
+
+.offcanvas__info::-webkit-scrollbar {
+  display: none;
+}
+
+/* When menu is open - slide in */
+.offcanvas__info.info-open {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+/* Overlay must be below offcanvas */
+.offcanvas__overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(21, 21, 21, 0.8) !important;
+  z-index: 9999 !important; /* Below offcanvas but above everything else */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.offcanvas__overlay.overlay-open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: all !important;
+}
+
+/* Ensure hamburger is clickable and visible */
+.header__hamburger {
+  cursor: pointer;
+  z-index: 100;
+  padding: 5px;
+}
+
+.sidebar__toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border: none;
+  background: transparent;
+}
+
+.sidebar__toggle i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.sidebar__toggle:hover i {
+  color: #AC1E23;
+}
+
+/* Mobile responsive width */
+@media (max-width: 450px) {
+  .offcanvas__info {
+    width: 300px !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .offcanvas__info {
+    width: 280px !important;
+  }
+}
+
+/* Body overflow when menu is open */
+body.menu-open {
+  overflow: hidden !important;
+}
+
+
+
+
+.gallery-section .array-button .array-prev, .gallery-section .array-button .array-next {
+  background-color: transparent !important;
+  font-size: 60px;
+  color: var(--text);
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  z-index: 99;
+  border: 0px;
+}
+@media (max-width: 1399px) {
+  .gallery-section .array-button .array-prev, .gallery-section .array-button .array-next {
+    font-size: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .gallery-section .array-button .array-prev, .gallery-section .array-button .array-next {
+    font-size: 40px;
+  }
+}
+.gallery-section .array-button .array-next {
+  left: auto;
+  right: 5%;
+}
+
+.gallery-image {
+  position: relative;
+}
+.gallery-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 27px;
+  object-fit: cover;
+}
+@media (max-width: 575px) {
+  .gallery-image {
+    height: 400px;
+  }
+}
+.gallery-image .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 42px;
+  z-index: 9;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  transition-delay: 0s;
+  transition-delay: 0s;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+}
+.gallery-image .icon i {
+  color: var(--white);
+}
+.gallery-image::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: 0.5s all ease;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 27px;
+}
+.gallery-image:hover .icon {
+  -webkit-transform: scale(1) translate(-50%, -50%);
+  transform: scale(1) translate(-50%, -50%);
+  transition-delay: 300ms;
+  opacity: 1;
+  visibility: visible;
+}
+.gallery-image:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.galler-image-2 {
+  position: relative;
+  height: 448px;
+}
+.galler-image-2 img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 575px) {
+  .galler-image-2 {
+    height: 380px;
+  }
+}
+.galler-image-2 .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 70px;
+  z-index: 9;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  transition-delay: 0s;
+  transition-delay: 0s;
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+}
+.galler-image-2 .icon i {
+  color: var(--white);
+}
+.galler-image-2::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.5);
+  transition: 0.5s all ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.galler-image-2:hover .icon {
+  -webkit-transform: scale(1) translate(-50%, -50%);
+  transform: scale(1) translate(-50%, -50%);
+  transition-delay: 300ms;
+  opacity: 1;
+  visibility: visible;
+}
+.galler-image-2:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
