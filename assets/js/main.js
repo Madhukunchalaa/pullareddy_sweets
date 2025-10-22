@@ -15,15 +15,20 @@
             meanExpand: ['<i class="far fa-plus"></i>'],
         });
 
-        //>> Sidebar Toggle Js Start <<//
-        $(".offcanvas__close,.offcanvas__overlay").on("click", function() {
-            $(".offcanvas__info").removeClass("info-open");
-            $(".offcanvas__overlay").removeClass("overlay-open");
-        });
-        $(".sidebar__toggle").on("click", function() {
-            $(".offcanvas__info").addClass("info-open");
-            $(".offcanvas__overlay").addClass("overlay-open");
-        });
+     $(document).ready(function() {
+    // Close sidebar
+    $(".offcanvas__close, .offcanvas__overlay").on("click", function() {
+        $(".offcanvas__info").removeClass("info-open");
+        $(".offcanvas__overlay").removeClass("overlay-open");
+    });
+
+    // Open sidebar
+    $(".sidebar__toggle").on("click", function() {
+        $(".offcanvas__info").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
+    });
+});
+
 
         //>> Body Overlay Js Start <<//
         $(".body-overlay").on("click", function() {

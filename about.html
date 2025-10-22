@@ -320,43 +320,6 @@
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
 
-     <script>
-function showText() {
-    document.getElementById("mission-text").style.display = "block";
-    document.getElementById("mission2-text").style.display = "block";
-}
-
-function showVissonText() {
-    document.getElementById("vision-text").style.display = "block";
-    document.getElementById("vision2-text").style.display = "block";
-}
-
-// Toggle sections (mission/values)
-function showSection(section) {
-    const buttons = document.querySelectorAll('.kurnool-toggle-btn');
-    const sections = document.querySelectorAll('.kurnool-content-section');
-    
-    buttons.forEach(btn => btn.classList.remove('active'));
-    sections.forEach(sec => sec.classList.remove('active'));
-    
-    if (section === 'mission') {
-        buttons[0].classList.add('active');
-        document.getElementById('mission-section').classList.add('active');
-    } else if (section === 'values') {
-        buttons[1].classList.add('active');
-        document.getElementById('values-section').classList.add('active');
-    }
-}
-
-// Run when page loads
-window.addEventListener('load', function() {
-    // Always scroll to top when page loads
-    window.scrollTo(0, 0);
-
-    // Show default section
-    showSection('mission'); // 👈 change to 'values' if you want that by default
-});
-</script>
-
+     
     </body>
 </html>
