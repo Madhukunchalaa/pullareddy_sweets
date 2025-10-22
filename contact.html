@@ -35,6 +35,7 @@
     <body>
 
 
+
         <!-- Offcanvas Area Start -->
        <div class="fix-area">
             <div class="offcanvas__info">
@@ -342,46 +343,27 @@
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
      <script>
-        // ========== Wait for DOM to be fully loaded ==========
+     // ========== Load Header and Footer ==========
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header-placeholder').innerHTML = data;
+    console.log('Header loaded successfully');
+  });
+
+fetch('footer.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('footer-placeholder').innerHTML = data;
+    console.log('Footer loaded successfully');
+  });
+
+// ========== Wait for DOM to be fully loaded ==========
 document.addEventListener('DOMContentLoaded', function() {
   console.log('DOM Loaded - Initializing...');
-  loadHeaderAndFooter();
   initializeCarousel();
   initializeMap();
 });
-
-// ========== Load Header and Footer ==========
-function loadHeaderAndFooter() {
-  // Load Header
-  fetch('header.html')
-    .then(response => {
-      if (!response.ok) throw new Error('Header not found');
-      return response.text();
-    })
-    .then(data => {
-      document.getElementById('header-placeholder').innerHTML = data;
-      console.log('Header loaded successfully');
-      // Wait a bit for DOM to update, then initialize menu
-      
-    })
-    .catch(error => {
-      console.error('Error loading header:', error);
-    });
-
-  // Load Footer
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-      console.log('Footer loaded successfully');
-    })
-    .catch(error => {
-      console.error('Error loading footer:', error);
-    });
-}
-
-
-
 
 // ========== Address Carousel ==========
 function initializeCarousel() {
@@ -564,6 +546,33 @@ function initializeMap() {
 window.addEventListener('load', initializeMap);
      </script>
 
+<script>
+  (function($) {
+    "use strict";
+
+    $(document).ready( function() {
+
+        //>> Mobile Menu Js Start <<//
+        $('#mobile-menu').meanmenu({
+            meanMenuContainer: '.mobile-menu',
+            meanScreenWidth: "991",
+            meanExpand: ['<i class="far fa-plus"></i>'],
+        });
+
+     $(document).ready(function() {
+    // Close sidebar
+    $(".offcanvas__close, .offcanvas__overlay").on("click", function() {
+        $(".offcanvas__info").removeClass("info-open");
+        $(".offcanvas__overlay").removeClass("overlay-open");
+    });
+
+    // Open sidebar
+    $(".sidebar__toggle").on("click", function() {
+        $(".offcanvas__info").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
+    });
+});
+</script>
        
     </body>
 </html>

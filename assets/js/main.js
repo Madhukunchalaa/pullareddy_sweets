@@ -39,13 +39,7 @@
 
         //>> Sticky Header Js Start <<//
 
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 250) {
-                $("#header-sticky").addClass("sticky");
-            } else {
-                $("#header-sticky").removeClass("sticky");
-            }
-        });
+        
 
          //>> Hero Slider Start <<//
          const sliderActive1 = ".hero-slider";
