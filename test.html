@@ -3,204 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>77 Years of Sweet Heritage</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Header Menu Example</title>
 
-        .sw7742x9kl_banner {
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Your CSS -->
+    <style>
+        /* Header base styling */
+        .header-1 {
+            background: #fff;
+            padding: 15px 0;
             position: relative;
-            width: 100%;
-            min-height: 100vh;
+            z-index: 1000;
+        }
+        .header-main {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            padding: 60px 40px;
-            overflow: hidden;
-            background-size: cover;
-            background-repeat: no-repeat;
+            justify-content: space-between;
+        }
+        .header-logo img {
+            max-height: 50px;
         }
 
-        .sw7742x9kl_banner::before {
-            content: '';
+        /* MeanMenu nav styling */
+        .mean-nav {
+            display: none;
             position: absolute;
-            top: 0;
+            top: 70px;
             left: 0;
             width: 100%;
-            height: 100%;
-            /* background: linear-gradient(135deg, rgba(20, 15, 10, 0.85) 0%, rgba(40, 30, 20, 0.75) 50%, rgba(20, 15, 10, 0.85) 100%); */
-            z-index: 1;
+            background: #fff;
+            z-index: 9999;
+            padding: 10px 0;
         }
-
-        .vx8n2qpm7_wrapper {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            text-align: left;
-            animation: fadeInRight 1.2s ease-out;
+        .mean-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
-
-        .jk5lm8n9p_heading {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(3rem, 8vw, 7rem);
-            font-weight: 400;
-            color: #f5f5f5;
-            line-height: 1.1;
-            margin-bottom: 0;
-            letter-spacing: -2px;
+        .mean-nav ul li {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
         }
-
-        .qt3rb6vx2_subtitle {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 7vw, 6rem);
-            font-weight: 700;
-            color: #f5f5f5;
-            line-height: 1.1;
-            margin-bottom: 30px;
-            letter-spacing: -1px;
-        }
-
-        .yz9wc4fh1_tagline {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
-            font-weight: 300;
-            color: #d4d4d4;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 40px;
-        }
-
-        .kd7pf2xs8_btn {
-            display: inline-block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(0.9rem, 2vw, 1.1rem);
-            font-weight: 600;
-            color: #fff;
-            background: linear-gradient(135deg, #d97634 0%, #c85a1a 100%);
-            padding: 18px 45px;
-            border-radius: 8px;
+        .mean-nav ul li a {
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(217, 118, 52, 0.4);
-            border: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .mean-nav ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Hide reveal button entirely */
+        .meanmenu-reveal {
+            display: none !important;
+        }
+
+        /* Mobile hamburger */
+        #mobile-menu-toggle {
+            font-size: 24px;
             cursor: pointer;
+            color: #e00000;
         }
 
-        .kd7pf2xs8_btn:hover {
-            background: linear-gradient(135deg, #e88a4d 0%, #d97634 100%);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(217, 118, 52, 0.6);
-            color: #fff;
-        }
-
-        .nh6lj1vk9_first {
-            /* Add your first banner background image here */
-            background-image: url('assets/img/sweetsbanner1.jpg');
-        }
-
-        .bw4ts5yd3_second {
-            /* Add your second banner background image here */
-            background-image: url('assets/img/sweetsbanner2.jpg');
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @media (max-width: 992px) {
-            .sw7742x9kl_banner {
-                padding: 50px 30px;
-                justify-content: center;
-            }
-
-            .vx8n2qpm7_wrapper {
-                text-align: center;
-            }
-
-            .jk5lm8n9p_heading {
-                font-size: clamp(2.5rem, 10vw, 5rem);
-            }
-
-            .qt3rb6vx2_subtitle {
-                font-size: clamp(2rem, 9vw, 4.5rem);
-            }
-
-            .yz9wc4fh1_tagline {
-                font-size: clamp(0.75rem, 2.5vw, 0.95rem);
-                letter-spacing: 3px;
-            }
-
-            .kd7pf2xs8_btn {
-                padding: 16px 40px;
-                font-size: clamp(0.85rem, 2.5vw, 1rem);
-            }
-        }
-
-        @media (max-width: 576px) {
-            .sw7742x9kl_banner {
-                padding: 40px 20px;
-                min-height: 90vh;
-            }
-
-            .jk5lm8n9p_heading {
-                font-size: clamp(2rem, 12vw, 3.5rem);
-                letter-spacing: -1px;
-            }
-
-            .qt3rb6vx2_subtitle {
-                font-size: clamp(1.8rem, 11vw, 3rem);
-                margin-bottom: 20px;
-            }
-
-            .yz9wc4fh1_tagline {
-                font-size: 0.7rem;
-                letter-spacing: 2px;
-                margin-bottom: 30px;
-            }
-
-            .kd7pf2xs8_btn {
-                padding: 14px 35px;
-                font-size: 0.8rem;
-                letter-spacing: 1.5px;
+        @media (min-width: 992px) {
+            .mean-nav {
+                display: none !important;
             }
         }
     </style>
 </head>
 <body>
-    <!-- First Banner -->
-    <div class="sw7742x9kl_banner nh6lj1vk9_first">
-        <div class="vx8n2qpm7_wrapper">
-            <h1 class="jk5lm8n9p_heading">77 Years of</h1>
-            <h2 class="qt3rb6vx2_subtitle">Sweet Heritage</h2>
-            <p class="yz9wc4fh1_tagline">Handcrafted with love since 1948</p>
-            <a href="#" class="kd7pf2xs8_btn">Explore Our Collection</a>
+
+<!-- ================= Header Area Start ================= -->
+<header class="section-bg">
+    <div id="header-sticky" class="header-1">
+        <div class="container">
+            <div class="mega-menu-wrapper">
+                <div class="header-main">
+                    <div class="logo">
+                        <a href="index.html" class="header-logo">
+                            <img src="assets/img/logo/logo.png" alt="logo-img">
+                        </a>
+                    </div>
+                    
+                    <div class="header-left">
+                        <div class="mean__menu-wrapper d-none d-lg-block">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active"><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="sweets.html">Our Products</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="header-right d-flex justify-content-end align-items-center">
+                        <div class="header-button">
+                            <a href="contact.html" class="theme-btn bg-red-2">Contact Us</a>
+                        </div>
+
+                        <!-- Mobile Menu Toggle Button -->
+                        <div class="header__hamburger d-lg-none my-auto">
+                            <div class="sidebar__toggle" id="mobile-menu-toggle">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+</header>
+<!-- ================= Header Area End ================= -->
 
-    <!-- Second Banner -->
-    <div class="sw7742x9kl_banner bw4ts5yd3_second">
-        <div class="vx8n2qpm7_wrapper">
-            <h1 class="jk5lm8n9p_heading">77 Years of</h1>
-            <h2 class="qt3rb6vx2_subtitle">Sweet Heritage</h2>
-            <p class="yz9wc4fh1_tagline">Handcrafted with love since 1948</p>
-            <a href="#" class="kd7pf2xs8_btn">Explore Our Collection</a>
-        </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!-- ✅ Scripts Section -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/jquery.meanmenu.min.js"></script>
+
+<script>
+jQuery(document).ready(function ($) {
+    // Initialize MeanMenu but hide its default reveal button
+    $('#mobile-menu').meanmenu({
+        meanMenuContainer: '.header-left',
+        meanScreenWidth: "991",
+        meanRevealPosition: "none", // Hide the reveal button
+        meanShowChildren: true
+    });
+
+    // Hide the meanmenu reveal button if it appears
+    $('.meanmenu-reveal').hide();
+
+    // Control the menu manually using your hamburger button
+    $('#mobile-menu-toggle').on('click', function () {
+        $('.mean-nav').slideToggle(); // toggle visibility of mobile nav
+    });
+});
+</script>
+
 </body>
 </html>
