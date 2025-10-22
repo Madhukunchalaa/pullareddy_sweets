@@ -3377,3 +3377,129 @@ body.menu-open {
     .contact-button:active {
         transform: translateY(0);
     }
+
+   .mob-banner {
+    background:linear-gradient(to bottom, rgba(66, 3, 45, 0.88) 0%, rgba(71, 43, 50, 0.80) 24%, rgba(180, 80, 60, 0.75) 100%);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2.5rem 1.8rem;
+}
+
+.mob-banner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    max-width: 100%;
+}
+
+.legacy-badge {
+    background: rgba(229, 197, 146, 0.25);
+    color: #E5C592;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: inline-block;
+    width: fit-content;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(229, 197, 146, 0.3);
+}
+
+.banner-title {
+    color: white;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0.5rem 0 0 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.banner-subtitle {
+    color: #E5C592;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.banner-description {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0.8rem 0 1rem 0;
+    max-width: 95%;
+    font-weight: 400;
+}
+
+.explore-btn {
+    background: #E5C592;
+    color: #2D1810;
+    border: none;
+    padding: 1rem 2.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: fit-content;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.explore-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    background: #f0d4a8;
+}
+
+.explore-btn .arrow {
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+    font-weight: 400;
+}
+
+.explore-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .mob-banner {
+        padding: 2rem 1.5rem;
+    }
+    
+    .banner-title {
+        font-size: 1.9rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.7rem;
+    }
+    
+    .banner-description {
+        font-size: 0.88rem;
+    }
+    
+    .explore-btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner-title {
+        font-size: 1.7rem;
+    }
+    
+    .banner-subtitle {
+        font-size: 1.5rem;
+    }
+}
