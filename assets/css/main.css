@@ -186,10 +186,10 @@ input:focus {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
     outline: none !important;
     cursor: pointer;
-    color: var(--header);
+    color: var(--header) !important;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1165,7 +1165,7 @@ h6 {
 
 .contact-info-items:hover .phone-item a,
 .contact-info-items:hover .phone-item .location {
-    color: #fff;
+    color: #fff !important;
 }
 
 /* Contact Form */
@@ -1248,7 +1248,7 @@ h6 {
 
 .phone-item .location {
     display: block;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 @media (max-width: 576px) {

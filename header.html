@@ -9,31 +9,26 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        
-        
-        
-        
-        .header-logo img {
+        .phoenix-brand-wrapper img {
             max-height: 50px;
             width: auto;
         }
         
-       
-        
-        .navbar-nav .nav-link {
+        .horizon-navigation .zenith-nav-list .nebula-link {
             color: #333;
             font-weight: 500;
             padding: 10px 20px;
             transition: color 0.3s ease;
             position: relative;
-            font-family: Barlow Condensed;
+            
+            font-size: 18px;
         }
         
-        .navbar-nav .nav-link:hover {
+        .zenith-nav-list .nebula-link:hover {
             color: #AE1F23;
         }
         
-        .navbar-nav .nav-link::after {
+        .zenith-nav-list .nebula-link::after {
             content: '';
             position: absolute;
             bottom: 5px;
@@ -44,24 +39,25 @@
             transition: width 0.3s ease;
         }
         
-        .navbar-nav .nav-link:hover::after {
+        .zenith-nav-list .nebula-link:hover::after {
             width: calc(100% - 40px);
         }
         
-        .theme-btn {
+        .crimson-action-btn {
             display: inline-block;
-            padding: 19px 30px;
-            background-color: #dc3545;
+            padding: 15px 30px;
+            background-color: #AC1E23;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
-            border: 2px solid #dc3545;
+            border: 2px solid #AC1E23;
+            font-family: Barlow Condensed;
         }
         
-        .theme-btn:hover {
+        .crimson-action-btn:hover {
             background-color: #c82333;
             border-color: #c82333;
             color: #fff;
@@ -69,17 +65,17 @@
             box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
         }
         
-        .navbar-toggler {
+        .aurora-toggle-btn {
             border: none;
             padding: 8px 12px;
             background-color: transparent;
         }
         
-        .navbar-toggler:focus {
+        .aurora-toggle-btn:focus {
             box-shadow: none;
         }
         
-        .navbar-toggler-icon {
+        .aurora-toggle-icon {
             background-image: none;
             width: 28px;
             height: 3px;
@@ -90,8 +86,8 @@
             border-radius: 2px;
         }
         
-        .navbar-toggler-icon::before,
-        .navbar-toggler-icon::after {
+        .aurora-toggle-icon::before,
+        .aurora-toggle-icon::after {
             content: '';
             position: absolute;
             width: 28px;
@@ -102,25 +98,25 @@
             border-radius: 2px;
         }
         
-        .navbar-toggler-icon::before {
+        .aurora-toggle-icon::before {
             top: -9px;
         }
         
-        .navbar-toggler-icon::after {
+        .aurora-toggle-icon::after {
             top: 9px;
         }
         
         /* Offcanvas Styles */
-        .offcanvas {
+        .mercury-sidebar-panel {
             width: 300px !important;
         }
         
-        .offcanvas-header {
+        .mercury-sidebar-header {
             border-bottom: 1px solid #e0e0e0;
             padding: 20px;
         }
         
-        .offcanvas-title img {
+        .mercury-sidebar-title img {
             max-height: 50px;
         }
         
@@ -128,40 +124,40 @@
             font-size: 14px;
         }
         
-        .offcanvas-body {
+        .mercury-sidebar-content {
             padding: 0;
         }
         
-        .offcanvas .navbar-nav {
+        .mercury-sidebar-panel .zenith-nav-list {
             width: 100%;
         }
         
-        .offcanvas .nav-item {
+        .mercury-sidebar-panel .galaxy-nav-item {
             border-bottom: 1px solid #f0f0f0;
         }
         
-        .offcanvas .nav-link {
+        .mercury-sidebar-panel .nebula-link {
             padding: 18px 25px;
             color: #333;
             font-weight: 500;
             transition: all 0.3s ease;
         }
         
-        .offcanvas .nav-link:hover {
+        .mercury-sidebar-panel .nebula-link:hover {
             background-color: #f8f9fa;
-            color: #dc3545;
+            color: #AC1E23;
             padding-left: 30px;
         }
         
-        .offcanvas .nav-link::after {
+        .mercury-sidebar-panel .nebula-link::after {
             display: none;
         }
         
-        .offcanvas .header-button {
+        .mercury-sidebar-panel .apex-button-zone {
             padding: 25px;
         }
         
-        .offcanvas .theme-btn {
+        .mercury-sidebar-panel .crimson-action-btn {
             display: block;
             width: 100%;
             text-align: center;
@@ -169,13 +165,13 @@
         
         /* Desktop menu styles */
         @media (min-width: 992px) {
-            .desktop-menu {
+            .quantum-display-menu {
                 display: flex !important;
             }
         }
         
         @media (max-width: 991px) {
-            .desktop-menu {
+            .quantum-display-menu {
                 display: none !important;
             }
         }
@@ -184,43 +180,41 @@
 <body>
     <!-- Header Area Start -->
     <header class="section-bg">
-        <div id="header-sticky">
+        <div id="stellar-header-fixed">
             <div class="container">
-                <nav class="navbar">
-                    <a class="navbar-brand header-logo" href="index.html">
+                <nav class="horizon-navigation navbar">
+                    <a class="navbar-brand phoenix-brand-wrapper" href="index.html">
                         <img src="assets/img/logo/logo.png" alt="logo-img">
                     </a>
                     
                     <!-- Desktop Menu -->
-                    <div class="desktop-menu ms-auto">
-                        <ul class="navbar-nav align-items-center flex-row">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Home</a>
+                    <div class="quantum-display-menu ms-auto">
+                        <ul class="zenith-nav-list navbar-nav align-items-center flex-row">
+                            <li class="galaxy-nav-item nav-item">
+                                <a class="nebula-link nav-link" href="index.html">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">About Us</a>
+                            <li class="galaxy-nav-item nav-item">
+                                <a class="nebula-link nav-link" href="about.html">About Us</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="sweets.html">Our Products</a>
+                            <li class="galaxy-nav-item nav-item">
+                                <a class="nebula-link nav-link" href="sweets.html">Our Products</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                            <li class="galaxy-nav-item nav-item">
+                                <a class="nebula-link nav-link" href="gallery.html">Gallery</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="desktop-menu ms-auto">
-                        <ul class="navbar-nav align-items-center flex-row">
-                            
-                           
-                            <li class="nav-item ms-3">
-                                <a href="contact.html" class="theme-btn">Contact Us</a>
+                    <div class="quantum-display-menu ms-auto">
+                        <ul class="zenith-nav-list navbar-nav align-items-center flex-row">
+                            <li class="galaxy-nav-item nav-item ms-3">
+                                <a href="contact.html" class="crimson-action-btn">Contact Us</a>
                             </li>
                         </ul>
                     </div>
                     
                     <!-- Mobile Menu Toggle -->
-                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                    <button class="aurora-toggle-btn navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mercurySidebarPanel" aria-controls="mercurySidebarPanel" aria-label="Toggle navigation">
+                        <span class="aurora-toggle-icon navbar-toggler-icon"></span>
                     </button>
                 </nav>
             </div>
@@ -229,30 +223,30 @@
     <!-- Header Area End -->
 
     <!-- Offcanvas Menu -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasMenuLabel">
+    <div class="mercury-sidebar-panel offcanvas offcanvas-end" tabindex="-1" id="mercurySidebarPanel" aria-labelledby="mercurySidebarLabel">
+        <div class="mercury-sidebar-header offcanvas-header">
+            <h5 class="mercury-sidebar-title offcanvas-title" id="mercurySidebarLabel">
                 <img src="assets/img/logo/logo.png" alt="logo-img">
             </h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+        <div class="mercury-sidebar-content offcanvas-body">
+            <ul class="zenith-nav-list navbar-nav">
+                <li class="galaxy-nav-item nav-item">
+                    <a class="nebula-link nav-link" href="index.html">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
+                <li class="galaxy-nav-item nav-item">
+                    <a class="nebula-link nav-link" href="about.html">About Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sweets.html">Our Products</a>
+                <li class="galaxy-nav-item nav-item">
+                    <a class="nebula-link nav-link" href="sweets.html">Our Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
+                <li class="galaxy-nav-item nav-item">
+                    <a class="nebula-link nav-link" href="gallery.html">Gallery</a>
                 </li>
             </ul>
-            <div class="header-button">
-                <a href="contact.html" class="theme-btn">Contact Us</a>
+            <div class="apex-button-zone">
+                <a href="contact.html" class="crimson-action-btn">Contact Us</a>
             </div>
         </div>
     </div>
