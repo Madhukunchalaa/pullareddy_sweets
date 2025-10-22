@@ -9,27 +9,16 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        .section-bg {
-            background-color: #f8f9fa;
-        }
         
-        #header-sticky {
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: #f8f9fa;
-        }
+        
+        
         
         .header-logo img {
-            max-height: 60px;
+            max-height: 50px;
             width: auto;
         }
         
-        .navbar {
-            padding: 0;
-        }
+       
         
         .navbar-nav .nav-link {
             color: #333;
@@ -37,10 +26,11 @@
             padding: 10px 20px;
             transition: color 0.3s ease;
             position: relative;
+            font-family: Barlow Condensed;
         }
         
         .navbar-nav .nav-link:hover {
-            color: #dc3545;
+            color: #AE1F23;
         }
         
         .navbar-nav .nav-link::after {
@@ -50,7 +40,7 @@
             left: 20px;
             width: 0;
             height: 2px;
-            background-color: #dc3545;
+            background-color: #AE1F23;
             transition: width 0.3s ease;
         }
         
@@ -60,12 +50,12 @@
         
         .theme-btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 19px 30px;
             background-color: #dc3545;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: 600;
+            font-weight: bold;
             text-transform: uppercase;
             transition: all 0.3s ease;
             border: 2px solid #dc3545;
@@ -216,6 +206,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="gallery.html">Gallery</a>
                             </li>
+                        </ul>
+                    </div>
+                    <div class="desktop-menu ms-auto">
+                        <ul class="navbar-nav align-items-center flex-row">
+                            
+                           
                             <li class="nav-item ms-3">
                                 <a href="contact.html" class="theme-btn">Contact Us</a>
                             </li>
