@@ -3,6 +3,33 @@
     Version         : 1.0
 * ================================================================= */
 
+(function($) {
+    "use strict";
+
+    $(document).ready( function() {
+
+        //>> Mobile Menu Js Start <<//
+        $('#mobile-menu').meanmenu({
+            meanMenuContainer: '.mobile-menu',
+            meanScreenWidth: "991",
+            meanExpand: ['<i class="far fa-plus"></i>'],
+        });
+
+     $(document).ready(function() {
+    // Close sidebar
+    $(".offcanvas__close, .offcanvas__overlay").on("click", function() {
+        $(".offcanvas__info").removeClass("info-open");
+        $(".offcanvas__overlay").removeClass("overlay-open");
+    });
+
+    // Open sidebar
+    $(".sidebar__toggle").on("click", function() {
+        $(".offcanvas__info").addClass("info-open");
+        $(".offcanvas__overlay").addClass("overlay-open");
+    });
+});
+
+
         //>> Body Overlay Js Start <<//
         $(".body-overlay").on("click", function() {
             $(".offcanvas__area").removeClass("offcanvas-opened");
