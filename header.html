@@ -20,7 +20,6 @@
             padding: 10px 20px;
             transition: color 0.3s ease;
             position: relative;
-            
             font-size: 18px;
         }
         
@@ -107,6 +106,36 @@
             top: 9px;
         }
         
+        /* Social Media Icons */
+        .social-icon {
+            gap: 15px;
+            margin: 0 20px;
+        }
+        
+        .social-icon a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            background-color: #f8f9fa;
+            color: #333;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon a:hover {
+            background-color: #AC1E23;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(172, 30, 35, 0.3);
+        }
+        
+        .social-icon a i {
+            font-size: 16px;
+        }
+        
         /* Offcanvas Styles */
         .mercury-sidebar-panel {
             width: 300px !important;
@@ -152,6 +181,13 @@
         
         .mercury-sidebar-panel .nebula-link::after {
             display: none;
+        }
+        
+        .mercury-sidebar-panel .social-icon {
+            padding: 25px;
+            justify-content: center;
+            border-bottom: 1px solid #f0f0f0;
+            margin: 0;
         }
         
         .mercury-sidebar-panel .apex-button-zone {
@@ -205,9 +241,20 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="quantum-display-menu ms-auto">
+                    
+                    <!-- Social Media Icons -->
+                    <div class="quantum-display-menu">
+                         <div class="social-icon d-flex align-items-center">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                
+                <a href="#"><i class="fab fa-instagram"></i></a>
+               
+            </div>
+                    </div>
+                      
+                    <div class="quantum-display-menu">
                         <ul class="zenith-nav-list navbar-nav align-items-center flex-row">
-                            <li class="galaxy-nav-item nav-item ms-3">
+                            <li class="galaxy-nav-item nav-item">
                                 <a href="contact.html" class="crimson-action-btn">Contact Us</a>
                             </li>
                         </ul>
@@ -246,6 +293,15 @@
                     <a class="nebula-link nav-link" href="gallery.html">Gallery</a>
                 </li>
             </ul>
+            
+            <!-- Social Media Icons in Mobile Menu -->
+            <div class="social-icon d-flex align-items-center">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                
+                <a href="#"><i class="fab fa-instagram"></i></a>
+               
+            </div>
+            
             <div class="apex-button-zone">
                 <a href="contact.html" class="crimson-action-btn">Contact Us</a>
             </div>
