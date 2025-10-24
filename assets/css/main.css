@@ -1,10 +1,6 @@
 /*
 ==============================================
-Theme Name: Foodking
-Author: Modina Theme
-Author URI: https://themeforest.net/user/modinatheme/
-Description: Fast Food Restaurant HTML
-Version: 2.0.0
+website Name: G Pulla Reddy Sweets
 ==============================================
 
 TABLE OF CONTENTS:
@@ -156,7 +152,7 @@ TABLE OF CONTENTS:
    3. TYPOGRAPHY & BASE STYLES
 ============================================== */
 body {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Barlow Condensed";
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -191,6 +187,7 @@ a {
     cursor: pointer;
     color: var(--header) !important;
     transition: all 0.4s ease-in-out;
+    font-family:'Barlow Condensed' ;
 }
 
 p {
@@ -2393,7 +2390,7 @@ h6 {
 }
 
 .heritage-card-title {
-    font-family: 'Playfair Display', serif;
+   
     font-size: 22px;
     font-weight: 700;
     color: #c7302b;
@@ -2401,7 +2398,7 @@ h6 {
 }
 
 .heritage-card-description {
-    font-family: 'Roboto', sans-serif;
+   
     font-size: 14px;
     line-height: 1.7;
     color: #666;
@@ -2573,7 +2570,7 @@ h6 {
 }
 
 .sweet-indulgence-tagline {
-    font-family: 'Playfair Display', serif;
+    
     font-size: 1.8rem;
     color: #d4c4b0;
     margin-bottom: 50px;
@@ -2583,7 +2580,7 @@ h6 {
 }
 
 .sweet-indulgence-cta {
-    font-family: 'Montserrat', sans-serif;
+
     background: rgba(139, 90, 43, 0.9);
     color: #f5e6d3;
     border: none;
@@ -2938,7 +2935,7 @@ h6 {
         }
 
         .jk5lm8n9p_heading {
-            font-family: 'Playfair Display', serif;
+            
             font-size: clamp(3rem, 8vw, 7rem);
             font-weight: 400;
             color: #f5f5f5;
@@ -2948,7 +2945,7 @@ h6 {
         }
 
         .qt3rb6vx2_subtitle {
-            font-family: 'Playfair Display', serif;
+            
             font-size: clamp(2.5rem, 7vw, 6rem);
             font-weight: 700;
             color: #f5f5f5;
@@ -2958,7 +2955,7 @@ h6 {
         }
 
         .yz9wc4fh1_tagline {
-            font-family: 'Montserrat', sans-serif;
+        
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             font-weight: 300;
             color: #d4d4d4;
@@ -2969,7 +2966,7 @@ h6 {
 
         .kd7pf2xs8_btn {
             display: inline-block;
-            font-family: 'Montserrat', sans-serif;
+        
             font-size: clamp(0.9rem, 2vw, 1.1rem);
             font-weight: 600;
             color: #fff;
@@ -3645,4 +3642,9 @@ body.menu-open {
 
 .food-image img[src] {
     background: none;
+}
+
+.categories-list li a{
+    
+    
 }

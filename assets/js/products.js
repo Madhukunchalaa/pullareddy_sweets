@@ -307,7 +307,56 @@ const productsData = [
     name: "Kova puri",
     image: "assets/img/kova_puri.jpg",
     category:"traditional_sweets"
-   }
+   },
+
+    {
+    id: 49,
+    name: "Baadusha",
+    image: "assets/img/badusha.jpg",
+    category:"traditional_sweets"
+   },
+    {
+    id: 50,
+    name: "Laddu",
+    image: "assets/img/bombay",
+    category:"traditional_sweets"
+   },
+
+  
+
+
+  //  kaju sweets
+
+  {
+    id: 49,
+    name:"kaju pakam",
+    image:"assets/img/kaju_pakam.jpg",
+    category:"kaju_sweets"
+
+  },
+
+  //dry fruits sweets
+
+  {
+    id: 50,
+    name:"Dry Fruit Laddu",
+    image:"assets/img/dryfruit_laddu.jpg",
+    category:"Dry Fruit Sweets"
+  },
+
+
+  // juicy_sweets
+
+  {
+    id: 51,
+    name:"Gulab Jamun",
+    image:'assets/img/gulabjamun.jpg',
+    category: "juicy sweets"
+  }
+
+
+
+  
 
 
 

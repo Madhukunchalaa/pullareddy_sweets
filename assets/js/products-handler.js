@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                              loading="lazy"
                              width="350"
                              height="350"
-                             onerror="this.src='assets/img/placeholder.jpg'">
+                             onerror="">
                     </div>
                     <div class="food-content">
                         <h3>${product.name}</h3>
@@ -120,13 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
             // Remove active class from all categories
             filterLinks.forEach(l => {
                 l.parentElement.classList.remove('active');
-                l.style.color = ''; // Reset color
-                l.style.fontWeight = ''; // Reset font weight
+                l.style.color = 'red !important'; // Reset color
+                l.style.fontWeight = 'bold'; // Reset font weight
             });
             
             // Add active class and styling to clicked category
             this.parentElement.classList.add('active');
-            this.style.color = '#ff6b6b'; // Highlight color (change as needed)
+            this.style.color = '#ff6b6b !important'; // Highlight color (change as needed)
             this.style.fontWeight = 'bold';
 
             // Update category and reset to first page
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
             e.preventDefault();
             const products = getProductsByCategory(currentCategory);
             const totalPages = Math.ceil(products.length / itemsPerPage);
-            
+
             if (currentPage < totalPages - 1) {
                 currentPage++;
                 renderProductsWithPagination(currentCategory);
