@@ -3644,7 +3644,48 @@ body.menu-open {
     background: none;
 }
 
-.categories-list li a{
-    
-    
+
+
+
+/* products-handler */
+/* Category list item styling */
+.widget-categories .categories-list li {
+    position: relative;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Active category highlight with ::before element */
+.widget-categories .categories-list li.active::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 17px;
+    background-color: var(--theme);
+}
+
+/* Active category text styling */
+.widget-categories .categories-list li.active a {
+    color: var(--theme);
+    font-weight: 600;
+}
+
+/* Optional: Hover effect */
+.widget-categories .categories-list li:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 17px;
+    background-color: var(--theme);
+    opacity: 0.5;
+}
+
+.widget-categories .categories-list li:hover a {
+    color: var(--theme);
 }

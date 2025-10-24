@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function () {
     // Category display names mapping
     const categoryNames = {
         'sweets': 'SWEETS',
+        'traditional_sweets': 'TRADITIONAL SWEETS',
+        'kaju_sweets': 'KAAJU SWEETS',
+        'Dry Fruit Sweets': 'DRY FRUIT SWEETS',
+        'juicy_sweets': 'JUICE/BENGALI SWEETS',
         'ghee': 'GHEE SAVORIES',
         'snacks': 'SAVORIES',
         'bakery': 'BAKERY',
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                              loading="lazy"
                              width="350"
                              height="350"
-                             onerror="">
+                             onerror="this.src='assets/img/placeholder.jpg'">
                     </div>
                     <div class="food-content">
                         <h3>${product.name}</h3>
@@ -109,7 +113,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Update prev/next button states
         prevBtn.style.opacity = currentPage === 0 ? '0.5' : '1';
+        prevBtn.style.cursor = currentPage === 0 ? 'not-allowed' : 'pointer';
         nextBtn.style.opacity = currentPage >= totalPages - 1 ? '0.5' : '1';
+        nextBtn.style.cursor = currentPage >= totalPages - 1 ? 'not-allowed' : 'pointer';
     }
 
     // Handle category filter
@@ -120,14 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Remove active class from all categories
             filterLinks.forEach(l => {
                 l.parentElement.classList.remove('active');
-                l.style.color = 'red !important'; // Reset color
-                l.style.fontWeight = 'bold'; // Reset font weight
             });
             
-            // Add active class and styling to clicked category
+            // Add active class to clicked category
             this.parentElement.classList.add('active');
-            this.style.color = '#ff6b6b !important'; // Highlight color (change as needed)
-            this.style.fontWeight = 'bold';
 
             // Update category and reset to first page
             currentCategory = this.getAttribute('data-filter');
@@ -139,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle pagination
+    // Handle pagination - Next button
     if (nextBtn) {
         nextBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -154,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Handle pagination - Previous button
     if (prevBtn) {
         prevBtn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -188,7 +191,5 @@ document.addEventListener('DOMContentLoaded', function () {
     const sweetsLink = document.querySelector('.categories-list a[data-filter="sweets"]');
     if (sweetsLink) {
         sweetsLink.parentElement.classList.add('active');
-        sweetsLink.style.color = '#ff6b6b'; // Highlight color
-        sweetsLink.style.fontWeight = 'bold';
     }
 });

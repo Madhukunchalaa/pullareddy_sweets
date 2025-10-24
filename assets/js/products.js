@@ -63,9 +63,6 @@ const productsData = [
     image: "assets/img/Bandhar_laddu.jpg",
     category: "sweets"
   },
-
-
-
   
   // BAKERY
   {
@@ -175,56 +172,16 @@ const productsData = [
   },
   
   // GHEE SAVORIES
-  {
-    id: 28,
-    name: "Soan Patti",
-    image: "assets/img/soan patti.jpg",
-    category: "ghee"
-  },
-  {
-    id: 29,
-    name: "Ariselu",
-    image: "assets/img/ariselu.jpeg",
-    category: "ghee"
-  },
-  {
-    id: 30,
-    name: "Badusha",
-    image: "assets/img/Badusha.jpg",
-    category: "ghee"
-  },
-  {
-    id: 31,
-    name: "Motichur Laddu",
-    image: "assets/img/mothichur-laddu.jpg",
-    category: "ghee",
-    featured: true
-  },
-  {
-    id: 32,
-    name: "Ajmeri Kalakand",
-    image: "assets/img/kalakand.jpg",
-    category: "ghee"
-  },
-  {
-    id: 33,
-    name: "Mysorepak",
-    image: "assets/img/mysorepak.jpg",
-    category: "ghee",
-    featured: true
-  },
-  {
-    id: 34,
-    name: "Jaggery Sunnundalu",
-    image: "assets/img/jaggery sunnandalu.jpg",
-    category: "ghee"
-  },
+ 
   {
     id: 35,
-    name: "Milk Mysorepak",
-    image: "assets/img/milkmysorepak.jpg",
+    name: "Kaaju pakoda",
+    image: "assets/img/kaju pakoda",
     category: "ghee"
   },
+  
+  
+  
   {
     id: 36,
     name: "Ghee Kara Boondi",
@@ -300,68 +257,238 @@ const productsData = [
     image: "assets/img/flaxseed_powder.jpg",
     category: "pickle&powder"
   },
-   //traditional sweets
 
-   {
+  // TRADITIONAL SWEETS
+  {
     id: 48,
-    name: "Kova puri",
+    name: "Kova Puri",
     image: "assets/img/kova_puri.jpg",
-    category:"traditional_sweets"
-   },
-
-    {
+    category: "traditional_sweets"
+  },
+  {
     id: 49,
     name: "Baadusha",
     image: "assets/img/badusha.jpg",
-    category:"traditional_sweets"
-   },
-    {
-    id: 50,
-    name: "Laddu",
-    image: "assets/img/bombay",
-    category:"traditional_sweets"
-   },
-
-  
-
-
-  //  kaju sweets
-
-  {
-    id: 49,
-    name:"kaju pakam",
-    image:"assets/img/kaju_pakam.jpg",
-    category:"kaju_sweets"
-
+    category: "traditional_sweets"
   },
-
-  //dry fruits sweets
-
   {
     id: 50,
-    name:"Dry Fruit Laddu",
-    image:"assets/img/dryfruit_laddu.jpg",
-    category:"Dry Fruit Sweets"
+    name: "Laddoo",
+    image: "assets/img/laddoo.jpg",
+    category: "traditional_sweets"
   },
-
-
-  // juicy_sweets
-
   {
     id: 51,
-    name:"Gulab Jamun",
-    image:'assets/img/gulabjamun.jpg',
-    category: "juicy sweets"
+    name: "Bombay Halwa",
+    image: "assets/img/bombay_halwa.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 52,
+    name: "Motichoor Laddoo",
+    image: "assets/img/motichoor_laddoo.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 53,
+    name: "Son Patti",
+    image: "assets/img/son_patti.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 54,
+    name: "Pheni",
+    image: "assets/img/pheni.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 55,
+    name: "Jaangri",
+    image: "assets/img/jaangri.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 56,
+    name: "Ariselu",
+    image: "assets/img/ariselu.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 57,
+    name: "Son Papdi",
+    image: "assets/img/son_papdi.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 58,
+    name: "Pootharekulu",
+    image: "assets/img/pootharekulu.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 59,
+    name: "Chocolate Burfi",
+    image: "assets/img/chocolate_burfi.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 60,
+    name: "Mysore Paak",
+    image: "assets/img/mysore_paak.jpg",
+    category: "traditional_sweets"
+  },
+  {
+    id: 61,
+    name: "Assorted Sweets",
+    image: "assets/img/assorted_sweets.jpg",
+    category: "traditional_sweets"
+  },
+
+  // KAJU SWEETS
+  {
+    id: 62,
+    name: "Kaju Pakam",
+    image: "assets/img/kaju_pakam.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 63,
+    name: "Kaju Burfi",
+    image: "assets/img/kaju_burfi.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 64,
+    name: "Bellam Kaju",
+    image: "assets/img/bellam_kaju.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 65,
+    name: "Kaju Bouquet",
+    image: "assets/img/kaju_bouquet.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 66,
+    name: "Bellam Kaju Burfi",
+    image: "assets/img/bellam_kaju_burfi.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 67,
+    name: "Kaju Casatta",
+    image: "assets/img/kaju_casatta.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 68,
+    name: "Kaju Anjeer Roll",
+    image: "assets/img/kaju_anjeer_roll.jpg",
+    category: "kaju_sweets"
+  },
+  {
+    id: 69,
+    name: "Kaju Pista Roll",
+    image: "assets/img/kaju_pista_roll.jpg",
+    category: "kaju_sweets"
+  },
+
+  // DRY FRUIT SWEETS
+  {
+    id: 70,
+    name: "Dry Fruit Laddoo",
+    image: "assets/img/dryfruit_laddu.jpg",
+    category: "dry_fruit_sweets"
+  },
+  {
+    id: 71,
+    name: "Kajur Bisco",
+    image: "assets/img/kajur_bisco.jpg",
+    category: "dry_fruit_sweets"
+  },
+  {
+    id: 72,
+    name: "Kesar Anjeer Roll",
+    image: "assets/img/kesar_anjeer_roll.jpg",
+    category: "dry_fruit_sweets"
+  },
+  {
+    id: 73,
+    name: "Badam Burfi",
+    image: "assets/img/badam_burfi.jpg",
+    category: "dry_fruit_sweets"
+  },
+  {
+    id: 74,
+    name: "Pista Burfi",
+    image: "assets/img/pista_burfi.jpg",
+    category: "dry_fruit_sweets"
+  },
+
+  // JUICY / BENGALI SWEETS
+  {
+    id: 75,
+    name: "Gulab Jamun",
+    image: "assets/img/gulabjamun.jpg",
+    category: "juicy_sweets"
+  },
+  {
+    id: 76,
+    name: "Rasgulla",
+    image: "assets/img/rasgulla.jpg",
+    category: "juicy_sweets"
+  },
+  {
+    id: 77,
+    name: "Basundi",
+    image: "assets/img/basundi.jpg",
+    category: "juicy_sweets"
+  },
+  {
+    id: 78,
+    name: "Rasmalai",
+    image: "assets/img/rasmalai.jpg",
+    category: "juicy_sweets"
+  },
+  {
+    id: 79,
+    name: "Rasbheri",
+    image: "assets/img/rasbheri.jpg",
+    category: "juicy_sweets"
+  },
+
+  // BAKERY (ADDITIONAL ITEMS)
+  {
+    id: 80,
+    name: "Vanilla Tea Cake",
+    image: "assets/img/vanilla_tea_cake.jpg",
+    category: "bakery"
+  },
+  {
+    id: 81,
+    name: "Plum Cake",
+    image: "assets/img/plum_cake.jpg",
+    category: "bakery"
+  },
+  {
+    id: 82,
+    name: "Chocolate Chip Cookies",
+    image: "assets/img/chocolate_chip_cookies.jpg",
+    category: "bakery"
+  },
+  {
+    id: 83,
+    name: "Coconut Cookies",
+    image: "assets/img/coconut_cookies.jpg",
+    category: "bakery"
+  },
+  {
+    id: 84,
+    name: "Badam Pista Sticks",
+    image: "assets/img/badam_pista_sticks.jpg",
+    category: "bakery"
   }
-
-
-
-  
-
-
-
-
-
 ];
 
 // Function to get products by category
