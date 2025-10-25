@@ -3689,3 +3689,97 @@ body.menu-open {
 .widget-categories .categories-list li:hover a {
     color: var(--theme);
 }
+
+
+
+/* Styling for the new Founder's Vision Section */
+.founder-vision-wrapper {
+    padding-top: 80px; /* Adjust spacing as needed */
+    padding-bottom: 80px; /* Adjust spacing as needed */
+}
+
+.founder-vision-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on smaller screens */
+    align-items: center;
+    gap: 40px; /* Spacing between image and text */
+}
+
+.founder-image-placeholder {
+    flex: 1; /* Takes up one part of the space */
+    min-width: 300px; /* Ensure a minimum width */
+}
+
+.founder-vision-text {
+    flex: 1.5; /* Takes up more space than the image */
+    min-width: 350px; /* Ensure a minimum width */
+}
+
+.founder-image-frame {
+    /* Style similar to the existing image frame for consistency */
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.kurnool-about-label {
+    /* Reusing the existing style for the label/tagline */
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--theme-color-2, #a04a0e); /* Using a theme color variable */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.founder-heading {
+    /* Styling for the main heading, matching the H1/H2 style */
+    font-size: 38px;
+    line-height: 1.2;
+    color: var(--heading-color, #1a1a1a);
+    margin-bottom: 30px;
+}
+
+.kurnool-highlight {
+    /* Reusing the existing highlight color */
+    color: var(--theme-color-2, #a04a0e);
+}
+
+.founder-points {
+    margin-top: 20px;
+}
+
+.founder-point-item {
+    margin-bottom: 25px;
+}
+
+.point-title {
+    font-size: 20px;
+    color: var(--heading-color, #1a1a1a);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.point-title i {
+    margin-right: 10px;
+}
+
+.point-description {
+    font-size: 16px;
+    color: var(--body-color, #555);
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .founder-vision-content {
+        flex-direction: column;
+    }
+
+    .founder-image-placeholder,
+    .founder-vision-text {
+        min-width: 100%;
+    }
+}
