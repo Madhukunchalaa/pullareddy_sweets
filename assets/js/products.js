@@ -352,6 +352,12 @@ const productsData = [
     category: "kaju_sweets"
   },
   {
+    id: 623,
+    name: "Kaju katli",
+    image: "assets/img/kaju_katli.jpg",
+    category: "kaju_sweets"
+  },
+  {
     id: 63,
     name: "Kaju Burfi",
     image: "assets/img/kaju_burfi.jpg",
@@ -390,7 +396,7 @@ const productsData = [
   {
     id: 69,
     name: "Kaju Pista Roll",
-    image: "assets/img/kaju_pista_roll.jpg",
+    image: "assets/img/kajupistaroll1.jpg",
     category: "kaju_sweets"
   },
 
@@ -407,10 +413,13 @@ const productsData = [
     image: "assets/img/kajur_bisco.jpg",
     category: "dry_fruit_sweets"
   },
+
+ 
+
   {
     id: 72,
     name: "Kesar Anjeer Roll",
-    image: "assets/img/kesar_anjeer_roll.jpg",
+    image: "assets/img/kesarianjeerroll1.jpg",
     category: "dry_fruit_sweets"
   },
   {
@@ -488,7 +497,17 @@ const productsData = [
     name: "Badam Pista Sticks",
     image: "assets/img/badam_pista_sticks.jpg",
     category: "bakery"
+  },
+
+    {
+    id: 85,
+    name: "Kaju katli",
+    image: "assets/img/kaju_katli",
+    category: "kaaju"
   }
+
+
+
 ];
 
 // Function to get products by category
