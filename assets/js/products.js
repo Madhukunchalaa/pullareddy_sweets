@@ -175,8 +175,8 @@ const productsData = [
  
   {
     id: 35,
-    name: "Kaaju pakoda",
-    image: "assets/img/kaju pakoda",
+    name: "Kaju pakoda",
+    image: "assets/img/kajupakoda1.jpg",
     category: "ghee"
   },
   
@@ -291,8 +291,8 @@ const productsData = [
   },
   {
     id: 53,
-    name: "Son Patti",
-    image: "assets/img/soan_patti.jpg",
+    name: "Soan Patti",
+    image: "assets/img/soan patti.jpg",
     category: "traditional_sweets"
   },
   {
@@ -303,19 +303,19 @@ const productsData = [
   },
   {
     id: 55,
-    name: "Jaangri",
+    name: "Jangri",
     image: "assets/img/jaangri1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 56,
     name: "Ariselu",
-    image: "assets/img/ariselu.jpg",
+    image: "assets/img/ariselu1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 57,
-    name: "Son Papdi",
+    name: "Soan Papdi",
     image: "assets/img/son_papdi.jpg",
     category: "traditional_sweets"
   },
@@ -340,7 +340,7 @@ const productsData = [
   {
     id: 61,
     name: "Assorted Sweets",
-    image: "assets/img/assorted_sweets.jpg",
+    image: "assets/img/sweetbox1.jpg",
     category: "traditional_sweets"
   },
 
@@ -360,19 +360,19 @@ const productsData = [
   {
     id: 63,
     name: "Kaju Burfi",
-    image: "assets/img/kaju_burfi.jpg",
+    image: "assets/img/Kaju-Barfi.jpg",
     category: "kaju_sweets"
   },
   {
     id: 64,
     name: "Bellam Kaju",
-    image: "assets/img/bellam_kaju.jpg",
+    image: "assets/img/Bellam-kaju.jpg",
     category: "kaju_sweets"
   },
   {
     id: 65,
     name: "Kaju Bouquet",
-    image: "assets/img/kaju_bouquet.jpg",
+    image: "assets/img/kaju-bouquet.jpg",
     category: "kaju_sweets"
   },
   {
@@ -384,13 +384,13 @@ const productsData = [
   {
     id: 67,
     name: "Kaju Casatta",
-    image: "assets/img/kaju_casatta.jpg",
+    image: "assets/img/kajupizza1.jpg",
     category: "kaju_sweets"
   },
   {
     id: 68,
     name: "Kaju Anjeer Roll",
-    image: "assets/img/kaju_anjeer_roll.jpg",
+    image: "assets/img/kajuroll1.jpg",
     category: "kaju_sweets"
   },
   {
@@ -410,7 +410,7 @@ const productsData = [
   {
     id: 71,
     name: "Kajur Bisco",
-    image: "assets/img/kajur_bisco.jpg",
+    image: "assets/img/Kajur-Bisco.jpg",
     category: "dry_fruit_sweets"
   },
 
@@ -431,7 +431,7 @@ const productsData = [
   {
     id: 74,
     name: "Pista Burfi",
-    image: "assets/img/pista_burfi.jpg",
+    image: "assets/img/pista-burfi1.jpg",
     category: "dry_fruit_sweets"
   },
 
@@ -439,13 +439,13 @@ const productsData = [
   {
     id: 75,
     name: "Gulab Jamun",
-    image: "assets/img/gulabjamun.jpg",
+    image: "assets/img/Gulabjamun1.jpg",
     category: "juicy_sweets"
   },
   {
     id: 76,
     name: "Rasgulla",
-    image: "assets/img/rasgulla.jpg",
+    image: "assets/img/Rasgulla1.jpg",
     category: "juicy_sweets"
   },
   {
@@ -457,13 +457,13 @@ const productsData = [
   {
     id: 78,
     name: "Rasmalai",
-    image: "assets/img/rasmalai.jpg",
+    image: "assets/img/Rasmalai1.jpg",
     category: "juicy_sweets"
   },
   {
     id: 79,
     name: "Rasbheri",
-    image: "assets/img/rasbheri.jpg",
+    image: "assets/img/Rasbheri1.jpg",
     category: "juicy_sweets"
   },
 
@@ -477,13 +477,13 @@ const productsData = [
   {
     id: 81,
     name: "Plum Cake",
-    image: "assets/img/plum_cake.jpg",
+    image: "assets/img/PlumCake1.jpg",
     category: "bakery"
   },
   {
     id: 82,
     name: "Chocolate Chip Cookies",
-    image: "assets/img/chocolate_chip_cookies.jpg",
+    image: "assets/img/chocolatechipcookie.jpg",
     category: "bakery"
   },
   {
@@ -495,7 +495,7 @@ const productsData = [
   {
     id: 84,
     name: "Badam Pista Sticks",
-    image: "assets/img/badam_pista_sticks.jpg",
+    image: "assets/img/Badam-Pista-Sticks.jpg",
     category: "bakery"
   },
 
@@ -504,6 +504,12 @@ const productsData = [
     name: "Kaju katli",
     image: "assets/img/kaju_katli",
     category: "kaaju"
+  },
+  {
+    id: 86,
+    name: "Vanilla Sponge Cake",
+    image: "assets/img/VanillaSpongeCake1.jpg",
+    category: "bakery"
   }
 
 
