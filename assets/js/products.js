@@ -262,49 +262,49 @@ const productsData = [
   {
     id: 48,
     name: "Kova Puri",
-    image: "assets/img/kova_puri.jpg",
+    image: "assets/img/Kovapuri_Bhujiya1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 49,
     name: "Baadusha",
-    image: "assets/img/badusha.jpg",
+    image: "assets/img/badushaa.jpg",
     category: "traditional_sweets"
   },
   {
     id: 50,
     name: "Laddoo",
-    image: "assets/img/laddoo.jpg",
+    image: "assets/img/boondi_laddu.jpg",
     category: "traditional_sweets"
   },
   {
     id: 51,
     name: "Bombay Halwa",
-    image: "assets/img/bombay_halwa.jpg",
+    image: "assets/img/MixedHalwa.jpg",
     category: "traditional_sweets"
   },
   {
     id: 52,
     name: "Motichoor Laddoo",
-    image: "assets/img/motichoor_laddoo.jpg",
+    image: "assets/img/Mothichur_laddu.jpg",
     category: "traditional_sweets"
   },
   {
     id: 53,
     name: "Son Patti",
-    image: "assets/img/son_patti.jpg",
+    image: "assets/img/soan_patti.jpg",
     category: "traditional_sweets"
   },
   {
     id: 54,
     name: "Pheni",
-    image: "assets/img/pheni.jpg",
+    image: "assets/img/pheni1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 55,
     name: "Jaangri",
-    image: "assets/img/jaangri.jpg",
+    image: "assets/img/jaangri1.jpg",
     category: "traditional_sweets"
   },
   {
@@ -322,7 +322,7 @@ const productsData = [
   {
     id: 58,
     name: "Pootharekulu",
-    image: "assets/img/pootharekulu.jpg",
+    image: "assets/img/paper-sweet1.jpg",
     category: "traditional_sweets"
   },
   {
@@ -334,7 +334,7 @@ const productsData = [
   {
     id: 60,
     name: "Mysore Paak",
-    image: "assets/img/mysore_paak.jpg",
+    image: "assets/img/MysorePaak1.jpg",
     category: "traditional_sweets"
   },
   {
