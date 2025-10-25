@@ -36,6 +36,9 @@ TABLE OF CONTENTS:
 ============================================== */
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+    font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
+}
 :root {
     --body: #fff;
     --black: #000;
@@ -152,7 +155,7 @@ TABLE OF CONTENTS:
    3. TYPOGRAPHY & BASE STYLES
 ============================================== */
 body {
-    font-family: "Barlow Condensed";
+    font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -187,7 +190,7 @@ a {
     cursor: pointer;
     color: var(--header) !important;
     transition: all 0.4s ease-in-out;
-    font-family:'Barlow Condensed' ;
+    font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
 }
 
 p {
@@ -197,7 +200,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Barlow Condensed";
+    font-family: "Barlow Condensed", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     color: var(--header);
@@ -711,7 +714,7 @@ h6 {
 }
 
 .banner-container {
-    background-image: url("../img/GPR_Banner_V2.png");
+    background-image: url("../img/homeNewbannerfamily.jpg");
     align-items: center;
     justify-content: flex-end;
 }
