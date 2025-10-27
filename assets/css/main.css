@@ -643,7 +643,7 @@ h6 {
 }
 
 .theme-color-3 {
-    color: var(--theme3) !important;
+    color: var(--white) !important;
 }
 
 /* Scroll Up Button */
@@ -1375,7 +1375,7 @@ h6 {
 }
 
 .footer-bottom .footer-bottom-wrapper p a {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .footer-bottom .footer-bottom-wrapper p a:hover {
@@ -1975,7 +1975,7 @@ h6 {
 }
 
 .sweets-feature-item {
-    background: #F4F1EA;
+    background: #fff;
     padding: 18px 20px;
     display: flex;
     align-items: center;
