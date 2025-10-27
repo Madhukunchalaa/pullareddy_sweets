@@ -4,7 +4,7 @@ const productsData = [
   // SWEETS
   {
     id: 1,
-    name: "Mothichur Laddu",
+    name: "Motichoor Laddu",
     image: "assets/img/Mothichur_laddu.jpg",
     category: "sweets",
     featured: true
