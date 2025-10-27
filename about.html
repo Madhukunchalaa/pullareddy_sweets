@@ -34,75 +34,8 @@
 
     <body>
 
-        <!-- Offcanvas Area Start -->
-       <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="index.html">
-                                <img src="assets/img/logo/logo.png" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button>
-                                <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text d-none d-lg-block">
-                            This involves interactions between a business and its customers. It's about meeting customers' needs and resolving their problems. Effective customer service is crucial.
-                        </p>
-                        <div class="offcanvas-gallery-area d-none d-lg-block">
-                            <div class="offcanvas-gallery-items">
-                                <a href="assets/img/header/01.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/01.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/02.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/02.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/03.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/03.jpg" alt="gallery-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas-gallery-items">
-                                <a href="assets/img/header/04.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/04.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/05.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/05.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/06.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/06.jpg" alt="gallery-img">
-                                </a>
-                            </div>
-                        </div>
-                        <ul class="nav-menu">
-    <li class="nav-item nav-item-active">
-        <a href="index.html" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-        <a href="about.html" class="nav-link">About Us</a>
-    </li>
-    <li class="nav-item">
-        <a href="sweets.html" class="nav-link">Our Products</a>
-    </li>
-    <li class="nav-item">
-        <a href="gallery.html" class="nav-link">Gallery</a>
-    </li>
-    <li class="nav-item">
-        <button class="contact-button" onclick="window.location.href='contact.html'">Contact Us</button>
-    </li>
-                        
-
-                    </div>
-                </div>
-            </div>
-</div>
-        <div class="offcanvas__overlay"></div>
-
-        <div id="header-placeholder"></div>
+    <!-- Header placeholder will be loaded here -->
+    <div id="header-placeholder"></div>
 
         <!--<< Breadcrumb Section Start >>-->
         <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/About\ Us\ banner.png');">
@@ -132,7 +65,7 @@
         <div class="founder-vision-content">
             <div class="founder-image-placeholder">
                 <div class="founder-image-frame">
-                    <img src="assets/img/founder-profile.jpg" alt="Sri G. Pulla Reddy Garu Founder" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+                    <img src="assets/img/ourvisionmission.jpg" alt="Sri G. Pulla Reddy Garu Founder" style="width: 100%; height: auto; display: block; border-radius: 8px;">
                 </div>
             </div>
 
@@ -145,21 +78,21 @@
 
                 <div class="founder-points">
                     <div class="founder-point-item">
-                        <h3 class="point-title"><i class="fa fa-map-marker" aria-hidden="true" style="color: #a04a0e;"></i> Founder’s Journey & Legacy</h3>
+                        <h3 class="point-title"><i class="fa fa-map-marker" aria-hidden="true" style="color: #AC1E23;"></i> Founder’s Journey & Legacy</h3>
                         <p class="point-description">
                             Beginning with a **small push-cart in 1948**, Sri G. Pulla Reddy Garu turned a simple dream into a brand synonymous with quality. His sheer willpower and dedication created a legacy that spread from Kurnool to Hyderabad, upholding the values of purity, integrity, and honesty.
                         </p>
                     </div>
 
                     <div class="founder-point-item">
-                        <h3 class="point-title"><i class="fa fa-certificate" aria-hidden="true" style="color: #a04a0e;"></i> Uncompromising Quality</h3>
+                        <h3 class="point-title"><i class="fa fa-certificate" aria-hidden="true" style="color: #AC1E23;"></i> Uncompromising Quality</h3>
                         <p class="point-description">
                             Quality is the **hallmark** of G. Pulla Reddy Sweets. We use only the finest ingredients, including our own pure ghee, rich milk, and the best dry fruits. Our strict standards ensure every sweet is authentic, hygienic, and worthy of our trusted name.
                         </p>
                     </div>
                     
                     <div class="founder-point-item">
-                        <h3 class="point-title"><i class="fa fa-users" aria-hidden="true" style="color: #a04a0e;"></i> Social Commitment</h3>
+                        <h3 class="point-title"><i class="fa fa-users" aria-hidden="true" style="color: #AC1E23;"></i> Social Commitment</h3>
                         <p class="point-description">
                             A philanthropist and humanist, the founder established the **G. Pulla Reddy Charities Trust** and multiple educational institutions, including engineering and technology colleges, demonstrating a profound commitment to social upliftment and providing educational opportunities to the community.
                         </p>
@@ -349,6 +282,10 @@
        }
    }
 
+   // Header loader script
+   fetch('header.html')
+       .then(response => response.text())
+       .then(data => document.getElementById('header-placeholder').innerHTML = data);
    
      </script>
     </body>

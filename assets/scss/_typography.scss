@@ -11,7 +11,6 @@ $body-font: 'Barlow Condensed', sans-serif;
 $fa: "Font Awesome 5 Pro";
 
 body {
-    font-family: $body-font;
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -49,7 +48,6 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font;
     margin: 0px;
 	padding: 0;
     color: $header-color;

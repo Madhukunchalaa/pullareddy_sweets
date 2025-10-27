@@ -4,7 +4,7 @@ const productsData = [
   // SWEETS
   {
     id: 1,
-    name: "Mothichur Laddu",
+    name: "Motichoor Laddu",
     image: "assets/img/Mothichur_laddu.jpg",
     category: "sweets",
     featured: true
@@ -67,7 +67,7 @@ const productsData = [
   // BAKERY
   {
     id: 11,
-    name: "Cakes",
+    name: "Plum Cake",
     image: "assets/img/cakes.jpg",
     category: "bakery"
   },
@@ -267,7 +267,7 @@ const productsData = [
   },
   {
     id: 49,
-    name: "Baadusha",
+    name: "Badusha",
     image: "assets/img/badushaa.jpg",
     category: "traditional_sweets"
   },
@@ -409,7 +409,7 @@ const productsData = [
   },
   {
     id: 71,
-    name: "Kajur Bisco",
+    name: "Khajur Bisco",
     image: "assets/img/Kajur-Bisco.jpg",
     category: "dry_fruit_sweets"
   },
@@ -451,7 +451,7 @@ const productsData = [
   {
     id: 77,
     name: "Basundi",
-    image: "assets/img/basundi.jpg",
+    image: "assets/img/Basundi.jpg",
     category: "juicy_sweets"
   },
   {
@@ -474,12 +474,7 @@ const productsData = [
     image: "assets/img/vanilla_tea_cake.jpg",
     category: "bakery"
   },
-  {
-    id: 81,
-    name: "Plum Cake",
-    image: "assets/img/PlumCake1.jpg",
-    category: "bakery"
-  },
+ 
   {
     id: 82,
     name: "Chocolate Chip Cookies",

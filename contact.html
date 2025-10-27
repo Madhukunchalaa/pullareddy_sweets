@@ -34,75 +34,8 @@
 
     <body>
 
-        <!-- Offcanvas Area Start -->
-       <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="index.html">
-                                <img src="assets/img/logo/logo.png" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button>
-                                <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <p class="text d-none d-lg-block">
-                            This involves interactions between a business and its customers. It's about meeting customers' needs and resolving their problems. Effective customer service is crucial.
-                        </p>
-                        <div class="offcanvas-gallery-area d-none d-lg-block">
-                            <div class="offcanvas-gallery-items">
-                                <a href="assets/img/header/01.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/01.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/02.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/02.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/03.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/03.jpg" alt="gallery-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas-gallery-items">
-                                <a href="assets/img/header/04.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/04.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/05.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/05.jpg" alt="gallery-img">
-                                </a>
-                                <a href="assets/img/header/06.jpg" class="offcanvas-image img-popup">
-                                <img src="assets/img/header/06.jpg" alt="gallery-img">
-                                </a>
-                            </div>
-                        </div>
-                        <ul class="nav-menu">
-    <li class="nav-item nav-item-active">
-        <a href="index.html" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item">
-        <a href="about.html" class="nav-link">About Us</a>
-    </li>
-    <li class="nav-item">
-        <a href="sweets.html" class="nav-link">Our Products</a>
-    </li>
-    <li class="nav-item">
-        <a href="gallery.html" class="nav-link">Gallery</a>
-    </li>
-    <li class="nav-item">
-        <button class="contact-button" onclick="window.location.href='contact.html'">Contact Us</button>
-    </li>
-                        
-
-                    </div>
-                </div>
-            </div>
-</div>
-        <div class="offcanvas__overlay"></div>
-
-        <div id="header-placeholder"></div>
+    <!-- Header placeholder will be loaded here -->
+    <div id="header-placeholder"></div>
 
         <!--<< Breadcrumb Section Start >>-->
         <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/Contact\ Us\ banner.png');">
@@ -233,7 +166,7 @@
 </svg>
                             </div>
                             <div class="content">
-                                <h3>Mail Adress</h3>
+                                <h3>Mail Address</h3>
                                 <p>
                                     email@example.com <br>
                                     info@yourdomain.com <br>
@@ -281,7 +214,7 @@
                                         </div>
                                         <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
                                             <div class="form-clt-big form-clt">
-                                                <textarea name="message" id="message" placeholder="Enter Your Messege here"></textarea>
+                                                <textarea name="message" id="message" placeholder="Enter Your Message here"></textarea>
                                                 <div class="icon">
                                                     <i class="fal fa-edit"></i>
                                                 </div>
@@ -512,7 +445,7 @@ function initializeMap() {
 
     const infoWindow = new google.maps.InfoWindow({
       content: `
-        <div style="font-family: Arial, sans-serif; max-width: 250px; padding: 10px;">
+        <div style="max-width: 250px; padding: 10px;">
           <h4 style="margin: 0 0 10px 0; color: #AC1E23; font-size: 16px;">${loc.name}</h4>
           <p style="margin: 0 0 10px 0; color: #666; font-size: 13px; line-height: 1.5;">${loc.address}</p>
           <a href="https://www.google.com/maps?q=${loc.lat},${loc.lng}" 
@@ -546,6 +479,15 @@ function initializeMap() {
 window.addEventListener('load', initializeMap);
      </script>
 
+
+    <!-- ========================================
+         JAVASCRIPT - HEADER LOADER
+    ======================================== -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    </script>
 
  <!--<< All JS Plugins >>-->
         <script src="assets/js/jquery-3.7.1.min.js"></script>

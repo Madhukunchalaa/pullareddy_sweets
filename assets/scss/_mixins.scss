@@ -136,10 +136,4 @@
 @mixin gradient{
 	background: linear-gradient(90deg, #1A4DBE 0%, #AE5EBE 100%);
 }
-@mixin bodyfont{
-    font-family: 'Plus Jakarta Sans', sans-serif;
-}
-@mixin titlefont{
-    font-family: 'Urbanist', sans-serif;
-}
 

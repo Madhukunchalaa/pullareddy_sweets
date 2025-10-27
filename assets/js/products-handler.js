@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const categoryNames = {
         'sweets': 'SWEETS',
         'traditional_sweets': 'TRADITIONAL SWEETS',
-        'kaju_sweets': 'KAAJU SWEETS',
-        'Dry Fruit Sweets': 'DRY FRUIT SWEETS',
+        'kaju_sweets': 'KAJU SWEETS',
+        'dry_fruit_sweets': 'DRY FRUIT SWEETS',
         'juicy_sweets': 'JUICE/BENGALI SWEETS',
         'ghee': 'GHEE SAVORIES',
         'snacks': 'SAVORIES',
