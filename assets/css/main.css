@@ -982,7 +982,7 @@ h6 {
 @media (max-width: 767px) {
     .main-cta-banner-wrapper {
         padding: 70px 50px;
-        text-align: center;
+        text-align: left;
     }
 }
 
@@ -1150,7 +1150,8 @@ h6 {
 
 .contact-info-items:hover .icon,
 .contact-info-items.active .icon {
-    filter: grayscale(100%) brightness(300%);
+    filter: invert(1) brightness(200%);
+    color: #fff;
 }
 
 .contact-info-items:hover .content h3,
@@ -1172,6 +1173,7 @@ h6 {
 
 .contact-area .contact-form-items .contact-title h3 {
     margin-top: -10px;
+    font-weight: 700;
 }
 
 .contact-area .contact-form-items .form-clt {
@@ -1245,7 +1247,7 @@ h6 {
 
 .phone-item .location {
     display: block;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 @media (max-width: 576px) {
@@ -1507,7 +1509,7 @@ h6 {
 
 .delicacies-description {
     color: #666;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.7;
     margin-bottom: 35px;
     max-width: 320px;
@@ -1625,6 +1627,17 @@ h6 {
 @media (max-width: 768px) {
     .delicacies-hero-section {
         padding: 40px 20px;
+        margin-right: 0;
+    }
+    .delicacies-carousel-control {
+        width: 30px;
+        height: 30px;
+    }
+    .delicacies-carousel-control.delicacies-next {
+        margin-right: 5px;
+    }
+    .delicacies-carousel-control.delicacies-prev {
+        margin-left: 5px;
     }
     .delicacies-main-heading {
         font-size: 28px;
@@ -1688,7 +1701,7 @@ h6 {
 
 .heritage-description-text {
     color: #666;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 40px;
 }
@@ -1741,6 +1754,9 @@ h6 {
 @media (max-width: 576px) {
     .heritage-journey-section {
         padding: 40px 0;
+    }
+    .welcome-sec{
+        padding: 20px!important;
     }
     .heritage-main-title {
         font-size: 28px;
@@ -1825,7 +1841,7 @@ h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 8px;
+    margin-bottom: 30px;
 }
 
 .jaggery-product-count {
@@ -1911,6 +1927,9 @@ h6 {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 20px;
     }
+    .sweet-tradition-description {
+        font-size: 14px;
+    }
 }
 
 
@@ -1939,7 +1958,7 @@ h6 {
 
 .sweets-category-label {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #c62828;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -2080,10 +2099,10 @@ h6 {
         padding: 15px 18px;
     }
     .sweets-feature-text {
-        font-size: 10px;
+        font-size: 14px;
     }
     .sweets-description-text {
-        font-size: 12px;
+        font-size: 14px;
     }
     .sweets-visual-gallery {
         min-height: 350px;
@@ -2098,7 +2117,7 @@ h6 {
         font-size: 28px;
     }
     .sweets-category-label {
-        font-size: 9px;
+        font-size: 11px;
     }
     .sweets-visual-gallery {
         min-height: 300px;
@@ -2458,8 +2477,8 @@ h6 {
 }
 
 .carousel-item p {
-    font-size: 14px;
-    color: #666;
+    font-size: 16px;
+    color: #555;
     line-height: 1.6;
     margin: 0;
 }
@@ -3787,4 +3806,37 @@ body.menu-open {
 
 .testimonial-content p{
     font-size: 30px;
+    color: #555;
+}
+.awards-title{
+    font-weight: 700;
+}
+
+.testimonial-heading h2{
+    font-weight: 700;
+}
+@media (max-width: 768px) {
+    .testimonial-content p {
+        font-size: 20px;
+    }
+    .founder-vision-wrapper{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    .heritage-section {
+        padding: 0;
+    }
+    .food-category-section{
+        padding: 40px 0;
+    }
+    .contact-info-section{
+        padding: 0;
+    }
+    .contact-title h3{
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
 }

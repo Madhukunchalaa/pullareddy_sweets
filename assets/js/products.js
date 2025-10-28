@@ -91,7 +91,7 @@ const productsData = [
   },
   {
     id: 15,
-    name: "Spl Biscuits",
+    name: "Badam Pista Sticks",
     image: "assets/img/Spl Biscuits (1).jpg",
     category: "bakery"
   },
