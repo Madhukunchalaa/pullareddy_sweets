@@ -33,12 +33,12 @@ const productsData = [
     image: "assets/img/dryfruit_laddu.jpg",
     category: "sweets"
   },
-  {
-    id: 6,
-    name: "Badam Katli",
-    image: "assets/img/badam_katli.jpg",
-    category: "sweets"
-  },
+  // {
+  //   id: 6,
+  //   name: "Badam Katli",
+  //   image: "assets/img/badam_katli.jpg",
+  //   category: "sweets"
+  // },
   {
     id: 7,
     name: "Boondi Laddu",
