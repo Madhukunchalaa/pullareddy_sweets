@@ -44,7 +44,7 @@ TABLE OF CONTENTS:
     --black: #000;
     --white: #fff;
     --theme: #AC1E23;
-    --theme2: #D12525;
+    --theme2: #AC1E23;
     --theme3: #AC1E23;
     --header: #212121;
     --base: #00813D;
@@ -632,7 +632,7 @@ h6 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-position: center;
+    background-position: top;
     width: 100%;
     height: 100%;
 }
@@ -643,7 +643,7 @@ h6 {
 }
 
 .theme-color-3 {
-    color: var(--theme3) !important;
+    color: var(--white) !important;
 }
 
 /* Scroll Up Button */
@@ -968,7 +968,7 @@ h6 {
 
 .main-cta-banner-wrapper {
     padding: 120px 100px;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     position: relative;
     z-index: 9;
 }
@@ -1377,7 +1377,7 @@ h6 {
 }
 
 .footer-bottom .footer-bottom-wrapper p a {
-    color: var(--white);
+    color: var(--white) !important;
 }
 
 .footer-bottom .footer-bottom-wrapper p a:hover {
@@ -1490,7 +1490,7 @@ h6 {
 }
 
 .delicacies-tagline {
-    color: #d32f2f;
+    color: #AC1E23;
     font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
@@ -1518,7 +1518,7 @@ h6 {
 }
 
 .delicacies-cta-btn {
-    background-color: #d32f2f;
+    background-color: #AC1E23;
     color: white;
     border: none;
     padding: 14px 40px;
@@ -1585,7 +1585,7 @@ h6 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #d32f2f;
+    background-color: #AC1E23;
     color: white;
     border: none;
     width: 40px;
@@ -1675,12 +1675,12 @@ h6 {
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
-    border: 2px solid #d32f2f;
+    border: 2px solid #AC1E23;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .heritage-welcome-tag {
-    color: #d32f2f;
+    color: #AC1E23;
     font-size: 27px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1696,7 +1696,7 @@ h6 {
 }
 
 .heritage-highlight-text {
-    color: #d32f2f;
+    color: #AC1E23;
 }
 
 .heritage-description-text {
@@ -1793,7 +1793,7 @@ h6 {
 }
 
 .sweet-tradition-title-red {
-    color: #c42a2a;
+    color: #AC1E23;
 }
 
 .sweet-tradition-description {
@@ -1836,7 +1836,7 @@ h6 {
 }
 
 .jaggery-category-title {
-    color: #c42a2a;
+    color: #AC1E23;
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1864,7 +1864,7 @@ h6 {
     text-transform: uppercase;
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
-    background-color: #c42a2a;
+    background-color: #AC1E23;
     color: #fff;
 }
 
@@ -1878,7 +1878,7 @@ h6 {
 
 .jaggery-collection-card:has(.jaggery-explore-btn:hover),
 .jaggery-collection-card:has(.jaggery-explore-btn:focus) {
-    background-color: #c42a2a;
+    background-color: #AC1E23;
     color: #fff;
 }
 
@@ -1968,6 +1968,7 @@ h6 {
 .sweets-main-title {
     font-size: 42px;
     line-height: 1.1;
+    font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 18px;
     text-transform: uppercase;
@@ -1993,7 +1994,7 @@ h6 {
 }
 
 .sweets-feature-item {
-    background: #F4F1EA;
+    background: #fff;
     padding: 18px 20px;
     display: flex;
     align-items: center;
@@ -2510,7 +2511,7 @@ h6 {
 }
 
 .indicator.active {
-    background: #d32f2f;
+    background: #AC1E23;
     width: 25px;
     border-radius: 5px;
 }
@@ -3747,7 +3748,7 @@ body.menu-open {
     display: inline-block;
     font-size: 14px;
     font-weight: 600;
-    color: var(--theme-color-2, #a04a0e); /* Using a theme color variable */
+    color: var(--theme-color-2, #AC1E23); /* Using a theme color variable */
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 10px;
@@ -3755,7 +3756,8 @@ body.menu-open {
 
 .founder-heading {
     /* Styling for the main heading, matching the H1/H2 style */
-    font-size: 38px;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 1.2;
     color: var(--heading-color, #1a1a1a);
     margin-bottom: 30px;
@@ -3763,7 +3765,7 @@ body.menu-open {
 
 .kurnool-highlight {
     /* Reusing the existing highlight color */
-    color: var(--theme-color-2, #a04a0e);
+    color: var(--theme-color-2, #AC1E23);
 }
 
 .founder-points {
@@ -3803,7 +3805,10 @@ body.menu-open {
     }
 }
 
-
+.testimonial-heading{
+    margin-bottom: 50px;
+    font-weight: 700;
+}
 .testimonial-content p{
     font-size: 30px;
     color: #555;
@@ -3839,4 +3844,101 @@ body.menu-open {
         margin-bottom: 30px;
     }
     
+}
+/* Desktop: Show 3 cards per slide */
+@media (min-width: 768px) {
+    .delicacies-carousel-item.mobile-slide {
+        display: none !important;
+    }
+    
+    .delicacies-carousel-item.desktop-slide {
+        display: flex !important;
+        gap: 1.5rem;
+        justify-content: space-between;
+    }
+    
+    .delicacies-carousel-item.desktop-slide .delicacies-product-card {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    .delicacies-carousel-item.desktop-slide:not(.delicacies-active) {
+        display: none !important;
+    }
+}
+
+/* Mobile: Show 1 card per slide */
+@media (max-width: 767px) {
+    .delicacies-carousel-item.desktop-slide {
+        display: none !important;
+    }
+    
+    .delicacies-carousel-item.mobile-slide {
+        display: flex !important;
+        justify-content: center;
+    }
+    
+    .delicacies-carousel-item.mobile-slide:not(.delicacies-active) {
+        display: none !important;
+    }
+    
+    .delicacies-carousel-item.mobile-slide .delicacies-product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Base carousel item styles */
+.delicacies-carousel-item {
+    display: none;
+}
+
+.delicacies-carousel-item.delicacies-active {
+    display: flex !important;
+}
+
+/* Base styles - hide all slides by default */
+.delicacies-carousel-item {
+    display: none !important;
+}
+
+.delicacies-carousel-item.delicacies-active {
+    display: flex !important;
+}
+
+/* Desktop: Show only desktop-slide elements with 3 cards */
+@media (min-width: 768px) {
+    .delicacies-carousel-item.mobile-slide {
+        display: none !important;
+    }
+    
+    .delicacies-carousel-item.desktop-slide.delicacies-active {
+        display: flex !important;
+        gap: 1.5rem;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    
+    .delicacies-carousel-item.desktop-slide .delicacies-product-card {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* Mobile: Show only mobile-slide elements with 1 card */
+@media (max-width: 767px) {
+    .delicacies-carousel-item.desktop-slide {
+        display: none !important;
+    }
+    
+    .delicacies-carousel-item.mobile-slide.delicacies-active {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .delicacies-carousel-item.mobile-slide .delicacies-product-card {
+        width: 100%;
+        max-width: 300px;
+    }
 }
