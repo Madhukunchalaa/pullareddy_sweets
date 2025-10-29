@@ -513,7 +513,7 @@ h6 {
     gap: 10px;
 }
 
-.breadcrumb-wrapper .page-heading .breadcrumb-items li {
+.breadcrumb-wrapper .page-heading .breadcrumb-items div {
     font-size: 20px;
     color: var(--theme2);
     font-weight: 600;
@@ -525,11 +525,11 @@ h6 {
     transition: all 0.4s ease-in-out;
 }
 
-.breadcrumb-wrapper .page-heading .breadcrumb-items li a:hover {
+.breadcrumb-wrapper .page-heading .breadcrumb-items div a:hover {
     color: var(--theme);
 }
 
-.breadcrumb-wrapper .page-heading .breadcrumb-items li i {
+.breadcrumb-wrapper .page-heading .breadcrumb-items div i {
     font-size: 20px;
     color: var(--theme2);
 }
@@ -553,7 +553,7 @@ h6 {
     .breadcrumb-wrapper .page-heading h1 {
         font-size: 36px;
     }
-    .breadcrumb-wrapper .page-heading .breadcrumb-items li i {
+    .breadcrumb-wrapper .page-heading .breadcrumb-items div i {
         font-size: 18px;
     }
 }
