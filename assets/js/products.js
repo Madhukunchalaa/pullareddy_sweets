@@ -33,12 +33,12 @@ const productsData = [
     image: "assets/img/dryfruit_laddu.jpg",
     category: "sweets"
   },
-  {
-    id: 6,
-    name: "Badam Katli",
-    image: "assets/img/badam_katli.jpg",
-    category: "sweets"
-  },
+  // {
+  //   id: 6,
+  //   name: "Badam Katli",
+  //   image: "assets/img/badam_katli.jpg",
+  //   category: "sweets"
+  // },
   {
     id: 7,
     name: "Boondi Laddu",
@@ -65,15 +65,15 @@ const productsData = [
   },
   
   // BAKERY
-  {
-    id: 11,
-    name: "Plum Cake",
-    image: "assets/img/cakes.jpg",
-    category: "bakery"
-  },
+  // {
+  //   id: 11,
+  //   name: "Plum Cake",
+  //   image: "assets/img/cakes.jpg",
+  //   category: "bakery"
+  // },
   {
     id: 12,
-    name: "Dilpasand",
+    name: "Plum Cake",
     image: "assets/img/Dilpasand.jpg",
     category: "bakery"
   },
@@ -89,24 +89,14 @@ const productsData = [
     image: "assets/img/osmania_Biscuits.jpg",
     category: "bakery"
   },
-  {
-    id: 15,
-    name: "Badam Pista Sticks",
-    image: "assets/img/Spl Biscuits (1).jpg",
-    category: "bakery"
-  },
+ 
   {
     id: 16,
     name: "Kova Bun",
     image: "assets/img/kova_bun.jpg",
     category: "bakery"
   },
-  {
-    id: 17,
-    name: "Biscuits",
-    image: "assets/img/Biscuits.jpg",
-    category: "bakery"
-  },
+ 
   
   // SNACKS
   {
@@ -315,8 +305,8 @@ const productsData = [
   },
   {
     id: 57,
-    name: "Soan Papdi",
-    image: "assets/img/son_papdi.jpg",
+    name: "Soan Papdi Yellow and White",
+    image: "assets/img/soan-papdi.jpg",
     category: "traditional_sweets"
   },
   {
@@ -328,7 +318,7 @@ const productsData = [
   {
     id: 59,
     name: "Chocolate Burfi",
-    image: "assets/img/chocolate_burfi.jpg",
+    image: "assets/img/chocolate-burfi.jpg",
     category: "traditional_sweets"
   },
   {
@@ -425,7 +415,7 @@ const productsData = [
   {
     id: 73,
     name: "Badam Burfi",
-    image: "assets/img/badam_burfi.jpg",
+    image: "assets/img/badam-burfi.jpg",
     category: "dry_fruit_sweets"
   },
   {
@@ -468,12 +458,7 @@ const productsData = [
   },
 
   // BAKERY (ADDITIONAL ITEMS)
-  {
-    id: 80,
-    name: "Vanilla Tea Cake",
-    image: "assets/img/vanilla_tea_cake.jpg",
-    category: "bakery"
-  },
+ 
  
   {
     id: 82,
@@ -481,16 +466,17 @@ const productsData = [
     image: "assets/img/chocolatechipcookie.jpg",
     category: "bakery"
   },
-  {
-    id: 83,
-    name: "Coconut Cookies",
-    image: "assets/img/coconut_cookies.jpg",
-    category: "bakery"
-  },
+  
   {
     id: 84,
     name: "Badam Pista Sticks",
     image: "assets/img/Badam-Pista-Sticks.jpg",
+    category: "bakery"
+  },
+  {
+    id: 83,
+    name: "Coconut Cookies",
+    image: "assets/img/Coconut_Cookies[2].jpg",
     category: "bakery"
   },
 
