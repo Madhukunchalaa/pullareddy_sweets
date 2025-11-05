@@ -392,7 +392,7 @@ const productsData = [
 
   // DRY FRUIT SWEETS
   {
-    id: 70,
+    id: 789,
     name: "Dry Fruit Laddoo",
     image: "assets/img/dryfruit_laddu.jpg",
     category: "dry_fruit_sweets"
