@@ -288,19 +288,19 @@ const productsData = [
   {
     id: 54,
     name: "Pheni",
-    image: "assets/img/pheni1.jpg",
+    image: "assets/img/Pheni1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 55,
     name: "Jangri",
-    image: "assets/img/jaangri1.jpg",
+    image: "assets/img/Jaangri1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 56,
     name: "Ariselu",
-    image: "assets/img/ariselu1.jpg",
+    image: "assets/img/Ariselu1.jpg",
     category: "traditional_sweets"
   },
   {
