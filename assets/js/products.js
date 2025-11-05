@@ -288,19 +288,19 @@ const productsData = [
   {
     id: 54,
     name: "Pheni",
-    image: "assets/img/pheni1.jpg",
+    image: "assets/img/Pheni1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 55,
     name: "Jangri",
-    image: "assets/img/jaangri1.jpg",
+    image: "assets/img/Jaangri1.jpg",
     category: "traditional_sweets"
   },
   {
     id: 56,
     name: "Ariselu",
-    image: "assets/img/ariselu1.jpg",
+    image: "assets/img/Ariselu1.jpg",
     category: "traditional_sweets"
   },
   {
@@ -392,7 +392,7 @@ const productsData = [
 
   // DRY FRUIT SWEETS
   {
-    id: 70,
+    id: 789,
     name: "Dry Fruit Laddoo",
     image: "assets/img/dryfruit_laddu.jpg",
     category: "dry_fruit_sweets"
