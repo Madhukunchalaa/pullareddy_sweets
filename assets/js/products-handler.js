@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
         'traditional_sweets': 'TRADITIONAL SWEETS',
         'kaju_sweets': 'KAJU SWEETS',
         'dry_fruit_sweets': 'DRY FRUIT SWEETS',
-        'juicy_sweets': 'JUICE/BENGALI SWEETS',
-        'ghee': 'GHEE SAVORIES',
-        'snacks': 'SAVORIES',
+        'juicy_sweets': 'JUICE / BENGALI SWEETS',
+        'ghee': 'GHEE SAVOURIES',
+        'snacks': 'SAVOURIES',
         'bakery': 'BAKERY',
-        'pickle&powder': 'PICKLES AND POWDERS'
+        'pickle&powder': 'PICKLES & POWDERS'
     };
 
     // Render featured products in sidebar
