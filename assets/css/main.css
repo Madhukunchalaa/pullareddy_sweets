@@ -508,7 +508,7 @@ h6 {
 .breadcrumb-wrapper .page-heading .breadcrumb-items {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-top: 20px;
     gap: 10px;
 }
@@ -632,7 +632,7 @@ h6 {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-position: top;
+    background-position: center;
     width: 100%;
     height: 100%;
 }
@@ -717,7 +717,7 @@ h6 {
 }
 
 .banner-container1 {
-    background-image: url("../img/GPR_Banner_V2.png");
+    background-image: url("../img/home-banner-new.jpg");
     align-items: end;
     justify-content: center;
 }
