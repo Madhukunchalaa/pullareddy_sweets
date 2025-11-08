@@ -515,7 +515,7 @@ h6 {
 
 .breadcrumb-wrapper .page-heading .breadcrumb-items div {
     font-size: 20px;
-    color: var(--theme2);
+    /* color: var(--theme2); */
     font-weight: 600;
     text-transform: uppercase;
 }
