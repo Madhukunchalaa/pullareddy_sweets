@@ -700,7 +700,7 @@ h6 {
 .banner-container,
 .banner-container1,
 .banner-container2 {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -711,37 +711,25 @@ h6 {
 }
 
 .banner-container {
-    background-image: url("../img/homeNewbannerfamily.jpg");
-    align-items: center;
-    justify-content: flex-end;
+    background-image: url("../img/gallery-banner-new.jpg");
+    align-items:start;
+    justify-content: center;
 }
 
 .banner-container1 {
     background-image: url("../img/home-banner-new.jpg");
-    align-items: end;
+    align-items: start;
     justify-content: center;
 }
 
 .banner-container2 {
-    background-image: url("../img/sweetsbanner2.jpg");
-    align-items: end;
+    background-image: url("../img/pickles-powder-banner-new.jpg");
+    align-items: start;
     justify-content: center;
 }
-
-.banner-container::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(180, 90, 50, 0.5) 40%,
-        rgba(180, 30, 20, 0.8) 100%
-    );
-    z-index: 1;
+.carousel-item {
+  height: 600px; 
+  position: relative;
 }
 
 .banner-container > *,
@@ -764,17 +752,16 @@ h6 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.banner-container1 h2
+.banner-container1 h2, .banner-container h2
  {
-    margin-right: 200px;
+    margin-left: 100px;
    
 }
 
 .banner-container2 h2{
-  margin-right: 80px;
+  margin-left: 100px;
 
 }
-
 
 .banner-container h5,
 .banner-container1 h5,
@@ -789,11 +776,16 @@ h6 {
 }
 
 .banner-container1 h5 {
-    margin-right: 158px;
+    margin-left: 100px;
     margin-bottom: 245px;
 }
+
+.banner-container h5, .banner-container a{
+    margin-left: 100px;
+}
+
 .banner-container2 h5 {
-    margin-right: 94px;
+    margin-left: 100px;
     margin-bottom: 240px;
 }
 
