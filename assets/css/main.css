@@ -839,6 +839,7 @@ h6 {
             .banner-container1 h2,
             .banner-container2 h2 {
                 font-size: 42px;
+                color: #fddf5a;
             }
 
             .banner-container h5,
@@ -846,25 +847,32 @@ h6 {
             .banner-container2 h5 {
                 font-size: 18px;
                 letter-spacing: 3px;
+                font-weight: 700;
             }
 
             .heritage-cta-button {
                 font-size: 16px;
                 padding: 14px 35px;
+                background-color: #AC1E23;
+                color: #fff;
             }
 
             /* Mobile Background images - add your mobile versions here */
              .banner-container {
                 background-image: url("../img/home-banner2.jpg");
-                background-position: left;
+                background-position: center;
+                background-size: cover;
+                
             }
             .banner-container1 {
                 background-image: url("../img/new-home-banner5.jpg");
-                background-position: left;
+                background-position: right;
+                background-size: cover;
             }
             .banner-container2 {
                 background-image: url("../img/sweets-banner2.jpg");
-                background-position: left;
+                background-position: center;
+                background-size: cover;
             }
         }
 
