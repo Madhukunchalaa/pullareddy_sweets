@@ -366,12 +366,6 @@ const productsData = [
     category: "kaju_sweets"
   },
   {
-    id: 66,
-    name: "Bellam Kaju Burfi",
-    image: "assets/img/bellam_kaju_burfi.jpg",
-    category: "kaju_sweets"
-  },
-  {
     id: 67,
     name: "Kaju Casatta",
     image: "assets/img/kajupizza1.jpg",
