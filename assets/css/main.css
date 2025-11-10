@@ -697,160 +697,210 @@ h6 {
 /* ==============================================
    10. BANNER SECTIONS
 ============================================== */
-.carousel-item {
-  height: 650px;
-  margin: 0;
-  padding: 0;
-}
-.carousel-fade .carousel-item {
-  opacity: 0;
-  transition-duration: 0.1s;
-  transition-property: opacity;
-}
+ .carousel-item {
+            height: 650px;
+            margin: 0;
+            padding: 0;
+        }
 
-.carousel-fade .carousel-item.active {
-  opacity: 1;
-}
+        .carousel-fade .carousel-item {
+            opacity: 0;
+            transition-duration: 0.1s;
+            transition-property: opacity;
+        }
 
-.banner-container,
-.banner-container1,
-.banner-container2 {
-  height: 100%;
-  width: 100%;
-  min-height: 600px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 100px;
-  margin: 0;
-}
+        .carousel-fade .carousel-item.active {
+            opacity: 1;
+        }
 
-/* Background images */
-.banner-container {
-  background-image: url("../img/home-banner2.jpg");
-}
-.banner-container1 {
-  background-image: url("../img/new-home-banner5.jpg");
-}
-.banner-container2 {
-  background-image: url("../img/sweets-banner2.jpg");
-}
+        .banner-container,
+        .banner-container1,
+        .banner-container2 {
+            height: 100%;
+            width: 100%;
+            min-height: 600px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 100px;
+            margin: 0;
+        }
 
-/* Headings */
-.banner-container h2,
-.banner-container1 h2,
-.banner-container2 h2 {
-  color: #E5C592;
-  font-size: 72px;
-  text-align: left;
-  font-weight: bolder;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  text-transform: capitalize;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
+        /* Desktop Background images */
+        .banner-container {
+            background-image: url("../img/home-banner2.jpg");
+        }
+        .banner-container1 {
+            background-image: url("../img/new-home-banner5.jpg");
+        }
+        .banner-container2 {
+            background-image: url("../img/sweets-banner2.jpg");
+        }
 
-/* Subheadings */
-.banner-container h5,
-.banner-container1 h5,
-.banner-container2 h5 {
-  color: #fff;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  margin-bottom: 50px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
+        /* Headings */
+        .banner-container h2,
+        .banner-container1 h2,
+        .banner-container2 h2 {
+            color: #E5C592;
+            font-size: 72px;
+            text-align: left;
+            font-weight: bolder;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-/* CTA Button */
-.heritage-cta-button {
-  color: #AC1E23;
-  background-color: #E5C592;
-  padding: 18px 45px;
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+        /* Subheadings */
+        .banner-container h5,
+        .banner-container1 h5,
+        .banner-container2 h5 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 300;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
 
-.heritage-cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-}
+        /* CTA Button */
+        .heritage-cta-button {
+            color: #AC1E23;
+            background-color: #E5C592;
+            padding: 18px 45px;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
-/* Indicators */
-.carousel-indicators {
-  bottom: 20px;
-}
+        .heritage-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
 
-.carousel-indicators [data-bs-target] {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #E5C592;
-  opacity: 0.6;
-  border: none;
-  transition: opacity 0.3s ease;
-}
+        /* Indicators */
+        .carousel-indicators {
+            bottom: 20px;
+        }
 
-.carousel-indicators .active {
-  opacity: 1;
-}
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #E5C592;
+            opacity: 0.6;
+            border: none;
+            transition: opacity 0.3s ease;
+        }
 
-/* Controls (optional styling) */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: brightness(0) invert(1);
-}
+        .carousel-indicators .active {
+            opacity: 1;
+        }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .banner-container h2 {
-    font-size: 56px;
-  }
-}
+        /* Controls */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            filter: brightness(0) invert(1);
+        }
 
-@media (max-width: 768px) {
-  .banner-container {
-    padding-left: 50px;
-  }
-  .banner-container h2 {
-    font-size: 42px;
-  }
-  .banner-container h5 {
-    font-size: 18px;
-  }
-  .heritage-cta-button {
-    font-size: 16px;
-    padding: 14px 35px;
-  }
-}
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .banner-container h2,
+            .banner-container1 h2,
+            .banner-container2 h2 {
+                font-size: 56px;
+            }
+        }
 
-@media (max-width: 480px) {
-  .banner-container {
-    padding-left: 25px;
-  }
-  .banner-container h2 {
-    font-size: 32px;
-  }
-  .banner-container h5 {
-    font-size: 14px;
-    letter-spacing: 3px;
-  }
-  .heritage-cta-button {
-    font-size: 14px;
-    padding: 12px 28px;
-  }
-}
+        @media (max-width: 768px) {
+            .carousel-item {
+                height: 500px;
+            }
+
+            .banner-container,
+            .banner-container1,
+            .banner-container2 {
+                padding-left: 50px;
+                padding-right: 20px;
+                min-height: 500px;
+            }
+
+            .banner-container h2,
+            .banner-container1 h2,
+            .banner-container2 h2 {
+                font-size: 42px;
+            }
+
+            .banner-container h5,
+            .banner-container1 h5,
+            .banner-container2 h5 {
+                font-size: 18px;
+                letter-spacing: 3px;
+            }
+
+            .heritage-cta-button {
+                font-size: 16px;
+                padding: 14px 35px;
+            }
+
+            /* Mobile Background images - add your mobile versions here */
+             .banner-container {
+                background-image: url("../img/home-banner2.jpg");
+                background-position: left;
+            }
+            .banner-container1 {
+                background-image: url("../img/new-home-banner5.jpg");
+                background-position: left;
+            }
+            .banner-container2 {
+                background-image: url("../img/sweets-banner2.jpg");
+                background-position: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-item {
+                height: 450px;
+            }
+
+            .banner-container,
+            .banner-container1,
+            .banner-container2 {
+                padding-left: 25px;
+                padding-right: 15px;
+                min-height: 450px;
+            }
+
+            .banner-container h2,
+            .banner-container1 h2,
+            .banner-container2 h2 {
+                font-size: 32px;
+            }
+
+            .banner-container h5,
+            .banner-container1 h5,
+            .banner-container2 h5 {
+                font-size: 14px;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+
+            .heritage-cta-button {
+                font-size: 14px;
+                padding: 12px 28px;
+                letter-spacing: 2px;
+            }
+        }
 
 
 
