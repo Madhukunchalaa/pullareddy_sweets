@@ -697,157 +697,161 @@ h6 {
 /* ==============================================
    10. BANNER SECTIONS
 ============================================== */
+.carousel-item {
+  height: 600px;
+  margin: 0;
+  padding: 0;
+}
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 0.1s;
+  transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+
 .banner-container,
 .banner-container1,
 .banner-container2 {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    text-align: center;
+  height: 100%;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+  margin: 0;
 }
 
+/* Background images */
 .banner-container {
-    background-image: url("../img/gallery-banner-new.jpg");
-    align-items:start;
-    justify-content: center;
+  background-image: url("../img/home-banner2.jpg");
 }
-
 .banner-container1 {
-    background-image: url("../img/home-banner-new.jpg");
-    align-items: start;
-    justify-content: center;
+  background-image: url("../img/new-home-banner5.jpg");
 }
-
 .banner-container2 {
-    background-image: url("../img/pickles-powder-banner-new.jpg");
-    align-items: start;
-    justify-content: center;
-}
-.carousel-item {
-  height: 600px; 
-  position: relative;
+  background-image: url("../img/sweets-banner2.jpg");
 }
 
-.banner-container > *,
-.banner-container1 > *,
-.banner-container2 > * {
-    position: relative;
-    z-index: 2;
-}
-
+/* Headings */
 .banner-container h2,
 .banner-container1 h2,
 .banner-container2 h2 {
-    color: #E5C592;
-    font-size: 72px;
-    font-weight: bolder;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    text-transform: capitalize;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #E5C592;
+  font-size: 72px;
+  text-align: left;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.banner-container1 h2, .banner-container h2
- {
-    margin-left: 100px;
-   
-}
-
-.banner-container2 h2{
-  margin-left: 100px;
-
-}
-
+/* Subheadings */
 .banner-container h5,
 .banner-container1 h5,
 .banner-container2 h5 {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 300;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-.banner-container1 h5 {
-    margin-left: 100px;
-    margin-bottom: 245px;
-}
-
-.banner-container h5, .banner-container a{
-    margin-left: 100px;
-}
-
-.banner-container2 h5 {
-    margin-left: 100px;
-    margin-bottom: 240px;
-}
-
+/* CTA Button */
 .heritage-cta-button {
-    color: #ffffff;
-    padding: 18px 45px;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    background-color:  var(--theme);
+  color: #AC1E23;
+  background-color: #E5C592;
+  padding: 18px 45px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .heritage-cta-button:hover {
-   
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Indicators */
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #E5C592;
+  opacity: 0.6;
+  border: none;
+  transition: opacity 0.3s ease;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+}
+
+/* Controls (optional styling) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .banner-container h2 {
+    font-size: 56px;
+  }
 }
 
 @media (max-width: 768px) {
-    .banner-container h2 {
-        font-size: 48px;
-    }
-    .banner-container h5 {
-        font-size: 18px;
-        letter-spacing: 4px;
-    }
-    .heritage-cta-button {
-        font-size: 16px;
-        padding: 15px 35px;
-    }
-}
-
-@media (max-width: 575px) {
-    .banner-container1 {
-        height: auto !important;
-    }
-    .banner-container1 h5 {
-        margin-right: 0 !important;
-    }
+  .banner-container {
+    padding-left: 50px;
+  }
+  .banner-container h2 {
+    font-size: 42px;
+  }
+  .banner-container h5 {
+    font-size: 18px;
+  }
+  .heritage-cta-button {
+    font-size: 16px;
+    padding: 14px 35px;
+  }
 }
 
 @media (max-width: 480px) {
-    .banner-container h2 {
-        font-size: 36px;
-        padding: 0 20px;
-    }
-    .banner-container h5 {
-        font-size: 14px;
-        letter-spacing: 3px;
-        padding: 0 20px;
-    }
-    .heritage-cta-button {
-        font-size: 14px;
-        padding: 12px 30px;
-    }
+  .banner-container {
+    padding-left: 25px;
+  }
+  .banner-container h2 {
+    font-size: 32px;
+  }
+  .banner-container h5 {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+  .heritage-cta-button {
+    font-size: 14px;
+    padding: 12px 28px;
+  }
 }
+
 
 
 /* ==============================================

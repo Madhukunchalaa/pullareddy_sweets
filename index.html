@@ -89,35 +89,53 @@
     <!-- ========================================
          HERO CAROUSEL SECTION
     ======================================== -->
-     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-wrap="true">
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="1000" data-bs-wrap="true">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators d-none d-md-flex">
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
 
     <!-- Desktop Carousel -->
     <div class="carousel-inner d-none d-md-block">
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
-            <div class="banner-container1 text-align-left">
-                <h2>77 Years Of <br> Sweet Heritage</h2>
+            <div class="banner-container1">
+                <!-- <h2>77 Years Of <br> Sweet Heritage</h2>
                 <h5>Handcrafted with Love Since 1948</h5>
+                <a href="about.html">
+                    <button class="heritage-cta-button mb-5">Know More</button>
+                </a> -->
             </div>
         </div>
 
         <!-- Slide 2 -->
         <div class="carousel-item">
-            <div class="banner-container2 text-align-left">
+            <div class="banner-container2">
                 <h2>Timeless Flavors<br> Eternal Memories</h2>
                 <h5>Where tradition meets indulgence</h5>
+                <a href="about.html">
+                    <button class="heritage-cta-button mb-5">Know More</button>
+                </a>
             </div>
         </div>
 
         <!-- Slide 3 -->
         <div class="carousel-item">
-            <div class="banner-container text-align-left">
-                <h2>Creating Sweet Memories</h2>
+            <div class="banner-container">
+                <h2>Creating Sweet<br> Memories</h2>
                 <h5>Trusted by families for 3 generations</h5>
                 <a href="about.html">
                     <button class="heritage-cta-button mb-5">Know More</button>
                 </a>
+                <!-- <h2>77 Years Of <br> Sweet Heritage</h2>
+                <h5>Handcrafted with Love Since 1948</h5>
+                <a href="about.html">
+                    <button class="heritage-cta-button mb-5">Know More</button>
+                </a> -->
             </div>
         </div>
 
@@ -131,7 +149,9 @@
                 <span class="legacy-badge">Since 1948 - A Legacy of Sweetness</span>
                 <h2 class="banner-title">TRADITIONAL INDIAN<br>SWEETS</h2>
                 <h3 class="banner-subtitle">CRAFTED WITH LOVE</h3>
-                <p class="banner-description">Experience the authentic taste of India's finest traditional sweets, made with premium ingredients and age-old recipes passed down through generations.</p>
+                <p class="banner-description">
+                    Experience the authentic taste of India's finest traditional sweets, made with premium ingredients and age-old recipes passed down through generations.
+                </p>
                 <a href="sweets.html">
                     <button class="explore-btn">
                         Explore Our Collection 
@@ -144,16 +164,17 @@
 
     <!-- Controls -->
     <button class="carousel-control-prev d-none d-md-block" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
         <span class="visually-hidden">Previous</span>
     </button>
 
-    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" style="z-index: 999;">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <button class="carousel-control-next d-none d-md-block" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
         <span class="visually-hidden">Next</span>
     </button>
 
-</div>
+    </div>
+
 
 
 
