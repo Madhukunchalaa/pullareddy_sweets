@@ -15,18 +15,20 @@
     <div id="header-placeholder"></div>
 
     <!-- Breadcrumb -->
-    <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/our-products-banner.jpg');">
-        <div class="container">
-                <div class="page-heading left">
-                <h1>Our Products</h1>
-                <ul class="breadcrumb-items" style="font-weight:700; font-size:1.1rem;">
-                    <li><a href="index.html">Home</a></li>
-                    <li style="color: white;">></li>
-                    <li>Sweets</li>
-                </ul>
-            </div>
-        </div>
+  <div id="dynamic-banner" class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/banners/sweets-banner.jpg');">
+  <div class="container">
+    <div class="page-heading left text-white">
+      <h1 id="banner-title">Our Products</h1>
+      <ul class="breadcrumb-items" style="font-weight:700; font-size:1.1rem;">
+        <li><a href="index.html">Home</a></li>
+        <li style="color: white;">&gt;</li>
+        <li id="breadcrumb-category">Sweets</li>
+      </ul>
     </div>
+  </div>
+</div>
+
+
 
     <!-- Products Section -->
     <section class="food-category-section fix section-padding section-bg">
@@ -128,5 +130,115 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
     </script>
+  <script>
+  const DEFAULT_CATEGORY = "sweets";
+
+  // Get category from URL and normalise it
+  const params = new URLSearchParams(window.location.search);
+  const requestedCategory = (params.get("category") || DEFAULT_CATEGORY).toLowerCase();
+
+  // Map any aliases from the nav to the underlying product category keys
+  const categoryMap = {
+    sweets: "sweets",
+    savouries: "snacks",
+    snacks: "snacks",
+    pickles: "pickle&powder",
+    "pickels": "pickle&powder",
+    "pickelsandpowder": "pickle&powder",
+    powders: "pickle&powder",
+    "pickles & powders": "pickle&powder",
+    "pickles and powders": "pickle&powder",
+    bakery: "bakery",
+    ghee: "ghee",
+    "ghee savouries": "ghee",
+    "traditional_sweets": "traditional_sweets",
+    "traditional sweets": "traditional_sweets",
+    "kaju_sweets": "kaju_sweets",
+    "kaju sweets": "kaju_sweets",
+    "dry_fruit_sweets": "dry_fruit_sweets",
+    "dry fruit sweets": "dry_fruit_sweets",
+    "juicy_sweets": "juicy_sweets",
+    "juicy sweets": "juicy_sweets",
+    "juice sweets": "juicy_sweets",
+    "juice / bengali sweets": "juicy_sweets",
+    "juice and bengali sweets": "juicy_sweets",
+    "pickle&powder": "pickle&powder"
+  };
+
+  const canonicalCategory = categoryMap[requestedCategory] || requestedCategory || DEFAULT_CATEGORY;
+
+  // DOM elements
+  const banner = document.getElementById("dynamic-banner");
+  const bannerTitle = document.getElementById("banner-title");
+  const breadcrumbCategory = document.getElementById("breadcrumb-category");
+
+  // Category-based banner data keyed by the canonical category values
+  const bannerData = {
+    sweets: {
+      title: "Traditional Indian Sweets",
+      image: "assets/img/sweets-banner-new.jpg",
+      breadcrumb: "Sweets"
+    },
+    snacks: {
+      title: "Crispy Savouries",
+      image: "assets/img/snack%20banner.png",
+      breadcrumb: "Savouries"
+    },
+    "pickle&powder": {
+      title: "Authentic Pickles & Powders",
+      image: "assets/img/pickles-powder-banner-new.jpg",
+      breadcrumb: "Pickles & Powders"
+    },
+    bakery: {
+      title: "Freshly Baked Delights",
+      image: "assets/img/our-products-banner.jpg",
+      breadcrumb: "Bakery"
+    },
+    ghee: {
+      title: "Rich Ghee Savouries",
+      image: "assets/img/GPR_Banner_V2.png",
+      breadcrumb: "Ghee Savouries"
+    },
+    traditional_sweets: {
+      title: "Classic Traditional Sweets",
+      image: "assets/img/sweets-banner2.jpg",
+      breadcrumb: "Traditional Sweets"
+    },
+    kaju_sweets: {
+      title: "Premium Kaju Sweets",
+      image: "assets/img/sweets-banner2.jpg",
+      breadcrumb: "Kaju Sweets"
+    },
+    dry_fruit_sweets: {
+      title: "Healthy Dry Fruit Sweets",
+      image: "assets/img/sweetsbanner1.jpg",
+      breadcrumb: "Dry Fruit Sweets"
+    },
+    juicy_sweets: {
+      title: "Juicy & Bengali Sweets",
+      image: "assets/img/GPR_Inner Banners2.png",
+      breadcrumb: "Juice / Bengali Sweets"
+    }
+  };
+
+  function applyBanner(categoryKey) {
+    if (!banner || !bannerTitle || !breadcrumbCategory) {
+      return;
+    }
+    const info = bannerData[categoryKey] || bannerData[DEFAULT_CATEGORY];
+    if (!info) return;
+
+    banner.style.backgroundImage = `url('${info.image}')`;
+    bannerTitle.textContent = info.title;
+    breadcrumbCategory.textContent = info.breadcrumb;
+  }
+
+  // Apply the banner for the initial category and expose helpers for other scripts
+  applyBanner(canonicalCategory);
+  window.initialCategory = canonicalCategory;
+  window.applyBannerForCategory = applyBanner;
+</script>
+
+
 </body>
 </html>

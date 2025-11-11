@@ -8,7 +8,39 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevBtn = document.getElementById('prevBtn');
     const pageNumbers = document.querySelectorAll('.page-numbers:not(#prevBtn):not(#nextBtn)');
 
-    let currentCategory = 'sweets';
+    const DEFAULT_CATEGORY = 'sweets';
+    const categoryMap = {
+        sweets: 'sweets',
+        savouries: 'snacks',
+        snacks: 'snacks',
+        pickles: 'pickle&powder',
+        'pickels': 'pickle&powder',
+        'pickelsandpowder': 'pickle&powder',
+        powders: 'pickle&powder',
+        'pickles & powders': 'pickle&powder',
+        'pickles and powders': 'pickle&powder',
+        bakery: 'bakery',
+        ghee: 'ghee',
+        'ghee savouries': 'ghee',
+        'pickle&powder': 'pickle&powder',
+        'traditional_sweets': 'traditional_sweets',
+        'traditional sweets': 'traditional_sweets',
+        'kaju_sweets': 'kaju_sweets',
+        'kaju sweets': 'kaju_sweets',
+        'dry_fruit_sweets': 'dry_fruit_sweets',
+        'dry fruit sweets': 'dry_fruit_sweets',
+        'juicy_sweets': 'juicy_sweets',
+        'juicy sweets': 'juicy_sweets',
+        'juice sweets': 'juicy_sweets',
+        'juice / bengali sweets': 'juicy_sweets',
+        'juice and bengali sweets': 'juicy_sweets'
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedCategory = (params.get('category') || DEFAULT_CATEGORY).toLowerCase();
+    const initialCategory = categoryMap[requestedCategory] || requestedCategory || DEFAULT_CATEGORY;
+
+    let currentCategory = initialCategory;
     let currentPage = 0;
     const itemsPerPage = 9;
 
@@ -49,6 +81,23 @@ document.addEventListener('DOMContentLoaded', function () {
             const img = new Image();
             img.src = product.image;
         });
+    }
+
+    function setActiveCategory(categoryKey) {
+        filterLinks.forEach(link => {
+            link.parentElement.classList.remove('active');
+        });
+
+        const targetLink = document.querySelector(`.categories-list a[data-filter="${categoryKey}"]`);
+        if (targetLink) {
+            targetLink.parentElement.classList.add('active');
+        }
+    }
+
+    function syncBanner(categoryKey) {
+        if (typeof window.applyBannerForCategory === 'function') {
+            window.applyBannerForCategory(categoryKey);
+        }
     }
 
     // Render products with pagination
@@ -137,6 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Render products
             renderProductsWithPagination(currentCategory);
+            syncBanner(currentCategory);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
@@ -151,6 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (currentPage < totalPages - 1) {
                 currentPage++;
                 renderProductsWithPagination(currentCategory);
+                syncBanner(currentCategory);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
@@ -163,6 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (currentPage > 0) {
                 currentPage--;
                 renderProductsWithPagination(currentCategory);
+                syncBanner(currentCategory);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
@@ -178,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (index < totalPages) {
                 currentPage = index;
                 renderProductsWithPagination(currentCategory);
+                syncBanner(currentCategory);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
@@ -186,10 +239,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial load
     renderFeaturedProducts();
     renderProductsWithPagination(currentCategory);
-    
-    // Set initial active state for "Sweets" category
-    const sweetsLink = document.querySelector('.categories-list a[data-filter="sweets"]');
-    if (sweetsLink) {
-        sweetsLink.parentElement.classList.add('active');
-    }
+    setActiveCategory(currentCategory);
+    syncBanner(currentCategory);
 });
