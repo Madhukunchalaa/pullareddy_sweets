@@ -731,13 +731,13 @@ h6 {
 
         /* Desktop Background images */
         .banner-container {
-            background-image: url("../img/GPR_Banner_V2_2.png");
+            background-image: url("../img/GPR_Banner_V2.png");
         }
         .banner-container1 {
-            background-image: url("../img/GPR_Banner_V2_3.png");
+            background-image: url("../img/GPR_Banner_V2_2.png");
         }
         .banner-container2 {
-            background-image: url("../img/GPR_Banner_V2_2.png");
+            background-image: url("../img/GPR_Banner_V2_3.png");
         }
 
         /* Headings */
@@ -859,18 +859,18 @@ h6 {
 
             /* Mobile Background images - add your mobile versions here */
              .banner-container {
-                background-image: url("../img/home-banner2.jpg");
+                background-image: url("../img/GPR_Mobile-banners_3.png");
                 background-position: center;
                 background-size: cover;
                 
             }
             .banner-container1 {
-                background-image: url("../img/new-home-banner5.jpg");
+                background-image: url("../img/GPR_Mobile-banners_1.png");
                 background-position: right;
                 background-size: cover;
             }
             .banner-container2 {
-                background-image: url("../img/sweets-banner2.jpg");
+                background-image: url("../img/GPR_Mobile-banners_2.png");
                 background-position: center;
                 background-size: cover;
             }
