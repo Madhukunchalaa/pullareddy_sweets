@@ -698,7 +698,7 @@ h6 {
    10. BANNER SECTIONS
 ============================================== */
  .carousel-item {
-            height: 650px;
+            /* height: 650px; */
             margin: 0;
             padding: 0;
         }
@@ -729,16 +729,6 @@ h6 {
             margin: 0;
         }
 
-        /* Desktop Background images */
-        .banner-container {
-            background-image: url("../img/GPR_Banner_V2.png");
-        }
-        .banner-container1 {
-            background-image: url("../img/GPR_Banner_V2_2.png");
-        }
-        .banner-container2 {
-            background-image: url("../img/GPR_Banner_V2_3.png");
-        }
 
         /* Headings */
         .banner-container h2,
@@ -1776,6 +1766,9 @@ h6 {
 .heritage-icon-container {
     flex-shrink: 0;
 }
+.heritage-icon-container img{
+    width: 54px;
+}
 
 .heritage-feature-content h3 {
     font-size: 18px;
@@ -2501,6 +2494,7 @@ h6 {
     text-transform: uppercase;
 }
 
+
 /* Address Carousel */
 .address-carousel {
     position: relative;
@@ -2510,7 +2504,7 @@ h6 {
 .carousel-item {
     display: none;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     animation: fadeIn 0.5s;
 }
 
@@ -3995,5 +3989,67 @@ body.menu-open {
     .delicacies-carousel-item.mobile-slide .delicacies-product-card {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+
+
+/* Using ID - Most specific, won't affect anything else */
+#carouselExampleAutoplaying .carousel-inner {
+   
+}
+
+#carouselExampleAutoplaying .carousel-item {
+    
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* home page mobile banner */
+/* Hide mobile by default, show desktop */
+#carouselExampleAutoplaying .mobile-banner {
+    display: none;
+}
+
+#carouselExampleAutoplaying .desktop-banner {
+    display: block;
+}
+
+/* Base carousel styling */
+#carouselExampleAutoplaying .carousel-item {
+    
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mobile: Show mobile images, hide desktop */
+@media (max-width: 768px) {
+    #carouselExampleAutoplaying .mobile-banner {
+        display: block;
+    }
+    
+    #carouselExampleAutoplaying .desktop-banner {
+        display: none;
+    }
+    
+    #carouselExampleAutoplaying .carousel-item {
+        height: 400px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1199px) {
+    #carouselExampleAutoplaying .carousel-item {
+        height: 500px;
     }
 }
