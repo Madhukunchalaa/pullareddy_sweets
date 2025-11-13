@@ -426,12 +426,12 @@ const productsData = [
     image: "assets/img/Gulabjamun1.jpg",
     category: "juicy_sweets"
   },
-  {
-    id: 76,
-    name: "Rasgulla",
-    image: "assets/img/Rasgulla1.jpg",
-    category: "juicy_sweets"
-  },
+  // {
+  //   id: 76,
+  //   name: "Rasgulla",
+  //   image: "assets/img/Rasgulla1.jpg",
+  //   category: "juicy_sweets"
+  // },
   {
     id: 77,
     name: "Basundi",
