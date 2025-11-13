@@ -637,7 +637,7 @@ h6 {
     height: 100%;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768) {
     .bg-cover {
         background-position: bottom;
     }
