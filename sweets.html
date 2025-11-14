@@ -9,26 +9,76 @@
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Desktop banner - show by default */
+        .desktop-banner {
+            display: block;
+        }
+
+        /* Mobile banner - hide by default */
+        .mobile-banner {
+            display: none;
+        }
+
+        /* Mobile styles */
+        @media (max-width: 768px) {
+            .desktop-banner {
+                display: none;
+            }
+            
+            .mobile-banner {
+                display: block;
+                min-height: 500px;
+            }
+            
+            .mobile-banner .page-heading h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .breadcrumb-wrapper .page-heading .breadcrumb-items { 
+              align-items: center;
+              justify-content: center;
+              margin-left: -32px;
+            }
+            
+            .mobile-banner .breadcrumb-items {
+                font-size: 0.9rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
     <div id="header-placeholder"></div>
 
-    <!-- Breadcrumb -->
-  <div id="dynamic-banner" class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/banners/sweets-banner.jpg');">
-  <div class="container">
-    <div class="page-heading left text-white">
-      <h1 id="banner-title">Our Products</h1>
-      <ul class="breadcrumb-items" style="font-weight:700; font-size:1.1rem;">
-        <li><a href="index.html">Home</a></li>
-        <li style="color: white;">&gt;</li>
-        <li id="breadcrumb-category">Sweets</li>
-      </ul>
+    <!-- Desktop Breadcrumb Banner -->
+    <div id="dynamic-banner" class="breadcrumb-wrapper bg-cover desktop-banner" style="background-image: url('assets/img/sweets-banner-new.jpg');">
+        <div class="container">
+            <div class="page-heading left text-white">
+                <h1 id="banner-title">Our Products</h1>
+                <ul class="breadcrumb-items" style="font-weight:700; font-size:1.1rem;">
+                    <li><a href="index.html"  class="text-white">Home</a></li>
+                    <li style="color: white;">&gt;</li>
+                    <li id="breadcrumb-category">Sweets</li>
+                </ul>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-
+    <!-- Mobile Breadcrumb Banner -->
+    <div id="dynamic-banner-mobile" class="breadcrumb-wrapper bg-cover mobile-banner" style="background-image: url('assets/img/sweet-mbl-banner.png');">
+        <div class="container">
+            <div class="page-heading left text-white">
+                <h1 id="banner-title-mobile">Our Products</h1>
+                <ul class="breadcrumb-items" style="font-weight:700; font-size:1.1rem;">
+                    <li><a href="index.html">Home</a></li>
+                    <li style="color: white;">&gt;</li>
+                    <li id="breadcrumb-category-mobile">Sweets</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <!-- Products Section -->
     <section class="food-category-section fix section-padding section-bg">
@@ -56,7 +106,6 @@
                                     <li>
                                         <a href="#" data-filter="dry_fruit_sweets">Dry Fruit Sweets</a>
                                     </li>
-
                                     <li>
                                         <a href="#" data-filter="snacks">Savouries</a>
                                     </li>
@@ -117,8 +166,8 @@
     <!-- Scripts -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/products.js"></script> <!-- Product data -->
-    <script src="assets/js/products-handler.js"></script> <!-- Product handling logic -->
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/products-handler.js"></script>
     
     <script>
         // Load header and footer
@@ -130,115 +179,132 @@
             .then(response => response.text())
             .then(data => document.getElementById('footer-placeholder').innerHTML = data);
     </script>
-  <script>
-  const DEFAULT_CATEGORY = "sweets";
 
-  // Get category from URL and normalise it
-  const params = new URLSearchParams(window.location.search);
-  const requestedCategory = (params.get("category") || DEFAULT_CATEGORY).toLowerCase();
+    <script>
+        const DEFAULT_CATEGORY = "sweets";
 
-  // Map any aliases from the nav to the underlying product category keys
-  const categoryMap = {
-    sweets: "sweets",
-    savouries: "snacks",
-    snacks: "snacks",
-    pickles: "pickle&powder",
-    "pickels": "pickle&powder",
-    "pickelsandpowder": "pickle&powder",
-    powders: "pickle&powder",
-    "pickles & powders": "pickle&powder",
-    "pickles and powders": "pickle&powder",
-    bakery: "bakery",
-    ghee: "ghee",
-    "ghee savouries": "ghee",
-    "traditional_sweets": "traditional_sweets",
-    "traditional sweets": "traditional_sweets",
-    "kaju_sweets": "kaju_sweets",
-    "kaju sweets": "kaju_sweets",
-    "dry_fruit_sweets": "dry_fruit_sweets",
-    "dry fruit sweets": "dry_fruit_sweets",
-    "juicy_sweets": "juicy_sweets",
-    "juicy sweets": "juicy_sweets",
-    "juice sweets": "juicy_sweets",
-    "juice / bengali sweets": "juicy_sweets",
-    "juice and bengali sweets": "juicy_sweets",
-    "pickle&powder": "pickle&powder"
-  };
+        // Get category from URL and normalise it
+        const params = new URLSearchParams(window.location.search);
+        const requestedCategory = (params.get("category") || DEFAULT_CATEGORY).toLowerCase();
 
-  const canonicalCategory = categoryMap[requestedCategory] || requestedCategory || DEFAULT_CATEGORY;
+        // Map any aliases from the nav to the underlying product category keys
+        const categoryMap = {
+            sweets: "sweets",
+            savouries: "snacks",
+            snacks: "snacks",
+            pickles: "pickle&powder",
+            "pickels": "pickle&powder",
+            "pickelsandpowder": "pickle&powder",
+            powders: "pickle&powder",
+            "pickles & powders": "pickle&powder",
+            "pickles and powders": "pickle&powder",
+            bakery: "bakery",
+            ghee: "ghee",
+            "ghee savouries": "ghee",
+            "traditional_sweets": "traditional_sweets",
+            "traditional sweets": "traditional_sweets",
+            "kaju_sweets": "kaju_sweets",
+            "kaju sweets": "kaju_sweets",
+            "dry_fruit_sweets": "dry_fruit_sweets",
+            "dry fruit sweets": "dry_fruit_sweets",
+            "juicy_sweets": "juicy_sweets",
+            "juicy sweets": "juicy_sweets",
+            "juice sweets": "juicy_sweets",
+            "juice / bengali sweets": "juicy_sweets",
+            "juice and bengali sweets": "juicy_sweets",
+            "pickle&powder": "pickle&powder"
+        };
 
-  // DOM elements
-  const banner = document.getElementById("dynamic-banner");
-  const bannerTitle = document.getElementById("banner-title");
-  const breadcrumbCategory = document.getElementById("breadcrumb-category");
+        const canonicalCategory = categoryMap[requestedCategory] || requestedCategory || DEFAULT_CATEGORY;
 
-  // Category-based banner data keyed by the canonical category values
-  const bannerData = {
-    sweets: {
-      title: "Traditional Indian Sweets",
-      image: "assets/img/sweets-banner-new.jpg",
-      breadcrumb: "Sweets"
-    },
-    snacks: {
-      title: "Crispy Savouries",
-      image: "assets/img/savories.jpg",
-      breadcrumb: "Savouries"
-    },
-    "pickle&powder": {
-      title: "Authentic Pickles & Powders",
-      image: "assets/img/pickle_banner.jpg",
-      breadcrumb: "Pickles & Powders"
-    },
-    bakery: {
-      title: "Freshly Baked Delights",
-      image: "assets/img/our-products-banner.jpg",
-      breadcrumb: "Bakery"
-    },
-    ghee: {
-      title: "Rich Ghee Savouries",
-      image: "assets/img/ghee-savouries-banner1.jpg",
-      breadcrumb: "Ghee Savouries"
-    },
-    traditional_sweets: {
-      title: "Classic Traditional Sweets",
-      image: "assets/img/classic-traditional-sweets.jpg",
-      breadcrumb: "Traditional Sweets"
-    },
-    kaju_sweets: {
-      title: "Premium Kaju Sweets",
-      image: "assets/img/kaju-barfi-banner.jpg",
-      breadcrumb: "Kaju Sweets"
-    },
-    dry_fruit_sweets: {
-      title: "Healthy Dry Fruit Sweets",
-      image: "assets/img/sweetsbanner1.jpg",
-      breadcrumb: "Dry Fruit Sweets"
-    },
-    juicy_sweets: {
-      title: "Juicy & Bengali Sweets",
-      image: "assets/img/GPR_Inner Banners2.png",
-      breadcrumb: "Juice / Bengali Sweets"
-    }
-  };
+        // DOM elements for both desktop and mobile banners
+        const bannerDesktop = document.getElementById("dynamic-banner");
+        const bannerMobile = document.getElementById("dynamic-banner-mobile");
+        const bannerTitle = document.getElementById("banner-title");
+        const bannerTitleMobile = document.getElementById("banner-title-mobile");
+        const breadcrumbCategory = document.getElementById("breadcrumb-category");
+        const breadcrumbCategoryMobile = document.getElementById("breadcrumb-category-mobile");
 
-  function applyBanner(categoryKey) {
-    if (!banner || !bannerTitle || !breadcrumbCategory) {
-      return;
-    }
-    const info = bannerData[categoryKey] || bannerData[DEFAULT_CATEGORY];
-    if (!info) return;
+        // Category-based banner data with desktop and mobile images
+        const bannerData = {
+            sweets: {
+                title: "Traditional Indian Sweets",
+                imageDesktop: "assets/img/sweets-banner-new.jpg",
+                imageMobile: "assets/img/sweet-mbl-banner.png",
+                breadcrumb: "Sweets"
+            },
+            snacks: {
+                title: "Crispy Savouries",
+                imageDesktop: "assets/img/savories.jpg",
+                imageMobile: "assets/img/crispy-savouries-mbl-banner.png",
+                breadcrumb: "Savouries"
+            },
+            "pickle&powder": {
+                title: "Authentic Pickles & Powders",
+                imageDesktop: "assets/img/pickle_banner.jpg",
+                imageMobile: "assets/img/pickles-mbl-banner.png",
+                breadcrumb: "Pickles & Powders"
+            },
+            bakery: {
+                title: "Freshly Baked Delights",
+                imageDesktop: "assets/img/kaju-barfi-banner.jpg",
+                imageMobile: "assets/img/premium-kaju-sweet-mbl-banner.png",
+                breadcrumb: "Bakery"
+            },
+            ghee: {
+                title: "Rich Ghee Savouries",
+                imageDesktop: "assets/img/ghee-savouries-banner1.jpg",
+                imageMobile: "assets/img/ghee-savouries-mbl-banner.png",
+                breadcrumb: "Ghee Savouries"
+            },
+            traditional_sweets: {
+                title: "Classic Traditional Sweets",
+                imageDesktop: "assets/img/classic-traditional-sweets.jpg",
+                imageMobile: "assets/img/classic-traditional-mbl-banner.png",
+                breadcrumb: "Traditional Sweets"
+            },
+            kaju_sweets: {
+                title: "Premium Kaju Sweets",
+                imageDesktop: "assets/img/our-products-banner.jpg",
+                imageMobile: "assets/img/bakery-mbl-banner.png",
+                breadcrumb: "Kaju Sweets"
+            },
+            dry_fruit_sweets: {
+                title: "Healthy Dry Fruit Sweets",
+                imageDesktop: "assets/img/sweetsbanner1.jpg",
+                imageMobile: "assets/img/dry-fruit-mbl-banner.png",
+                breadcrumb: "Dry Fruit Sweets"
+            },
+            juicy_sweets: {
+                title: "Juicy / Bengali Sweets",
+                imageDesktop: "assets/img/about-banner-new.jpg",
+                imageMobile: "assets/img/juicy-bengali-mbl-banner.png",
+                breadcrumb: "Juice / Bengali Sweets"
+            }
+        };
 
-    banner.style.backgroundImage = `url('${info.image}')`;
-    bannerTitle.textContent = info.title;
-    breadcrumbCategory.textContent = info.breadcrumb;
-  }
+        function applyBanner(categoryKey) {
+            if (!bannerDesktop || !bannerMobile || !bannerTitle || !breadcrumbCategory) {
+                return;
+            }
+            const info = bannerData[categoryKey] || bannerData[DEFAULT_CATEGORY];
+            if (!info) return;
 
-  // Apply the banner for the initial category and expose helpers for other scripts
-  applyBanner(canonicalCategory);
-  window.initialCategory = canonicalCategory;
-  window.applyBannerForCategory = applyBanner;
-</script>
+            // Apply desktop banner
+            bannerDesktop.style.backgroundImage = `url('${info.imageDesktop}')`;
+            bannerTitle.textContent = info.title;
+            breadcrumbCategory.textContent = info.breadcrumb;
 
+            // Apply mobile banner
+            bannerMobile.style.backgroundImage = `url('${info.imageMobile}')`;
+            bannerTitleMobile.textContent = info.title;
+            breadcrumbCategoryMobile.textContent = info.breadcrumb;
+        }
 
+        // Apply the banner for the initial category and expose helpers for other scripts
+        applyBanner(canonicalCategory);
+        window.initialCategory = canonicalCategory;
+        window.applyBannerForCategory = applyBanner;
+    </script>
 </body>
 </html>

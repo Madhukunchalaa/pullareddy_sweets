@@ -495,12 +495,14 @@ h6 {
 ============================================== */
 .breadcrumb-wrapper .page-heading {
     position: relative;
-    padding: 120px 0;
+    padding: 160px 0;
 }
-
+.breadcrumb-wrapper{
+    background-image: url("/assets/img/about-banner-new2.jpg");
+}
 .breadcrumb-wrapper .page-heading h1 {
     color: var(--white);
-    font-size: 70px;
+    font-size: 50px;
     position: relative;
     z-index: 9;
 }
@@ -521,8 +523,9 @@ h6 {
 }
 
 .breadcrumb-wrapper .page-heading .breadcrumb-items li a {
-    color: var(--theme2);
+    /* color: var(--theme2); */
     transition: all 0.4s ease-in-out;
+    color: white!important;
 }
 
 .breadcrumb-wrapper .page-heading .breadcrumb-items div a:hover {
@@ -532,6 +535,12 @@ h6 {
 .breadcrumb-wrapper .page-heading .breadcrumb-items div i {
     font-size: 20px;
     color: var(--theme2);
+}
+@media (max-width: 768px) {
+    .breadcrumb-wrapper{
+         background-image: url("/assets/img/abt-mbl-banner.png");
+         min-height: 500px;
+    }
 }
 
 @media (max-width: 991px) {
@@ -546,6 +555,16 @@ h6 {
     }
     .breadcrumb-wrapper .page-heading .breadcrumb-items li {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .breadcrumb-wrapper .page-heading .breadcrumb-items {
+        align-items: center;
+        justify-content: center;
+    }
+    .breadcrumb-wrapper .page-heading h1 {
+        text-align:center;
     }
 }
 
@@ -1022,7 +1041,8 @@ h6 {
     padding: 120px 100px;
     /* border-radius: 20px; */
     position: relative;
-    background-position: top;
+    background-position: center;
+    /* min-height: 550px; */
     z-index: 9;
 }
 
@@ -1036,6 +1056,7 @@ h6 {
     .main-cta-banner-wrapper {
         padding: 70px 50px;
         text-align: left;
+        min-height: auto;
     }
 }
 
@@ -1754,6 +1775,14 @@ h6 {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
+.heritage-main-title1 {
+    font-size: 70px;
+    font-weight: 800;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
 
 .heritage-highlight-text {
     color: #AC1E23;
@@ -1815,9 +1844,9 @@ h6 {
     
 }
 
-@media (max-width: 991px) {
-    .heritage-image-wrapper {
-        height: 500px;
+@media (max-width: 768px) {
+    .heritage-main-title1 {
+      font-size: 28px!important;
     }
 }
 

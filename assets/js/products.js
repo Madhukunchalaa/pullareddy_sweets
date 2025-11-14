@@ -211,42 +211,57 @@ const productsData = [
     category: "pickle&powder",
     featured: true
   },
-  {
+    {
     id: 42,
+    name: "Amla Pickle",
+    image: "assets/img/amla-pickle.jpg",
+    category: "pickle&powder"
+  },
+  {
+    id: 43,
+    name: "Red Chilli Pickle",
+    image: "assets/img/red-chilli-pickle.jpg",
+    category: "pickle&powder"
+  },
+  {
+    id: 44,
     name: "Drum Stick Powder",
     image: "assets/img/Drum stick Leaf Powder.jpg",
     category: "pickle&powder"
   },
   {
-    id: 43,
+    id: 45,
     name: "Nalla Karam",
     image: "assets/img/Nalla Karam.jpg",
     category: "pickle&powder"
   },
   {
-    id: 44,
+    id: 46,
     name: "Roasted Chana Powder",
     image: "assets/img/Putnala Karam.jpg",
     category: "pickle&powder"
   },
   {
-    id: 45,
+    id: 47,
     name: "Amla Powder",
     image: "assets/img/Amla Powder.jpg",
     category: "pickle&powder"
   },
   {
-    id: 46,
+    id: 48,
     name: "Groundnut Powder",
     image: "assets/img/Groundnut Powder.jpg",
     category: "pickle&powder"
   },
   {
-    id: 47,
+    id: 49,
     name: "Flax Seeds",
     image: "assets/img/flaxseed_powder.jpg",
     category: "pickle&powder"
   },
+
+
+
 
   // TRADITIONAL SWEETS
   {
