@@ -497,9 +497,6 @@ h6 {
     position: relative;
     padding: 160px 0;
 }
-.breadcrumb-wrapper{
-    background-image: url("/assets/img/about-banner-new2.jpg");
-}
 .breadcrumb-wrapper .page-heading h1 {
     color: var(--white);
     font-size: 50px;
@@ -538,7 +535,6 @@ h6 {
 }
 @media (max-width: 768px) {
     .breadcrumb-wrapper{
-         background-image: url("/assets/img/abt-mbl-banner.png");
          min-height: 500px;
     }
 }
