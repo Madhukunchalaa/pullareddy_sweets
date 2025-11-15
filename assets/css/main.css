@@ -142,8 +142,9 @@ TABLE OF CONTENTS:
 
 @media (max-width: 767px) {
     .theme-btn {
-        padding: 14px 32px;
+        padding: 14px;
         font-size: 14px;
+        margin-top: 0px!important;
     }
     .theme-btn i {
         font-size: 20px;
@@ -500,6 +501,7 @@ h6 {
 .breadcrumb-wrapper .page-heading h1 {
     color: var(--white);
     font-size: 50px;
+    font-weight: 700;
     position: relative;
     z-index: 9;
 }
@@ -513,16 +515,17 @@ h6 {
 }
 
 .breadcrumb-wrapper .page-heading .breadcrumb-items div {
-    font-size: 20px;
+    font-size: 1.1rem;
+    color: #ffde59;
     /* color: var(--theme2); */
     font-weight: 600;
     text-transform: uppercase;
 }
 
-.breadcrumb-wrapper .page-heading .breadcrumb-items li a {
+.breadcrumb-wrapper .page-heading .breadcrumb-items div a {
     /* color: var(--theme2); */
     transition: all 0.4s ease-in-out;
-    color: white!important;
+    color: #ffde59!important;
 }
 
 .breadcrumb-wrapper .page-heading .breadcrumb-items div a:hover {
@@ -536,6 +539,9 @@ h6 {
 @media (max-width: 768px) {
     .breadcrumb-wrapper{
          min-height: 500px;
+    }
+    .breadcrumb-wrapper .page-heading .breadcrumb-items li a {
+        color: #fff!important;
     }
 }
 
@@ -1843,6 +1849,10 @@ h6 {
 @media (max-width: 768px) {
     .heritage-main-title1 {
       font-size: 28px!important;
+    }
+    
+    .heritage-image-wrapper {
+        height: 500px;
     }
 }
 
