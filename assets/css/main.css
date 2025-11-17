@@ -510,6 +510,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: left;
+    color: #ffde59;
     margin-top: 20px;
     gap: 10px;
 }
@@ -522,6 +523,9 @@ h6 {
     text-transform: uppercase;
 }
 
+.breadcrumb-wrapper .page-heading .breadcrumb-items li a {
+    color: #ffde59!important;
+}
 .breadcrumb-wrapper .page-heading .breadcrumb-items div a {
     /* color: var(--theme2); */
     transition: all 0.4s ease-in-out;
@@ -2720,13 +2724,6 @@ h6 {
     box-shadow: 0 5px 15px rgba(139, 90, 43, 0.4);
     width: fit-content;
 }
-
-.sweet-indulgence-cta:hover {
-    background: rgba(160, 105, 50, 1);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(139, 90, 43, 0.6);
-}
-
 .sweet-indulgence-decor {
     position: absolute;
     width: 60px;

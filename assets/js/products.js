@@ -369,6 +369,12 @@ const productsData = [
     category: "kaju_sweets"
   },
   {
+    id: 69,
+    name: "Kaju Pista Roll",
+    image: "assets/img/kajupistaroll1.jpg",
+    category: "kaju_sweets"
+  },
+  {
     id: 64,
     name: "Bellam Kaju",
     image: "assets/img/Bellam-kaju.jpg",
@@ -392,12 +398,7 @@ const productsData = [
     image: "assets/img/kajuroll1.jpg",
     category: "kaju_sweets"
   },
-  {
-    id: 69,
-    name: "Kaju Pista Roll",
-    image: "assets/img/kajupistaroll1.jpg",
-    category: "kaju_sweets"
-  },
+  
 
   // DRY FRUIT SWEETS
   {
