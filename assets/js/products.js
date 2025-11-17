@@ -501,9 +501,38 @@ const productsData = [
     name: "Vanilla Sponge Cake",
     image: "assets/img/VanillaSpongeCake1.jpg",
     category: "bakery"
+  },
+
+   {
+    id: 87,
+    name: "Badusha",
+    image: "assets/img/badushaa.jpg",
+    category: "sugarfree"
+  },
+  {
+    id: 88,
+    name: "Kaju Burfi",
+    image: "assets/img/Kaju-Barfi.jpg",
+    category: "sugarfree"
+  },
+   {
+    id: 89,
+    name: "Soan papdi",
+    image: "assets/img/soan-papdi.jpg",
+    category: "sugarfree"
+  },
+  {
+    id: 90,
+    name: "Kova Puri",
+    image: "assets/img/Kovapuri_Bhujiya1.jpg",
+    category: "sugarfree"
+  },
+  {
+    id: 91,
+    name: "Jangri",
+    image: "assets/img/Jaangri1.jpg",
+    category: "sugarfree"
   }
-
-
 
 ];
 
