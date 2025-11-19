@@ -138,7 +138,7 @@ const productsData = [
   },
   {
     id: 24,
-    name: "All in one Mixture",
+    name: "All-in-one Mixture",
     image: "assets/img/All_in_oneMixture.jpg",
     category: "snacks"
   },
@@ -511,8 +511,8 @@ const productsData = [
   },
   {
     id: 88,
-    name: "Kaju Burfi",
-    image: "assets/img/Kaju-Barfi.jpg",
+    name: "Sugar Free Sweets",
+    image: "assets/img/sugar-free-sweets.jpg",
     category: "sugarfree"
   },
    {

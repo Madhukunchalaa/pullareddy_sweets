@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'pickles & powders': 'pickle&powder',
         'pickles and powders': 'pickle&powder',
         bakery: 'bakery',
+        sugarfree: 'sugarfree',
         ghee: 'ghee',
         'ghee savouries': 'ghee',
         'pickle&powder': 'pickle&powder',
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'ghee': 'GHEE SAVOURIES',
         'snacks': 'SAVOURIES',
         'bakery': 'BAKERY',
+        'sugarfree': 'SUGAR FREE SWEETS',
         'pickle&powder': 'PICKLES & POWDERS'
     };
 

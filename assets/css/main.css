@@ -70,7 +70,7 @@ TABLE OF CONTENTS:
     font-size: 16px;
     line-height: 1;
     font-weight: 600;
-    padding: 20px 50px;
+    padding: 20px;
     color: var(--white);
     text-align: center;
     border-radius: 9px;
@@ -2068,7 +2068,7 @@ h6 {
 .sweets-category-label {
     font-size: 18px;
     font-weight: 700;
-    color: #c62828;
+    color: #AC1E23;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 12px;
@@ -2085,7 +2085,7 @@ h6 {
 }
 
 .sweets-main-title .highlight-pure {
-    color: #c62828;
+    color: #AC1E23;
 }
 
 .sweets-description-text {
@@ -2268,7 +2268,7 @@ h6 {
 .kurnool-about-label {
     font-size: 18px;
     font-weight: bold;
-    color: #c41e3a;
+    color: #AC1E23;
     text-transform: uppercase;
     margin-bottom: 10px;
     display: block;
@@ -2284,7 +2284,7 @@ h6 {
 }
 
 .kurnool-about-heading .kurnool-highlight {
-    color: #c41e3a;
+    color: #AC1E23;
 }
 
 .kurnool-about-description {
@@ -2376,7 +2376,7 @@ h6 {
     width: 78%;
     font-size: 29px;
     font-weight: 700;
-    color: #c41e3a;
+    color: #AC1E23;
     margin-bottom: 15px;
     padding-bottom: 12px;
     border-bottom: 2px solid #d4a574;
@@ -2406,7 +2406,7 @@ h6 {
     width: 78%;
     font-size: 29px;
     font-weight: 700;
-    color: #c41e3a;
+    color: #AC1E23;
     margin-bottom: 15px;
     padding-bottom: 12px;
     border-bottom: 2px solid #d4a574;
@@ -2476,7 +2476,7 @@ h6 {
 
 .heritage-header-tagline-about {
     text-align: center;
-    color: #c7302b;
+    color: #AC1E23;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -2522,7 +2522,7 @@ h6 {
    
     font-size: 22px;
     font-weight: 700;
-    color: #c7302b;
+    color: #AC1E23;
     margin-bottom: 15px;
 }
 
