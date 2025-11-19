@@ -1222,6 +1222,10 @@ h6 {
     background-color: var(--theme);
 }
 
+.contact-info-items:hover, .contact-info-items.active p a{
+    color: #fff!important;
+}
+
 .contact-info-items:hover::before,
 .contact-info-items.active::before {
     opacity: 1;
