@@ -2843,12 +2843,12 @@ h6 {
     .kurnool-about-text {
         order: 1;
         width: 100%;
-        padding: 0 20px;
+        padding: 0;
     }
     .kurnool-about-image-placeholder {
         order: 2;
         width: 100%;
-        padding: 0 20px;
+        /* padding: 0 20px; */
     }
     .kurnool-about-heading {
         font-size: 1.75rem;
@@ -2942,10 +2942,10 @@ h6 {
         margin-bottom: 15px;
     }
     .kurnool-about-text {
-        padding: 0 15px;
+        padding: 0;
     }
     .kurnool-about-image-placeholder {
-        padding: 0 15px;
+        padding: 0 ;
     }
      .kurnool-about-content {
         flex-direction: column;
