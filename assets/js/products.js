@@ -502,11 +502,10 @@ const productsData = [
     image: "assets/img/VanillaSpongeCake1.jpg",
     category: "bakery"
   },
-
-   {
-    id: 87,
-    name: "Badusha",
-    image: "assets/img/badushaa.jpg",
+    {
+    id: 89,
+    name: "Soan papdi",
+    image: "assets/img/soan-papdi.jpg",
     category: "sugarfree"
   },
   {
@@ -515,12 +514,14 @@ const productsData = [
     image: "assets/img/sugar-free-sweets.jpg",
     category: "sugarfree"
   },
+
    {
-    id: 89,
-    name: "Soan papdi",
-    image: "assets/img/soan-papdi.jpg",
+    id: 87,
+    name: "Badusha",
+    image: "assets/img/badushaa.jpg",
     category: "sugarfree"
   },
+ 
   {
     id: 90,
     name: "Kova Puri",
