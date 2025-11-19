@@ -2891,6 +2891,26 @@ h6 {
     .heritage-section {
         padding: 40px 15px;
     }
+     .kurnool-about-content {
+        flex-direction: column;
+    }
+
+    .kurnool-about-image-placeholder {
+        order: 1;  
+    }
+
+    .kurnool-about-text {
+        order: 2;   
+    }
+
+    .kurnool-about-image-frame img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: static;
+        margin: 0;
+    }
+
 }
 
 
@@ -2927,12 +2947,26 @@ h6 {
     .kurnool-about-image-placeholder {
         padding: 0 15px;
     }
+     .kurnool-about-content {
+        flex-direction: column;
+    }
+
+    .kurnool-about-image-placeholder {
+        order: 1;   
+    }
+
+    .kurnool-about-text {
+        order: 2;  
+    }
+
     .kurnool-about-image-frame img {
         width: 100%;
         height: auto;
-        border-radius: 8px;
-        display: none;
+        display: block;
+        position: static;
+        margin: 0;
     }
+  }
     .kurnool-mission-wrapper {
         padding:11px ;
     }
