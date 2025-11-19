@@ -1398,6 +1398,9 @@ h6 {
     background-color: var(--theme);
     color: var(--white);
 }
+.footer-widgets-wrapper .single-footer-widget .footer-content p{
+    color: var(--text);
+}
 
 .footer-widgets-wrapper .single-footer-widget .list-items li {
     text-transform: capitalize;
