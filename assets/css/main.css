@@ -1289,7 +1289,7 @@ h6 {
 }
 
 .contact-area .contact-form-items .form-clt-big textarea {
-    padding: 20px 30px 110px;
+    padding: 20px 30px 80px;
     width: 100%;
     outline: none;
     border: none;
@@ -1352,7 +1352,7 @@ h6 {
 }
 
 .footer-widgets-wrapper {
-    padding: 90px 0 120px;
+    padding: 70px 0 40px;
     position: relative;
     z-index: 9;
 }
@@ -1455,7 +1455,7 @@ h6 {
 }
 
 .footer-bottom {
-    padding: 35px 0;
+    padding: 30px 0;
     background-color: #AC1E23;
 }
 
@@ -1463,6 +1463,7 @@ h6 {
     text-transform: capitalize;
     color: var(--white);
     font-size: 20px;
+    margin-bottom: 0!important;
 }
 
 .footer-bottom .footer-bottom-wrapper p a {
@@ -1475,13 +1476,13 @@ h6 {
 
 @media (max-width: 1199px) {
     .footer-widgets-wrapper {
-        padding: 60px 0 90px;
+        padding: 60px 0 0px;
     }
 }
 
 @media (max-width: 991px) {
     .footer-widgets-wrapper {
-        padding: 50px 0 70px;
+        padding: 50px 0 0px;
     }
 }
 
@@ -4099,7 +4100,7 @@ body.menu-open {
     }
     
     #carouselExampleAutoplaying .carousel-item {
-        height: 400px;
+        height: 500px;
     }
 }
 
